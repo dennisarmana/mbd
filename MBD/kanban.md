@@ -27,7 +27,7 @@ kanban-plugin: board
 ## Dev todos
 
 - [ ] Design database schema for storing organizational data
-- [ ] Create mock email dataset for initial development
+- [x] Create mock email dataset for initial development
 - [ ] Design responsive UI for chat interface
 - [ ] Create department and user selection dropdowns
 - [ ] Implement BERT model for data extraction from emails
@@ -44,20 +44,12 @@ kanban-plugin: board
 
 ## Content creation todos
 
-
-
-
+- [ ] Generate email scenarios in increasing complexity to test the system
 
 
 ## Doing (WIP 2)
 
 - [ ] Breaking down product requirements into tasks (this kanban board)
-- [ ] Create mock email chains in JSON format with massive volumes:
-	- Use 10 scenarios of increasing complexity (from team to company-wide misalignment)
-	- Structure: JSON format with thread IDs, metadata, and full email fields
-	- Volume: 150-200 emails for early scenarios, 250-400 for middle scenarios, 500-1000+ for complex scenarios
-	- Generate programmatically with templates and variations
-	- File structure: Each scenario in its own folder with emails.json, metadata.json, and generation_config.json
 
 
 ## Done
@@ -66,6 +58,13 @@ kanban-plugin: board
 - [ ] Setting up the project repository
 - [ ] Created GitHub repository
 - [ ] Initialized development environment
+- [x] Create mock email chains in JSON format with massive volumes:
+	- Use 10 scenarios of increasing complexity (from team to company-wide misalignment)
+	- Structure: JSON format with thread IDs, metadata, and full email fields
+	- Volume: 150-200 emails for early scenarios, 250-400 for middle scenarios, 500-1000+ for complex scenarios
+	- Generate programmatically with templates and variations
+	- File structure: Each scenario in its own folder with emails.json, metadata.json, and generation_config.json
+	- Separation of raw data (for AI analysis) from ground truth (for evaluation)
 
 
 
