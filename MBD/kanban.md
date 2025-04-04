@@ -44,7 +44,6 @@ kanban-plugin: board
 
 ## Content creation todos
 
-- [ ] Generate email scenarios in increasing complexity to test the system
 
 
 ## Doing (WIP 2)
@@ -66,6 +65,7 @@ kanban-plugin: board
 
 ## Done
 
+- [ ] Generate email scenarios in increasing complexity to test the system
 - [ ] Created PRD document
 - [ ] Setting up the project repository
 - [ ] Created GitHub repository

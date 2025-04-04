@@ -1,0 +1,29 @@
+{
+  "scenario": {
+    "id": "feature_priority",
+    "name": "Feature Priority Misalignment",
+    "description": "Product team sees a feature as optional, marketing sees it as crucial",
+    "complexity_level": 3,
+    "key_issues": [
+      "Different interpretations of market requirements",
+      "Conflicting priorities between departments",
+      "Miscommunication about feature importance"
+    ],
+    "time_span": {
+      "start_date": "2025-03-01T00:00:00.000Z",
+      "end_date": "2025-04-01T00:00:00.000Z"
+    }
+  },
+  "generation_date": "2025-04-04T10:57:59.708Z",
+  "stats": {
+    "company_name": "Acme3Corp",
+    "departments": 7,
+    "employees": 60,
+    "email_count": 136,
+    "thread_count": 25,
+    "time_span": {
+      "start": "2025-03-07T05:29:24.343Z",
+      "end": "2025-03-31T21:58:59.252Z"
+    }
+  }
+}

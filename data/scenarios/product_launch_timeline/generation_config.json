@@ -1,0 +1,35 @@
+{
+  "scenario": {
+    "id": "product_launch_timeline",
+    "name": "Product Launch Timeline",
+    "description": "Marketing and product teams disagree on the launch date",
+    "complexity_level": 2,
+    "key_issues": [
+      "Different understanding of \"ready to launch\"",
+      "Dependency tracking issues",
+      "Miscommunication about approval processes"
+    ]
+  },
+  "options": {
+    "company": {
+      "name": "Acme2Corp",
+      "domain": "acme2.com",
+      "departmentCount": 6,
+      "employeesPerDepartment": {
+        "min": 5,
+        "max": 9
+      }
+    },
+    "emails": {
+      "threadCount": 20,
+      "emailsPerThread": {
+        "min": 3,
+        "max": 7
+      },
+      "timeSpan": {
+        "start": "2025-02-01",
+        "end": "2025-03-01"
+      }
+    }
+  }
+}

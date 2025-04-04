@@ -1,0 +1,29 @@
+{
+  "scenario": {
+    "id": "marketing_campaign_interpretation",
+    "name": "Marketing Campaign Interpretation",
+    "description": "Different team members have varied understandings of campaign goals",
+    "complexity_level": 1,
+    "key_issues": [
+      "Ambiguous campaign objectives",
+      "Unclear success metrics",
+      "Different interpretations of target audience"
+    ],
+    "time_span": {
+      "start_date": "2025-01-01T00:00:00.000Z",
+      "end_date": "2025-02-01T00:00:00.000Z"
+    }
+  },
+  "generation_date": "2025-04-04T10:57:59.699Z",
+  "stats": {
+    "company_name": "Acme1Corp",
+    "departments": 5,
+    "employees": 25,
+    "email_count": 66,
+    "thread_count": 15,
+    "time_span": {
+      "start": "2025-01-11T20:28:26.323Z",
+      "end": "2025-01-31T23:01:59.514Z"
+    }
+  }
+}

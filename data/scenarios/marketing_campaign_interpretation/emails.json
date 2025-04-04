@@ -1,0 +1,3759 @@
+{
+  "raw": {
+    "company": {
+      "name": "Acme1Corp",
+      "domain": "acme1.com",
+      "departments": [
+        {
+          "id": "dept_0",
+          "name": "Executive",
+          "parent_department": null
+        },
+        {
+          "id": "dept_1",
+          "name": "Marketing",
+          "parent_department": "dept_0"
+        },
+        {
+          "id": "dept_2",
+          "name": "Product",
+          "parent_department": null
+        },
+        {
+          "id": "dept_3",
+          "name": "Engineering",
+          "parent_department": "dept_0"
+        },
+        {
+          "id": "dept_4",
+          "name": "Design",
+          "parent_department": null
+        }
+      ],
+      "persons": [
+        {
+          "id": "person_0",
+          "name": "Dr. Stewart Stiedemann",
+          "email": "Karlie_Smith34@acme1.com",
+          "department_id": "dept_0",
+          "role": "Executive Director",
+          "boss_id": null,
+          "communication_style": "verbose"
+        },
+        {
+          "id": "person_1",
+          "name": "Myrtle Borer",
+          "email": "Jazlyn_Bogan-Kuphal81@acme1.com",
+          "department_id": "dept_0",
+          "role": "Manager",
+          "boss_id": "person_0",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_2",
+          "name": "Stuart Mann",
+          "email": "Jewel.Heathcote@acme1.com",
+          "department_id": "dept_0",
+          "role": "Analyst",
+          "boss_id": "person_0",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_3",
+          "name": "Lorenzo Lebsack",
+          "email": "Lavada.Kohler47@acme1.com",
+          "department_id": "dept_0",
+          "role": "Specialist",
+          "boss_id": "person_0",
+          "communication_style": "direct"
+        },
+        {
+          "id": "person_4",
+          "name": "Dr. Minnie Upton",
+          "email": "Jarret.Beatty@acme1.com",
+          "department_id": "dept_0",
+          "role": "Analyst",
+          "boss_id": "person_0",
+          "communication_style": "formal"
+        },
+        {
+          "id": "person_5",
+          "name": "Nick Feest",
+          "email": "Roosevelt_Barrows35@acme1.com",
+          "department_id": "dept_1",
+          "role": "Marketing Director",
+          "boss_id": "person_0",
+          "communication_style": "formal"
+        },
+        {
+          "id": "person_6",
+          "name": "Guillermo Schmeler",
+          "email": "Brando.Huels@acme1.com",
+          "department_id": "dept_1",
+          "role": "Content Creator",
+          "boss_id": "person_5",
+          "communication_style": "verbose"
+        },
+        {
+          "id": "person_7",
+          "name": "Mr. Edmund Braun IV",
+          "email": "Lucile.Tillman53@acme1.com",
+          "department_id": "dept_1",
+          "role": "Campaign Manager",
+          "boss_id": "person_5",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_8",
+          "name": "Gene Larkin-Feest",
+          "email": "Nash_Wehner@acme1.com",
+          "department_id": "dept_1",
+          "role": "Campaign Manager",
+          "boss_id": "person_5",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_9",
+          "name": "Neil Gleichner",
+          "email": "Jacey.Witting@acme1.com",
+          "department_id": "dept_2",
+          "role": "Product Director",
+          "boss_id": null,
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_10",
+          "name": "Sean Wehner Sr.",
+          "email": "Antoinette_Wisoky@acme1.com",
+          "department_id": "dept_2",
+          "role": "Business Analyst",
+          "boss_id": "person_9",
+          "communication_style": "technical"
+        },
+        {
+          "id": "person_11",
+          "name": "Ms. Kristine Veum",
+          "email": "Zion.McGlynn18@acme1.com",
+          "department_id": "dept_2",
+          "role": "Product Owner",
+          "boss_id": "person_9",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_12",
+          "name": "Dana Walsh",
+          "email": "Vena.Gulgowski46@acme1.com",
+          "department_id": "dept_2",
+          "role": "Product Owner",
+          "boss_id": "person_9",
+          "communication_style": "direct"
+        },
+        {
+          "id": "person_13",
+          "name": "Anne Kub",
+          "email": "Theo_Halvorson65@acme1.com",
+          "department_id": "dept_2",
+          "role": "Product Owner",
+          "boss_id": "person_9",
+          "communication_style": "technical"
+        },
+        {
+          "id": "person_14",
+          "name": "Jesse Ernser",
+          "email": "Friedrich.Erdman30@acme1.com",
+          "department_id": "dept_2",
+          "role": "Product Owner",
+          "boss_id": "person_9",
+          "communication_style": "technical"
+        },
+        {
+          "id": "person_15",
+          "name": "Wilfred Conn",
+          "email": "Hallie_Kertzmann93@acme1.com",
+          "department_id": "dept_3",
+          "role": "Engineering Director",
+          "boss_id": "person_0",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_16",
+          "name": "Mr. Fred Kuhn",
+          "email": "Kara_Hermann14@acme1.com",
+          "department_id": "dept_3",
+          "role": "Software Engineer",
+          "boss_id": "person_15",
+          "communication_style": "technical"
+        },
+        {
+          "id": "person_17",
+          "name": "Ivan Hayes",
+          "email": "Kelsi.Dicki@acme1.com",
+          "department_id": "dept_3",
+          "role": "DevOps Engineer",
+          "boss_id": "person_15",
+          "communication_style": "direct"
+        },
+        {
+          "id": "person_18",
+          "name": "Patsy Feest-Kunze Sr.",
+          "email": "Dax.Krajcik-Ortiz17@acme1.com",
+          "department_id": "dept_3",
+          "role": "QA Engineer",
+          "boss_id": "person_15",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_19",
+          "name": "Denise Cartwright DVM",
+          "email": "Adriana.Green@acme1.com",
+          "department_id": "dept_3",
+          "role": "QA Engineer",
+          "boss_id": "person_15",
+          "communication_style": "technical"
+        },
+        {
+          "id": "person_20",
+          "name": "Moses Hilpert",
+          "email": "Allison_West@acme1.com",
+          "department_id": "dept_3",
+          "role": "Software Engineer",
+          "boss_id": "person_15",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_21",
+          "name": "Vicki Ebert",
+          "email": "Patrick.Lockman@acme1.com",
+          "department_id": "dept_4",
+          "role": "Design Director",
+          "boss_id": null,
+          "communication_style": "verbose"
+        },
+        {
+          "id": "person_22",
+          "name": "Michael Schmitt",
+          "email": "Vivianne_Crona@acme1.com",
+          "department_id": "dept_4",
+          "role": "UX Researcher",
+          "boss_id": "person_21",
+          "communication_style": "formal"
+        },
+        {
+          "id": "person_23",
+          "name": "Randy Lehner",
+          "email": "Deshawn_Ryan8@acme1.com",
+          "department_id": "dept_4",
+          "role": "Visual Designer",
+          "boss_id": "person_21",
+          "communication_style": "technical"
+        },
+        {
+          "id": "person_24",
+          "name": "Jeffery Greenholt",
+          "email": "Christ_Bartoletti@acme1.com",
+          "department_id": "dept_4",
+          "role": "UI Designer",
+          "boss_id": "person_21",
+          "communication_style": "technical"
+        }
+      ]
+    },
+    "emails": [
+      {
+        "id": "email_0",
+        "thread_id": "thread_0",
+        "from": "person_7",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-31T10:57:45.632Z",
+        "subject": "Campaign channels vertical",
+        "body": "Hi Nick,\n\nWe need to finalize our marketing strategy for the vertical campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_1",
+        "thread_id": "thread_0",
+        "from": "person_7",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_0",
+        "timestamp": "2025-01-31T15:50:42.062Z",
+        "subject": "RE: Campaign channels vertical",
+        "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_2",
+        "thread_id": "thread_0",
+        "from": "person_5",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_1",
+        "timestamp": "2025-01-31T17:57:56.155Z",
+        "subject": "RE: Campaign channels vertical",
+        "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_3",
+        "thread_id": "thread_1",
+        "from": "person_8",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-31T17:48:53.480Z",
+        "subject": "Marketing lifetime value revolutionary",
+        "body": "Hi Guillermo,\n\nWe need to finalize our marketing strategy for the revolutionary campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_4",
+        "thread_id": "thread_1",
+        "from": "person_8",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_3",
+        "timestamp": "2025-01-31T18:56:08.784Z",
+        "subject": "RE: Marketing lifetime value revolutionary",
+        "body": "Hi Guillermo,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_5",
+        "thread_id": "thread_1",
+        "from": "person_8",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_4",
+        "timestamp": "2025-01-31T20:00:07.411Z",
+        "subject": "RE: Marketing lifetime value revolutionary",
+        "body": "Hi Guillermo,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_6",
+        "thread_id": "thread_1",
+        "from": "person_8",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_5",
+        "timestamp": "2025-01-31T20:43:57.358Z",
+        "subject": "RE: Marketing lifetime value revolutionary",
+        "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_7",
+        "thread_id": "thread_1",
+        "from": "person_8",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_6",
+        "timestamp": "2025-01-31T21:58:22.971Z",
+        "subject": "RE: Marketing lifetime value revolutionary",
+        "body": "Hi Guillermo,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_8",
+        "thread_id": "thread_1",
+        "from": "person_8",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_7",
+        "timestamp": "2025-01-31T23:01:59.514Z",
+        "subject": "RE: Marketing lifetime value revolutionary",
+        "body": "Hi Guillermo,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_9",
+        "thread_id": "thread_2",
+        "from": "person_7",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-14T14:42:54.850Z",
+        "subject": "Campaign technologies robust",
+        "body": "Hi Nick,\n\nWe need to finalize our marketing strategy for the robust campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_10",
+        "thread_id": "thread_2",
+        "from": "person_5",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_9",
+        "timestamp": "2025-01-18T08:59:31.269Z",
+        "subject": "RE: Campaign technologies robust",
+        "body": "Hi Mr.,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_11",
+        "thread_id": "thread_2",
+        "from": "person_7",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_10",
+        "timestamp": "2025-01-19T19:43:12.347Z",
+        "subject": "RE: Campaign technologies robust",
+        "body": "Hi Nick,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_12",
+        "thread_id": "thread_2",
+        "from": "person_7",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_11",
+        "timestamp": "2025-01-21T15:49:27.375Z",
+        "subject": "RE: Campaign technologies robust",
+        "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_13",
+        "thread_id": "thread_2",
+        "from": "person_5",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_12",
+        "timestamp": "2025-01-24T00:48:55.523Z",
+        "subject": "RE: Campaign technologies robust",
+        "body": "Hi Mr.,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_14",
+        "thread_id": "thread_3",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-18T14:44:42.565Z",
+        "subject": "Campaign e-commerce global",
+        "body": "Hi Nick,\n\nWe need to finalize our marketing strategy for the global campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_15",
+        "thread_id": "thread_3",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_14",
+        "timestamp": "2025-01-21T19:23:01.179Z",
+        "subject": "RE: Campaign e-commerce global",
+        "body": "Hi Nick,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_16",
+        "thread_id": "thread_3",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_15",
+        "timestamp": "2025-01-23T01:11:44.768Z",
+        "subject": "RE: Campaign e-commerce global",
+        "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_17",
+        "thread_id": "thread_3",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_16",
+        "timestamp": "2025-01-25T05:23:41.931Z",
+        "subject": "RE: Campaign e-commerce global",
+        "body": "Hi Nick,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_18",
+        "thread_id": "thread_4",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-18T05:47:49.917Z",
+        "subject": "Marketing portals clicks-and-mortar",
+        "body": "Hi Gene,\n\nI wanted to discuss our upcoming clicks-and-mortar campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_19",
+        "thread_id": "thread_4",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_18",
+        "timestamp": "2025-01-23T01:59:07.905Z",
+        "subject": "RE: Marketing portals clicks-and-mortar",
+        "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_20",
+        "thread_id": "thread_4",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_19",
+        "timestamp": "2025-01-27T21:43:08.846Z",
+        "subject": "RE: Marketing portals clicks-and-mortar",
+        "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_21",
+        "thread_id": "thread_5",
+        "from": "person_5",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-11T20:28:26.323Z",
+        "subject": "Campaign users B2B",
+        "body": "Hi Guillermo,\n\nI wanted to discuss our upcoming B2B campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_22",
+        "thread_id": "thread_5",
+        "from": "person_5",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_21",
+        "timestamp": "2025-01-14T14:21:56.049Z",
+        "subject": "RE: Campaign users B2B",
+        "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_23",
+        "thread_id": "thread_5",
+        "from": "person_5",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_22",
+        "timestamp": "2025-01-19T04:08:23.707Z",
+        "subject": "RE: Campaign users B2B",
+        "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_24",
+        "thread_id": "thread_5",
+        "from": "person_6",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_23",
+        "timestamp": "2025-01-23T08:39:02.363Z",
+        "subject": "RE: Campaign users B2B",
+        "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_25",
+        "thread_id": "thread_5",
+        "from": "person_6",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_24",
+        "timestamp": "2025-01-26T06:02:32.617Z",
+        "subject": "RE: Campaign users B2B",
+        "body": "Hi Nick,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_26",
+        "thread_id": "thread_6",
+        "from": "person_8",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-20T10:26:28.651Z",
+        "subject": "Marketing deliverables end-to-end",
+        "body": "Hi Mr.,\n\nWe need to finalize our marketing strategy for the end-to-end campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_27",
+        "thread_id": "thread_6",
+        "from": "person_8",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_26",
+        "timestamp": "2025-01-21T18:07:57.340Z",
+        "subject": "RE: Marketing deliverables end-to-end",
+        "body": "Hi Mr.,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_28",
+        "thread_id": "thread_6",
+        "from": "person_8",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_27",
+        "timestamp": "2025-01-22T21:14:41.299Z",
+        "subject": "RE: Marketing deliverables end-to-end",
+        "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_29",
+        "thread_id": "thread_6",
+        "from": "person_7",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_28",
+        "timestamp": "2025-01-24T17:47:06.695Z",
+        "subject": "RE: Marketing deliverables end-to-end",
+        "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_30",
+        "thread_id": "thread_6",
+        "from": "person_7",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_29",
+        "timestamp": "2025-01-26T03:30:05.081Z",
+        "subject": "RE: Marketing deliverables end-to-end",
+        "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_31",
+        "thread_id": "thread_6",
+        "from": "person_8",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_30",
+        "timestamp": "2025-01-28T00:39:39.956Z",
+        "subject": "RE: Marketing deliverables end-to-end",
+        "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_32",
+        "thread_id": "thread_7",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-24T15:02:55.903Z",
+        "subject": "Marketing lifetime value end-to-end",
+        "body": "Hi Nick,\n\nI wanted to discuss our upcoming end-to-end campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_33",
+        "thread_id": "thread_7",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_32",
+        "timestamp": "2025-01-26T14:36:38.774Z",
+        "subject": "RE: Marketing lifetime value end-to-end",
+        "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_34",
+        "thread_id": "thread_7",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_33",
+        "timestamp": "2025-01-28T13:44:41.040Z",
+        "subject": "RE: Marketing lifetime value end-to-end",
+        "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_35",
+        "thread_id": "thread_7",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_34",
+        "timestamp": "2025-01-29T14:07:21.815Z",
+        "subject": "RE: Marketing lifetime value end-to-end",
+        "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_36",
+        "thread_id": "thread_8",
+        "from": "person_7",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-18T17:26:44.043Z",
+        "subject": "Campaign platforms cross-platform",
+        "body": "Hi Guillermo,\n\nWe need to finalize our marketing strategy for the cross-platform campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_37",
+        "thread_id": "thread_8",
+        "from": "person_7",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_36",
+        "timestamp": "2025-01-21T12:02:18.413Z",
+        "subject": "RE: Campaign platforms cross-platform",
+        "body": "Hi Guillermo,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_38",
+        "thread_id": "thread_8",
+        "from": "person_6",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_37",
+        "timestamp": "2025-01-22T19:39:33.088Z",
+        "subject": "RE: Campaign platforms cross-platform",
+        "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_39",
+        "thread_id": "thread_8",
+        "from": "person_7",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_38",
+        "timestamp": "2025-01-24T17:20:08.748Z",
+        "subject": "RE: Campaign platforms cross-platform",
+        "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_40",
+        "thread_id": "thread_8",
+        "from": "person_6",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_39",
+        "timestamp": "2025-01-27T14:32:21.161Z",
+        "subject": "RE: Campaign platforms cross-platform",
+        "body": "Hi Mr.,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_41",
+        "thread_id": "thread_9",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-13T11:36:58.316Z",
+        "subject": "Campaign deliverables one-to-one",
+        "body": "Hi Nick,\n\nI wanted to discuss our upcoming one-to-one campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_42",
+        "thread_id": "thread_9",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_41",
+        "timestamp": "2025-01-15T18:08:16.516Z",
+        "subject": "RE: Campaign deliverables one-to-one",
+        "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_43",
+        "thread_id": "thread_9",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_42",
+        "timestamp": "2025-01-19T00:50:29.398Z",
+        "subject": "RE: Campaign deliverables one-to-one",
+        "body": "Hi Nick,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_44",
+        "thread_id": "thread_9",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_43",
+        "timestamp": "2025-01-21T19:10:21.216Z",
+        "subject": "RE: Campaign deliverables one-to-one",
+        "body": "Hi Nick,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_45",
+        "thread_id": "thread_9",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_44",
+        "timestamp": "2025-01-22T23:30:04.602Z",
+        "subject": "RE: Campaign deliverables one-to-one",
+        "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_46",
+        "thread_id": "thread_9",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_45",
+        "timestamp": "2025-01-24T03:24:53.529Z",
+        "subject": "RE: Campaign deliverables one-to-one",
+        "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_47",
+        "thread_id": "thread_10",
+        "from": "person_7",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-31T11:30:59.671Z",
+        "subject": "Launch initiatives granular",
+        "body": "Hi Guillermo,\n\nI wanted to discuss our upcoming granular campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_48",
+        "thread_id": "thread_10",
+        "from": "person_6",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_47",
+        "timestamp": "2025-01-31T15:48:08.152Z",
+        "subject": "RE: Launch initiatives granular",
+        "body": "Hi Mr.,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_49",
+        "thread_id": "thread_10",
+        "from": "person_6",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_48",
+        "timestamp": "2025-01-31T17:54:35.014Z",
+        "subject": "RE: Launch initiatives granular",
+        "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_50",
+        "thread_id": "thread_11",
+        "from": "person_5",
+        "to": [
+          "person_6",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-12T10:37:50.455Z",
+        "subject": "Launch mindshare compelling",
+        "body": "Hi Guillermo,\n\nI wanted to discuss our upcoming compelling campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_51",
+        "thread_id": "thread_11",
+        "from": "person_7",
+        "to": [
+          "person_5",
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_50",
+        "timestamp": "2025-01-16T14:11:55.624Z",
+        "subject": "RE: Launch mindshare compelling",
+        "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_52",
+        "thread_id": "thread_11",
+        "from": "person_6",
+        "to": [
+          "person_5",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_51",
+        "timestamp": "2025-01-20T18:08:18.854Z",
+        "subject": "RE: Launch mindshare compelling",
+        "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_53",
+        "thread_id": "thread_11",
+        "from": "person_7",
+        "to": [
+          "person_5",
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_52",
+        "timestamp": "2025-01-23T15:10:00.454Z",
+        "subject": "RE: Launch mindshare compelling",
+        "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_54",
+        "thread_id": "thread_12",
+        "from": "person_8",
+        "to": [
+          "person_6",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-15T00:04:46.762Z",
+        "subject": "Marketing models granular",
+        "body": "Hi Guillermo,\n\nI wanted to discuss our upcoming granular campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": []
+      },
+      {
+        "id": "email_55",
+        "thread_id": "thread_12",
+        "from": "person_6",
+        "to": [
+          "person_8",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_54",
+        "timestamp": "2025-01-17T09:09:05.335Z",
+        "subject": "RE: Marketing models granular",
+        "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_56",
+        "thread_id": "thread_12",
+        "from": "person_6",
+        "to": [
+          "person_8",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_55",
+        "timestamp": "2025-01-22T02:55:25.121Z",
+        "subject": "RE: Marketing models granular",
+        "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_57",
+        "thread_id": "thread_13",
+        "from": "person_6",
+        "to": [
+          "person_5",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-13T23:34:30.957Z",
+        "subject": "Campaign bandwidth efficient",
+        "body": "Hi Nick,\n\nWe need to finalize our marketing strategy for the efficient campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_58",
+        "thread_id": "thread_13",
+        "from": "person_6",
+        "to": [
+          "person_5",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_57",
+        "timestamp": "2025-01-16T18:35:57.362Z",
+        "subject": "RE: Campaign bandwidth efficient",
+        "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_59",
+        "thread_id": "thread_13",
+        "from": "person_6",
+        "to": [
+          "person_5",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_58",
+        "timestamp": "2025-01-20T02:31:09.992Z",
+        "subject": "RE: Campaign bandwidth efficient",
+        "body": "Hi Nick,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_60",
+        "thread_id": "thread_13",
+        "from": "person_5",
+        "to": [
+          "person_6",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_59",
+        "timestamp": "2025-01-21T20:45:58.723Z",
+        "subject": "RE: Campaign bandwidth efficient",
+        "body": "Hi Guillermo,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_61",
+        "thread_id": "thread_13",
+        "from": "person_6",
+        "to": [
+          "person_5",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_60",
+        "timestamp": "2025-01-24T15:40:05.585Z",
+        "subject": "RE: Campaign bandwidth efficient",
+        "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_62",
+        "thread_id": "thread_14",
+        "from": "person_5",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-23T06:03:50.058Z",
+        "subject": "Marketing paradigms web-enabled",
+        "body": "Hi Guillermo,\n\nWe need to finalize our marketing strategy for the web-enabled campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_63",
+        "thread_id": "thread_14",
+        "from": "person_5",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_62",
+        "timestamp": "2025-01-25T02:08:47.632Z",
+        "subject": "RE: Marketing paradigms web-enabled",
+        "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_64",
+        "thread_id": "thread_14",
+        "from": "person_6",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_63",
+        "timestamp": "2025-01-26T19:37:46.137Z",
+        "subject": "RE: Marketing paradigms web-enabled",
+        "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": []
+      },
+      {
+        "id": "email_65",
+        "thread_id": "thread_14",
+        "from": "person_5",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_64",
+        "timestamp": "2025-01-29T08:03:46.423Z",
+        "subject": "RE: Marketing paradigms web-enabled",
+        "body": "Hi Guillermo,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": []
+      }
+    ],
+    "threads": [
+      {
+        "id": "thread_0",
+        "subject": "Campaign channels vertical",
+        "participants": [
+          "person_7",
+          "person_5"
+        ],
+        "start_time": "2025-01-31T06:47:48.414Z",
+        "end_time": "2025-01-31T20:33:33.682Z",
+        "email_ids": [
+          "email_0",
+          "email_1",
+          "email_2"
+        ]
+      },
+      {
+        "id": "thread_1",
+        "subject": "Marketing lifetime value revolutionary",
+        "participants": [
+          "person_8",
+          "person_6"
+        ],
+        "start_time": "2025-01-31T16:38:33.531Z",
+        "end_time": "2025-01-31T22:31:42.706Z",
+        "email_ids": [
+          "email_3",
+          "email_4",
+          "email_5",
+          "email_6",
+          "email_7",
+          "email_8"
+        ]
+      },
+      {
+        "id": "thread_2",
+        "subject": "Campaign technologies robust",
+        "participants": [
+          "person_7",
+          "person_5"
+        ],
+        "start_time": "2025-01-12T05:18:29.420Z",
+        "end_time": "2025-01-28T01:03:41.884Z",
+        "email_ids": [
+          "email_9",
+          "email_10",
+          "email_11",
+          "email_12",
+          "email_13"
+        ]
+      },
+      {
+        "id": "thread_3",
+        "subject": "Campaign e-commerce global",
+        "participants": [
+          "person_8",
+          "person_5"
+        ],
+        "start_time": "2025-01-17T00:47:52.771Z",
+        "end_time": "2025-01-29T00:09:34.554Z",
+        "email_ids": [
+          "email_14",
+          "email_15",
+          "email_16",
+          "email_17"
+        ]
+      },
+      {
+        "id": "thread_4",
+        "subject": "Marketing portals clicks-and-mortar",
+        "participants": [
+          "person_5",
+          "person_8"
+        ],
+        "start_time": "2025-01-14T03:29:02.174Z",
+        "end_time": "2025-01-28T10:17:48.434Z",
+        "email_ids": [
+          "email_18",
+          "email_19",
+          "email_20"
+        ]
+      },
+      {
+        "id": "thread_5",
+        "subject": "Campaign users B2B",
+        "participants": [
+          "person_5",
+          "person_6"
+        ],
+        "start_time": "2025-01-07T09:05:34.495Z",
+        "end_time": "2025-01-27T01:49:06.899Z",
+        "email_ids": [
+          "email_21",
+          "email_22",
+          "email_23",
+          "email_24",
+          "email_25"
+        ]
+      },
+      {
+        "id": "thread_6",
+        "subject": "Marketing deliverables end-to-end",
+        "participants": [
+          "person_8",
+          "person_7"
+        ],
+        "start_time": "2025-01-18T22:32:41.542Z",
+        "end_time": "2025-01-29T09:18:32.308Z",
+        "email_ids": [
+          "email_26",
+          "email_27",
+          "email_28",
+          "email_29",
+          "email_30",
+          "email_31"
+        ]
+      },
+      {
+        "id": "thread_7",
+        "subject": "Marketing lifetime value end-to-end",
+        "participants": [
+          "person_8",
+          "person_5"
+        ],
+        "start_time": "2025-01-22T09:00:29.030Z",
+        "end_time": "2025-01-30T01:48:05.806Z",
+        "email_ids": [
+          "email_32",
+          "email_33",
+          "email_34",
+          "email_35"
+        ]
+      },
+      {
+        "id": "thread_8",
+        "subject": "Campaign platforms cross-platform",
+        "participants": [
+          "person_7",
+          "person_6"
+        ],
+        "start_time": "2025-01-16T07:39:09.561Z",
+        "end_time": "2025-01-28T20:43:49.912Z",
+        "email_ids": [
+          "email_36",
+          "email_37",
+          "email_38",
+          "email_39",
+          "email_40"
+        ]
+      },
+      {
+        "id": "thread_9",
+        "subject": "Campaign deliverables one-to-one",
+        "participants": [
+          "person_8",
+          "person_5"
+        ],
+        "start_time": "2025-01-12T07:48:25.113Z",
+        "end_time": "2025-01-28T01:33:41.022Z",
+        "email_ids": [
+          "email_41",
+          "email_42",
+          "email_43",
+          "email_44",
+          "email_45",
+          "email_46"
+        ]
+      },
+      {
+        "id": "thread_10",
+        "subject": "Launch initiatives granular",
+        "participants": [
+          "person_7",
+          "person_6"
+        ],
+        "start_time": "2025-01-31T08:35:53.383Z",
+        "end_time": "2025-01-31T20:55:10.676Z",
+        "email_ids": [
+          "email_47",
+          "email_48",
+          "email_49"
+        ]
+      },
+      {
+        "id": "thread_11",
+        "subject": "Launch mindshare compelling",
+        "participants": [
+          "person_5",
+          "person_6",
+          "person_7"
+        ],
+        "start_time": "2025-01-06T21:53:21.649Z",
+        "end_time": "2025-01-26T23:34:40.329Z",
+        "email_ids": [
+          "email_50",
+          "email_51",
+          "email_52",
+          "email_53"
+        ]
+      },
+      {
+        "id": "thread_12",
+        "subject": "Marketing models granular",
+        "participants": [
+          "person_8",
+          "person_6",
+          "person_7"
+        ],
+        "start_time": "2025-01-11T04:27:46.371Z",
+        "end_time": "2025-01-27T20:05:33.274Z",
+        "email_ids": [
+          "email_54",
+          "email_55",
+          "email_56"
+        ]
+      },
+      {
+        "id": "thread_13",
+        "subject": "Campaign bandwidth efficient",
+        "participants": [
+          "person_6",
+          "person_5",
+          "person_7"
+        ],
+        "start_time": "2025-01-11T07:38:06.356Z",
+        "end_time": "2025-01-27T20:43:37.271Z",
+        "email_ids": [
+          "email_57",
+          "email_58",
+          "email_59",
+          "email_60",
+          "email_61"
+        ]
+      },
+      {
+        "id": "thread_14",
+        "subject": "Marketing paradigms web-enabled",
+        "participants": [
+          "person_5",
+          "person_6"
+        ],
+        "start_time": "2025-01-20T19:55:55.346Z",
+        "end_time": "2025-01-29T18:23:11.069Z",
+        "email_ids": [
+          "email_62",
+          "email_63",
+          "email_64",
+          "email_65"
+        ]
+      }
+    ]
+  },
+  "analysis": {
+    "scenario": {
+      "id": "marketing_campaign_interpretation",
+      "name": "Marketing Campaign Interpretation",
+      "description": "Different team members have varied understandings of campaign goals",
+      "complexity_level": 1,
+      "key_issues": [
+        "Ambiguous campaign objectives",
+        "Unclear success metrics",
+        "Different interpretations of target audience"
+      ],
+      "time_span": {
+        "start_date": "2025-01-01T00:00:00.000Z",
+        "end_date": "2025-02-01T00:00:00.000Z"
+      }
+    },
+    "company": {
+      "name": "Acme1Corp",
+      "domain": "acme1.com",
+      "departments": [
+        {
+          "id": "dept_0",
+          "name": "Executive",
+          "parent_department": null
+        },
+        {
+          "id": "dept_1",
+          "name": "Marketing",
+          "parent_department": "dept_0"
+        },
+        {
+          "id": "dept_2",
+          "name": "Product",
+          "parent_department": null
+        },
+        {
+          "id": "dept_3",
+          "name": "Engineering",
+          "parent_department": "dept_0"
+        },
+        {
+          "id": "dept_4",
+          "name": "Design",
+          "parent_department": null
+        }
+      ],
+      "persons": [
+        {
+          "id": "person_0",
+          "name": "Dr. Stewart Stiedemann",
+          "email": "Karlie_Smith34@acme1.com",
+          "department_id": "dept_0",
+          "role": "Executive Director",
+          "boss_id": null,
+          "communication_style": "verbose"
+        },
+        {
+          "id": "person_1",
+          "name": "Myrtle Borer",
+          "email": "Jazlyn_Bogan-Kuphal81@acme1.com",
+          "department_id": "dept_0",
+          "role": "Manager",
+          "boss_id": "person_0",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_2",
+          "name": "Stuart Mann",
+          "email": "Jewel.Heathcote@acme1.com",
+          "department_id": "dept_0",
+          "role": "Analyst",
+          "boss_id": "person_0",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_3",
+          "name": "Lorenzo Lebsack",
+          "email": "Lavada.Kohler47@acme1.com",
+          "department_id": "dept_0",
+          "role": "Specialist",
+          "boss_id": "person_0",
+          "communication_style": "direct"
+        },
+        {
+          "id": "person_4",
+          "name": "Dr. Minnie Upton",
+          "email": "Jarret.Beatty@acme1.com",
+          "department_id": "dept_0",
+          "role": "Analyst",
+          "boss_id": "person_0",
+          "communication_style": "formal"
+        },
+        {
+          "id": "person_5",
+          "name": "Nick Feest",
+          "email": "Roosevelt_Barrows35@acme1.com",
+          "department_id": "dept_1",
+          "role": "Marketing Director",
+          "boss_id": "person_0",
+          "communication_style": "formal"
+        },
+        {
+          "id": "person_6",
+          "name": "Guillermo Schmeler",
+          "email": "Brando.Huels@acme1.com",
+          "department_id": "dept_1",
+          "role": "Content Creator",
+          "boss_id": "person_5",
+          "communication_style": "verbose"
+        },
+        {
+          "id": "person_7",
+          "name": "Mr. Edmund Braun IV",
+          "email": "Lucile.Tillman53@acme1.com",
+          "department_id": "dept_1",
+          "role": "Campaign Manager",
+          "boss_id": "person_5",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_8",
+          "name": "Gene Larkin-Feest",
+          "email": "Nash_Wehner@acme1.com",
+          "department_id": "dept_1",
+          "role": "Campaign Manager",
+          "boss_id": "person_5",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_9",
+          "name": "Neil Gleichner",
+          "email": "Jacey.Witting@acme1.com",
+          "department_id": "dept_2",
+          "role": "Product Director",
+          "boss_id": null,
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_10",
+          "name": "Sean Wehner Sr.",
+          "email": "Antoinette_Wisoky@acme1.com",
+          "department_id": "dept_2",
+          "role": "Business Analyst",
+          "boss_id": "person_9",
+          "communication_style": "technical"
+        },
+        {
+          "id": "person_11",
+          "name": "Ms. Kristine Veum",
+          "email": "Zion.McGlynn18@acme1.com",
+          "department_id": "dept_2",
+          "role": "Product Owner",
+          "boss_id": "person_9",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_12",
+          "name": "Dana Walsh",
+          "email": "Vena.Gulgowski46@acme1.com",
+          "department_id": "dept_2",
+          "role": "Product Owner",
+          "boss_id": "person_9",
+          "communication_style": "direct"
+        },
+        {
+          "id": "person_13",
+          "name": "Anne Kub",
+          "email": "Theo_Halvorson65@acme1.com",
+          "department_id": "dept_2",
+          "role": "Product Owner",
+          "boss_id": "person_9",
+          "communication_style": "technical"
+        },
+        {
+          "id": "person_14",
+          "name": "Jesse Ernser",
+          "email": "Friedrich.Erdman30@acme1.com",
+          "department_id": "dept_2",
+          "role": "Product Owner",
+          "boss_id": "person_9",
+          "communication_style": "technical"
+        },
+        {
+          "id": "person_15",
+          "name": "Wilfred Conn",
+          "email": "Hallie_Kertzmann93@acme1.com",
+          "department_id": "dept_3",
+          "role": "Engineering Director",
+          "boss_id": "person_0",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_16",
+          "name": "Mr. Fred Kuhn",
+          "email": "Kara_Hermann14@acme1.com",
+          "department_id": "dept_3",
+          "role": "Software Engineer",
+          "boss_id": "person_15",
+          "communication_style": "technical"
+        },
+        {
+          "id": "person_17",
+          "name": "Ivan Hayes",
+          "email": "Kelsi.Dicki@acme1.com",
+          "department_id": "dept_3",
+          "role": "DevOps Engineer",
+          "boss_id": "person_15",
+          "communication_style": "direct"
+        },
+        {
+          "id": "person_18",
+          "name": "Patsy Feest-Kunze Sr.",
+          "email": "Dax.Krajcik-Ortiz17@acme1.com",
+          "department_id": "dept_3",
+          "role": "QA Engineer",
+          "boss_id": "person_15",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_19",
+          "name": "Denise Cartwright DVM",
+          "email": "Adriana.Green@acme1.com",
+          "department_id": "dept_3",
+          "role": "QA Engineer",
+          "boss_id": "person_15",
+          "communication_style": "technical"
+        },
+        {
+          "id": "person_20",
+          "name": "Moses Hilpert",
+          "email": "Allison_West@acme1.com",
+          "department_id": "dept_3",
+          "role": "Software Engineer",
+          "boss_id": "person_15",
+          "communication_style": "diplomatic"
+        },
+        {
+          "id": "person_21",
+          "name": "Vicki Ebert",
+          "email": "Patrick.Lockman@acme1.com",
+          "department_id": "dept_4",
+          "role": "Design Director",
+          "boss_id": null,
+          "communication_style": "verbose"
+        },
+        {
+          "id": "person_22",
+          "name": "Michael Schmitt",
+          "email": "Vivianne_Crona@acme1.com",
+          "department_id": "dept_4",
+          "role": "UX Researcher",
+          "boss_id": "person_21",
+          "communication_style": "formal"
+        },
+        {
+          "id": "person_23",
+          "name": "Randy Lehner",
+          "email": "Deshawn_Ryan8@acme1.com",
+          "department_id": "dept_4",
+          "role": "Visual Designer",
+          "boss_id": "person_21",
+          "communication_style": "technical"
+        },
+        {
+          "id": "person_24",
+          "name": "Jeffery Greenholt",
+          "email": "Christ_Bartoletti@acme1.com",
+          "department_id": "dept_4",
+          "role": "UI Designer",
+          "boss_id": "person_21",
+          "communication_style": "technical"
+        }
+      ]
+    },
+    "emails": [
+      {
+        "id": "email_0",
+        "thread_id": "thread_0",
+        "from": "person_7",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-31T10:57:45.632Z",
+        "subject": "Campaign channels vertical",
+        "body": "Hi Nick,\n\nWe need to finalize our marketing strategy for the vertical campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Timeline",
+            "Budget allocation"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 3
+        }
+      },
+      {
+        "id": "email_1",
+        "thread_id": "thread_0",
+        "from": "person_7",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_0",
+        "timestamp": "2025-01-31T15:50:42.062Z",
+        "subject": "RE: Campaign channels vertical",
+        "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "urgent",
+          "key_points": [
+            "Success metrics",
+            "Campaign objectives",
+            "Budget allocation"
+          ],
+          "miscommunication_elements": [
+            "Different understanding of target audience",
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": true,
+          "importance": 3
+        }
+      },
+      {
+        "id": "email_2",
+        "thread_id": "thread_0",
+        "from": "person_5",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_1",
+        "timestamp": "2025-01-31T17:57:56.155Z",
+        "subject": "RE: Campaign channels vertical",
+        "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Marketing channels",
+            "Timeline"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": false,
+          "importance": 1
+        }
+      },
+      {
+        "id": "email_3",
+        "thread_id": "thread_1",
+        "from": "person_8",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-31T17:48:53.480Z",
+        "subject": "Marketing lifetime value revolutionary",
+        "body": "Hi Guillermo,\n\nWe need to finalize our marketing strategy for the revolutionary campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Marketing channels",
+            "Campaign objectives"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_4",
+        "thread_id": "thread_1",
+        "from": "person_8",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_3",
+        "timestamp": "2025-01-31T18:56:08.784Z",
+        "subject": "RE: Marketing lifetime value revolutionary",
+        "body": "Hi Guillermo,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "positive",
+          "key_points": [
+            "Target audience",
+            "Marketing channels"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives",
+            "Different understanding of target audience"
+          ],
+          "follow_up_expected": true,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_5",
+        "thread_id": "thread_1",
+        "from": "person_8",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_4",
+        "timestamp": "2025-01-31T20:00:07.411Z",
+        "subject": "RE: Marketing lifetime value revolutionary",
+        "body": "Hi Guillermo,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Timeline",
+            "Target audience",
+            "Budget allocation"
+          ],
+          "miscommunication_elements": [
+            "Different interpretation of messaging strategy",
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_6",
+        "thread_id": "thread_1",
+        "from": "person_8",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_5",
+        "timestamp": "2025-01-31T20:43:57.358Z",
+        "subject": "RE: Marketing lifetime value revolutionary",
+        "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "urgent",
+          "key_points": [
+            "Budget allocation",
+            "Timeline"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics",
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_7",
+        "thread_id": "thread_1",
+        "from": "person_8",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_6",
+        "timestamp": "2025-01-31T21:58:22.971Z",
+        "subject": "RE: Marketing lifetime value revolutionary",
+        "body": "Hi Guillermo,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "positive",
+          "key_points": [
+            "Target audience",
+            "Budget allocation",
+            "Timeline"
+          ],
+          "miscommunication_elements": [
+            "Different interpretation of messaging strategy"
+          ],
+          "follow_up_expected": true,
+          "importance": 4
+        }
+      },
+      {
+        "id": "email_8",
+        "thread_id": "thread_1",
+        "from": "person_8",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_7",
+        "timestamp": "2025-01-31T23:01:59.514Z",
+        "subject": "RE: Marketing lifetime value revolutionary",
+        "body": "Hi Guillermo,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "urgent",
+          "key_points": [
+            "Budget allocation",
+            "Timeline",
+            "Success metrics"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": false,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_9",
+        "thread_id": "thread_2",
+        "from": "person_7",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-14T14:42:54.850Z",
+        "subject": "Campaign technologies robust",
+        "body": "Hi Nick,\n\nWe need to finalize our marketing strategy for the robust campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "neutral",
+          "key_points": [
+            "Timeline",
+            "Marketing channels"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 1
+        }
+      },
+      {
+        "id": "email_10",
+        "thread_id": "thread_2",
+        "from": "person_5",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_9",
+        "timestamp": "2025-01-18T08:59:31.269Z",
+        "subject": "RE: Campaign technologies robust",
+        "body": "Hi Mr.,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "neutral",
+          "key_points": [
+            "Marketing channels",
+            "Success metrics"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics",
+            "Different understanding of target audience"
+          ],
+          "follow_up_expected": true,
+          "importance": 1
+        }
+      },
+      {
+        "id": "email_11",
+        "thread_id": "thread_2",
+        "from": "person_7",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_10",
+        "timestamp": "2025-01-19T19:43:12.347Z",
+        "subject": "RE: Campaign technologies robust",
+        "body": "Hi Nick,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "neutral",
+          "key_points": [
+            "Budget allocation",
+            "Marketing channels",
+            "Success metrics"
+          ],
+          "miscommunication_elements": [
+            "Different interpretation of messaging strategy"
+          ],
+          "follow_up_expected": true,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_12",
+        "thread_id": "thread_2",
+        "from": "person_7",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_11",
+        "timestamp": "2025-01-21T15:49:27.375Z",
+        "subject": "RE: Campaign technologies robust",
+        "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "positive",
+          "key_points": [
+            "Budget allocation",
+            "Success metrics"
+          ],
+          "miscommunication_elements": [
+            "Different understanding of target audience"
+          ],
+          "follow_up_expected": true,
+          "importance": 1
+        }
+      },
+      {
+        "id": "email_13",
+        "thread_id": "thread_2",
+        "from": "person_5",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_12",
+        "timestamp": "2025-01-24T00:48:55.523Z",
+        "subject": "RE: Campaign technologies robust",
+        "body": "Hi Mr.,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Campaign objectives",
+            "Budget allocation",
+            "Timeline"
+          ],
+          "miscommunication_elements": [
+            "Different interpretation of messaging strategy"
+          ],
+          "follow_up_expected": false,
+          "importance": 1
+        }
+      },
+      {
+        "id": "email_14",
+        "thread_id": "thread_3",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-18T14:44:42.565Z",
+        "subject": "Campaign e-commerce global",
+        "body": "Hi Nick,\n\nWe need to finalize our marketing strategy for the global campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "urgent",
+          "key_points": [
+            "Target audience",
+            "Budget allocation",
+            "Campaign objectives"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 3
+        }
+      },
+      {
+        "id": "email_15",
+        "thread_id": "thread_3",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_14",
+        "timestamp": "2025-01-21T19:23:01.179Z",
+        "subject": "RE: Campaign e-commerce global",
+        "body": "Hi Nick,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "urgent",
+          "key_points": [
+            "Campaign objectives",
+            "Target audience"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": true,
+          "importance": 1
+        }
+      },
+      {
+        "id": "email_16",
+        "thread_id": "thread_3",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_15",
+        "timestamp": "2025-01-23T01:11:44.768Z",
+        "subject": "RE: Campaign e-commerce global",
+        "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "neutral",
+          "key_points": [
+            "Timeline",
+            "Success metrics",
+            "Target audience"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics",
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": true,
+          "importance": 4
+        }
+      },
+      {
+        "id": "email_17",
+        "thread_id": "thread_3",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_16",
+        "timestamp": "2025-01-25T05:23:41.931Z",
+        "subject": "RE: Campaign e-commerce global",
+        "body": "Hi Nick,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Marketing channels",
+            "Success metrics"
+          ],
+          "miscommunication_elements": [
+            "Different interpretation of messaging strategy"
+          ],
+          "follow_up_expected": false,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_18",
+        "thread_id": "thread_4",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-18T05:47:49.917Z",
+        "subject": "Marketing portals clicks-and-mortar",
+        "body": "Hi Gene,\n\nI wanted to discuss our upcoming clicks-and-mortar campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "neutral",
+          "key_points": [
+            "Budget allocation",
+            "Timeline",
+            "Target audience"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 3
+        }
+      },
+      {
+        "id": "email_19",
+        "thread_id": "thread_4",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_18",
+        "timestamp": "2025-01-23T01:59:07.905Z",
+        "subject": "RE: Marketing portals clicks-and-mortar",
+        "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Campaign objectives",
+            "Marketing channels",
+            "Target audience"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_20",
+        "thread_id": "thread_4",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_19",
+        "timestamp": "2025-01-27T21:43:08.846Z",
+        "subject": "RE: Marketing portals clicks-and-mortar",
+        "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "positive",
+          "key_points": [
+            "Marketing channels",
+            "Target audience",
+            "Timeline"
+          ],
+          "miscommunication_elements": [
+            "Different understanding of target audience",
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": false,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_21",
+        "thread_id": "thread_5",
+        "from": "person_5",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-11T20:28:26.323Z",
+        "subject": "Campaign users B2B",
+        "body": "Hi Guillermo,\n\nI wanted to discuss our upcoming B2B campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Budget allocation",
+            "Success metrics"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_22",
+        "thread_id": "thread_5",
+        "from": "person_5",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_21",
+        "timestamp": "2025-01-14T14:21:56.049Z",
+        "subject": "RE: Campaign users B2B",
+        "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "positive",
+          "key_points": [
+            "Campaign objectives",
+            "Budget allocation",
+            "Timeline"
+          ],
+          "miscommunication_elements": [
+            "Different understanding of target audience"
+          ],
+          "follow_up_expected": true,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_23",
+        "thread_id": "thread_5",
+        "from": "person_5",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_22",
+        "timestamp": "2025-01-19T04:08:23.707Z",
+        "subject": "RE: Campaign users B2B",
+        "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Budget allocation",
+            "Target audience",
+            "Marketing channels"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": true,
+          "importance": 3
+        }
+      },
+      {
+        "id": "email_24",
+        "thread_id": "thread_5",
+        "from": "person_6",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_23",
+        "timestamp": "2025-01-23T08:39:02.363Z",
+        "subject": "RE: Campaign users B2B",
+        "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Marketing channels",
+            "Success metrics",
+            "Target audience"
+          ],
+          "miscommunication_elements": [
+            "Different interpretation of messaging strategy"
+          ],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_25",
+        "thread_id": "thread_5",
+        "from": "person_6",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_24",
+        "timestamp": "2025-01-26T06:02:32.617Z",
+        "subject": "RE: Campaign users B2B",
+        "body": "Hi Nick,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "urgent",
+          "key_points": [
+            "Timeline",
+            "Target audience"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives",
+            "Different interpretation of messaging strategy"
+          ],
+          "follow_up_expected": false,
+          "importance": 1
+        }
+      },
+      {
+        "id": "email_26",
+        "thread_id": "thread_6",
+        "from": "person_8",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-20T10:26:28.651Z",
+        "subject": "Marketing deliverables end-to-end",
+        "body": "Hi Mr.,\n\nWe need to finalize our marketing strategy for the end-to-end campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Target audience",
+            "Timeline"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_27",
+        "thread_id": "thread_6",
+        "from": "person_8",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_26",
+        "timestamp": "2025-01-21T18:07:57.340Z",
+        "subject": "RE: Marketing deliverables end-to-end",
+        "body": "Hi Mr.,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Success metrics",
+            "Budget allocation",
+            "Marketing channels"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": true,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_28",
+        "thread_id": "thread_6",
+        "from": "person_8",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_27",
+        "timestamp": "2025-01-22T21:14:41.299Z",
+        "subject": "RE: Marketing deliverables end-to-end",
+        "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Budget allocation",
+            "Marketing channels",
+            "Timeline"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics",
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": true,
+          "importance": 4
+        }
+      },
+      {
+        "id": "email_29",
+        "thread_id": "thread_6",
+        "from": "person_7",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_28",
+        "timestamp": "2025-01-24T17:47:06.695Z",
+        "subject": "RE: Marketing deliverables end-to-end",
+        "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "neutral",
+          "key_points": [
+            "Marketing channels",
+            "Campaign objectives"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives",
+            "Different interpretation of messaging strategy"
+          ],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_30",
+        "thread_id": "thread_6",
+        "from": "person_7",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_29",
+        "timestamp": "2025-01-26T03:30:05.081Z",
+        "subject": "RE: Marketing deliverables end-to-end",
+        "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Success metrics",
+            "Budget allocation"
+          ],
+          "miscommunication_elements": [
+            "Different understanding of target audience"
+          ],
+          "follow_up_expected": true,
+          "importance": 3
+        }
+      },
+      {
+        "id": "email_31",
+        "thread_id": "thread_6",
+        "from": "person_8",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_30",
+        "timestamp": "2025-01-28T00:39:39.956Z",
+        "subject": "RE: Marketing deliverables end-to-end",
+        "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "urgent",
+          "key_points": [
+            "Success metrics",
+            "Budget allocation",
+            "Target audience"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": false,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_32",
+        "thread_id": "thread_7",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-24T15:02:55.903Z",
+        "subject": "Marketing lifetime value end-to-end",
+        "body": "Hi Nick,\n\nI wanted to discuss our upcoming end-to-end campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "urgent",
+          "key_points": [
+            "Target audience",
+            "Campaign objectives",
+            "Timeline"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_33",
+        "thread_id": "thread_7",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_32",
+        "timestamp": "2025-01-26T14:36:38.774Z",
+        "subject": "RE: Marketing lifetime value end-to-end",
+        "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "positive",
+          "key_points": [
+            "Budget allocation",
+            "Campaign objectives"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": true,
+          "importance": 1
+        }
+      },
+      {
+        "id": "email_34",
+        "thread_id": "thread_7",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_33",
+        "timestamp": "2025-01-28T13:44:41.040Z",
+        "subject": "RE: Marketing lifetime value end-to-end",
+        "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "positive",
+          "key_points": [
+            "Campaign objectives",
+            "Budget allocation"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": true,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_35",
+        "thread_id": "thread_7",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_34",
+        "timestamp": "2025-01-29T14:07:21.815Z",
+        "subject": "RE: Marketing lifetime value end-to-end",
+        "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "confused",
+          "key_points": [
+            "Timeline",
+            "Budget allocation",
+            "Success metrics"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": false,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_36",
+        "thread_id": "thread_8",
+        "from": "person_7",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-18T17:26:44.043Z",
+        "subject": "Campaign platforms cross-platform",
+        "body": "Hi Guillermo,\n\nWe need to finalize our marketing strategy for the cross-platform campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Target audience",
+            "Marketing channels",
+            "Budget allocation"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_37",
+        "thread_id": "thread_8",
+        "from": "person_7",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_36",
+        "timestamp": "2025-01-21T12:02:18.413Z",
+        "subject": "RE: Campaign platforms cross-platform",
+        "body": "Hi Guillermo,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Marketing channels",
+            "Budget allocation",
+            "Target audience"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics",
+            "Different understanding of target audience"
+          ],
+          "follow_up_expected": true,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_38",
+        "thread_id": "thread_8",
+        "from": "person_6",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_37",
+        "timestamp": "2025-01-22T19:39:33.088Z",
+        "subject": "RE: Campaign platforms cross-platform",
+        "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Timeline",
+            "Marketing channels",
+            "Target audience"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": true,
+          "importance": 3
+        }
+      },
+      {
+        "id": "email_39",
+        "thread_id": "thread_8",
+        "from": "person_7",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_38",
+        "timestamp": "2025-01-24T17:20:08.748Z",
+        "subject": "RE: Campaign platforms cross-platform",
+        "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Marketing channels",
+            "Target audience",
+            "Timeline"
+          ],
+          "miscommunication_elements": [
+            "Different understanding of target audience",
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": true,
+          "importance": 4
+        }
+      },
+      {
+        "id": "email_40",
+        "thread_id": "thread_8",
+        "from": "person_6",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_39",
+        "timestamp": "2025-01-27T14:32:21.161Z",
+        "subject": "RE: Campaign platforms cross-platform",
+        "body": "Hi Mr.,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Timeline",
+            "Success metrics",
+            "Marketing channels"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives",
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": false,
+          "importance": 3
+        }
+      },
+      {
+        "id": "email_41",
+        "thread_id": "thread_9",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-13T11:36:58.316Z",
+        "subject": "Campaign deliverables one-to-one",
+        "body": "Hi Nick,\n\nI wanted to discuss our upcoming one-to-one campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Success metrics",
+            "Marketing channels"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 4
+        }
+      },
+      {
+        "id": "email_42",
+        "thread_id": "thread_9",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_41",
+        "timestamp": "2025-01-15T18:08:16.516Z",
+        "subject": "RE: Campaign deliverables one-to-one",
+        "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "positive",
+          "key_points": [
+            "Marketing channels",
+            "Target audience"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": true,
+          "importance": 4
+        }
+      },
+      {
+        "id": "email_43",
+        "thread_id": "thread_9",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_42",
+        "timestamp": "2025-01-19T00:50:29.398Z",
+        "subject": "RE: Campaign deliverables one-to-one",
+        "body": "Hi Nick,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "neutral",
+          "key_points": [
+            "Marketing channels",
+            "Budget allocation",
+            "Timeline"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": true,
+          "importance": 4
+        }
+      },
+      {
+        "id": "email_44",
+        "thread_id": "thread_9",
+        "from": "person_8",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_43",
+        "timestamp": "2025-01-21T19:10:21.216Z",
+        "subject": "RE: Campaign deliverables one-to-one",
+        "body": "Hi Nick,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "urgent",
+          "key_points": [
+            "Timeline",
+            "Success metrics",
+            "Target audience"
+          ],
+          "miscommunication_elements": [
+            "Different interpretation of messaging strategy"
+          ],
+          "follow_up_expected": true,
+          "importance": 1
+        }
+      },
+      {
+        "id": "email_45",
+        "thread_id": "thread_9",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_44",
+        "timestamp": "2025-01-22T23:30:04.602Z",
+        "subject": "RE: Campaign deliverables one-to-one",
+        "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "confused",
+          "key_points": [
+            "Timeline",
+            "Success metrics",
+            "Budget allocation"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives",
+            "Different understanding of target audience"
+          ],
+          "follow_up_expected": true,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_46",
+        "thread_id": "thread_9",
+        "from": "person_5",
+        "to": [
+          "person_8"
+        ],
+        "cc": [],
+        "reply_to": "email_45",
+        "timestamp": "2025-01-24T03:24:53.529Z",
+        "subject": "RE: Campaign deliverables one-to-one",
+        "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "neutral",
+          "key_points": [
+            "Target audience",
+            "Success metrics"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": false,
+          "importance": 1
+        }
+      },
+      {
+        "id": "email_47",
+        "thread_id": "thread_10",
+        "from": "person_7",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-31T11:30:59.671Z",
+        "subject": "Launch initiatives granular",
+        "body": "Hi Guillermo,\n\nI wanted to discuss our upcoming granular campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Campaign objectives",
+            "Marketing channels"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_48",
+        "thread_id": "thread_10",
+        "from": "person_6",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_47",
+        "timestamp": "2025-01-31T15:48:08.152Z",
+        "subject": "RE: Launch initiatives granular",
+        "body": "Hi Mr.,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "neutral",
+          "key_points": [
+            "Campaign objectives",
+            "Marketing channels"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics",
+            "Different interpretation of messaging strategy"
+          ],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_49",
+        "thread_id": "thread_10",
+        "from": "person_6",
+        "to": [
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_48",
+        "timestamp": "2025-01-31T17:54:35.014Z",
+        "subject": "RE: Launch initiatives granular",
+        "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Budget allocation",
+            "Success metrics"
+          ],
+          "miscommunication_elements": [
+            "Different understanding of target audience",
+            "Different interpretation of messaging strategy"
+          ],
+          "follow_up_expected": false,
+          "importance": 3
+        }
+      },
+      {
+        "id": "email_50",
+        "thread_id": "thread_11",
+        "from": "person_5",
+        "to": [
+          "person_6",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-12T10:37:50.455Z",
+        "subject": "Launch mindshare compelling",
+        "body": "Hi Guillermo,\n\nI wanted to discuss our upcoming compelling campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Campaign objectives",
+            "Success metrics"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_51",
+        "thread_id": "thread_11",
+        "from": "person_7",
+        "to": [
+          "person_5",
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_50",
+        "timestamp": "2025-01-16T14:11:55.624Z",
+        "subject": "RE: Launch mindshare compelling",
+        "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "urgent",
+          "key_points": [
+            "Success metrics",
+            "Campaign objectives",
+            "Budget allocation"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives",
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_52",
+        "thread_id": "thread_11",
+        "from": "person_6",
+        "to": [
+          "person_5",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_51",
+        "timestamp": "2025-01-20T18:08:18.854Z",
+        "subject": "RE: Launch mindshare compelling",
+        "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "confused",
+          "key_points": [
+            "Success metrics",
+            "Budget allocation"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives",
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_53",
+        "thread_id": "thread_11",
+        "from": "person_7",
+        "to": [
+          "person_5",
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_52",
+        "timestamp": "2025-01-23T15:10:00.454Z",
+        "subject": "RE: Launch mindshare compelling",
+        "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "positive",
+          "key_points": [
+            "Success metrics",
+            "Campaign objectives",
+            "Timeline"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics",
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": false,
+          "importance": 1
+        }
+      },
+      {
+        "id": "email_54",
+        "thread_id": "thread_12",
+        "from": "person_8",
+        "to": [
+          "person_6",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-15T00:04:46.762Z",
+        "subject": "Marketing models granular",
+        "body": "Hi Guillermo,\n\nI wanted to discuss our upcoming granular campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Budget allocation",
+            "Target audience"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 1
+        }
+      },
+      {
+        "id": "email_55",
+        "thread_id": "thread_12",
+        "from": "person_6",
+        "to": [
+          "person_8",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_54",
+        "timestamp": "2025-01-17T09:09:05.335Z",
+        "subject": "RE: Marketing models granular",
+        "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "positive",
+          "key_points": [
+            "Target audience",
+            "Success metrics",
+            "Marketing channels"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": true,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_56",
+        "thread_id": "thread_12",
+        "from": "person_6",
+        "to": [
+          "person_8",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_55",
+        "timestamp": "2025-01-22T02:55:25.121Z",
+        "subject": "RE: Marketing models granular",
+        "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "confused",
+          "key_points": [
+            "Campaign objectives",
+            "Target audience",
+            "Budget allocation"
+          ],
+          "miscommunication_elements": [
+            "Different understanding of target audience"
+          ],
+          "follow_up_expected": false,
+          "importance": 3
+        }
+      },
+      {
+        "id": "email_57",
+        "thread_id": "thread_13",
+        "from": "person_6",
+        "to": [
+          "person_5",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-13T23:34:30.957Z",
+        "subject": "Campaign bandwidth efficient",
+        "body": "Hi Nick,\n\nWe need to finalize our marketing strategy for the efficient campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Success metrics",
+            "Target audience"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_58",
+        "thread_id": "thread_13",
+        "from": "person_6",
+        "to": [
+          "person_5",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_57",
+        "timestamp": "2025-01-16T18:35:57.362Z",
+        "subject": "RE: Campaign bandwidth efficient",
+        "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "neutral",
+          "key_points": [
+            "Campaign objectives",
+            "Marketing channels",
+            "Target audience"
+          ],
+          "miscommunication_elements": [
+            "Different understanding of target audience",
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": true,
+          "importance": 4
+        }
+      },
+      {
+        "id": "email_59",
+        "thread_id": "thread_13",
+        "from": "person_6",
+        "to": [
+          "person_5",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_58",
+        "timestamp": "2025-01-20T02:31:09.992Z",
+        "subject": "RE: Campaign bandwidth efficient",
+        "body": "Hi Nick,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "negative",
+          "key_points": [
+            "Budget allocation",
+            "Timeline"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics",
+            "Different understanding of target audience"
+          ],
+          "follow_up_expected": true,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_60",
+        "thread_id": "thread_13",
+        "from": "person_5",
+        "to": [
+          "person_6",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_59",
+        "timestamp": "2025-01-21T20:45:58.723Z",
+        "subject": "RE: Campaign bandwidth efficient",
+        "body": "Hi Guillermo,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "urgent",
+          "key_points": [
+            "Marketing channels",
+            "Success metrics"
+          ],
+          "miscommunication_elements": [
+            "Misaligned success metrics"
+          ],
+          "follow_up_expected": true,
+          "importance": 4
+        }
+      },
+      {
+        "id": "email_61",
+        "thread_id": "thread_13",
+        "from": "person_6",
+        "to": [
+          "person_5",
+          "person_7"
+        ],
+        "cc": [],
+        "reply_to": "email_60",
+        "timestamp": "2025-01-24T15:40:05.585Z",
+        "subject": "RE: Campaign bandwidth efficient",
+        "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Campaign objectives",
+            "Budget allocation"
+          ],
+          "miscommunication_elements": [
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": false,
+          "importance": 2
+        }
+      },
+      {
+        "id": "email_62",
+        "thread_id": "thread_14",
+        "from": "person_5",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": null,
+        "timestamp": "2025-01-23T06:03:50.058Z",
+        "subject": "Marketing paradigms web-enabled",
+        "body": "Hi Guillermo,\n\nWe need to finalize our marketing strategy for the web-enabled campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Timeline",
+            "Success metrics",
+            "Campaign objectives"
+          ],
+          "miscommunication_elements": [],
+          "follow_up_expected": true,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_63",
+        "thread_id": "thread_14",
+        "from": "person_5",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_62",
+        "timestamp": "2025-01-25T02:08:47.632Z",
+        "subject": "RE: Marketing paradigms web-enabled",
+        "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "neutral",
+          "key_points": [
+            "Marketing channels",
+            "Target audience"
+          ],
+          "miscommunication_elements": [
+            "Different interpretation of messaging strategy",
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": true,
+          "importance": 3
+        }
+      },
+      {
+        "id": "email_64",
+        "thread_id": "thread_14",
+        "from": "person_6",
+        "to": [
+          "person_5"
+        ],
+        "cc": [],
+        "reply_to": "email_63",
+        "timestamp": "2025-01-26T19:37:46.137Z",
+        "subject": "RE: Marketing paradigms web-enabled",
+        "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Budget allocation",
+            "Target audience"
+          ],
+          "miscommunication_elements": [
+            "Different interpretation of messaging strategy",
+            "Conflicting campaign objectives"
+          ],
+          "follow_up_expected": true,
+          "importance": 5
+        }
+      },
+      {
+        "id": "email_65",
+        "thread_id": "thread_14",
+        "from": "person_5",
+        "to": [
+          "person_6"
+        ],
+        "cc": [],
+        "reply_to": "email_64",
+        "timestamp": "2025-01-29T08:03:46.423Z",
+        "subject": "RE: Marketing paradigms web-enabled",
+        "body": "Hi Guillermo,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com",
+        "attachments": [],
+        "metadata": {
+          "sentiment": "frustrated",
+          "key_points": [
+            "Target audience",
+            "Timeline"
+          ],
+          "miscommunication_elements": [
+            "Different understanding of target audience"
+          ],
+          "follow_up_expected": false,
+          "importance": 2
+        }
+      }
+    ],
+    "threads": [
+      {
+        "id": "thread_0",
+        "subject": "Campaign channels vertical",
+        "participants": [
+          "person_7",
+          "person_5"
+        ],
+        "start_time": "2025-01-31T06:47:48.414Z",
+        "end_time": "2025-01-31T20:33:33.682Z",
+        "email_ids": [
+          "email_0",
+          "email_1",
+          "email_2"
+        ],
+        "summary": "Discussion about campaign channels vertical"
+      },
+      {
+        "id": "thread_1",
+        "subject": "Marketing lifetime value revolutionary",
+        "participants": [
+          "person_8",
+          "person_6"
+        ],
+        "start_time": "2025-01-31T16:38:33.531Z",
+        "end_time": "2025-01-31T22:31:42.706Z",
+        "email_ids": [
+          "email_3",
+          "email_4",
+          "email_5",
+          "email_6",
+          "email_7",
+          "email_8"
+        ],
+        "summary": "Discussion about marketing lifetime value revolutionary"
+      },
+      {
+        "id": "thread_2",
+        "subject": "Campaign technologies robust",
+        "participants": [
+          "person_7",
+          "person_5"
+        ],
+        "start_time": "2025-01-12T05:18:29.420Z",
+        "end_time": "2025-01-28T01:03:41.884Z",
+        "email_ids": [
+          "email_9",
+          "email_10",
+          "email_11",
+          "email_12",
+          "email_13"
+        ],
+        "summary": "Discussion about campaign technologies robust"
+      },
+      {
+        "id": "thread_3",
+        "subject": "Campaign e-commerce global",
+        "participants": [
+          "person_8",
+          "person_5"
+        ],
+        "start_time": "2025-01-17T00:47:52.771Z",
+        "end_time": "2025-01-29T00:09:34.554Z",
+        "email_ids": [
+          "email_14",
+          "email_15",
+          "email_16",
+          "email_17"
+        ],
+        "summary": "Discussion about campaign e-commerce global"
+      },
+      {
+        "id": "thread_4",
+        "subject": "Marketing portals clicks-and-mortar",
+        "participants": [
+          "person_5",
+          "person_8"
+        ],
+        "start_time": "2025-01-14T03:29:02.174Z",
+        "end_time": "2025-01-28T10:17:48.434Z",
+        "email_ids": [
+          "email_18",
+          "email_19",
+          "email_20"
+        ],
+        "summary": "Discussion about marketing portals clicks-and-mortar"
+      },
+      {
+        "id": "thread_5",
+        "subject": "Campaign users B2B",
+        "participants": [
+          "person_5",
+          "person_6"
+        ],
+        "start_time": "2025-01-07T09:05:34.495Z",
+        "end_time": "2025-01-27T01:49:06.899Z",
+        "email_ids": [
+          "email_21",
+          "email_22",
+          "email_23",
+          "email_24",
+          "email_25"
+        ],
+        "summary": "Discussion about campaign users b2b"
+      },
+      {
+        "id": "thread_6",
+        "subject": "Marketing deliverables end-to-end",
+        "participants": [
+          "person_8",
+          "person_7"
+        ],
+        "start_time": "2025-01-18T22:32:41.542Z",
+        "end_time": "2025-01-29T09:18:32.308Z",
+        "email_ids": [
+          "email_26",
+          "email_27",
+          "email_28",
+          "email_29",
+          "email_30",
+          "email_31"
+        ],
+        "summary": "Discussion about marketing deliverables end-to-end"
+      },
+      {
+        "id": "thread_7",
+        "subject": "Marketing lifetime value end-to-end",
+        "participants": [
+          "person_8",
+          "person_5"
+        ],
+        "start_time": "2025-01-22T09:00:29.030Z",
+        "end_time": "2025-01-30T01:48:05.806Z",
+        "email_ids": [
+          "email_32",
+          "email_33",
+          "email_34",
+          "email_35"
+        ],
+        "summary": "Discussion about marketing lifetime value end-to-end"
+      },
+      {
+        "id": "thread_8",
+        "subject": "Campaign platforms cross-platform",
+        "participants": [
+          "person_7",
+          "person_6"
+        ],
+        "start_time": "2025-01-16T07:39:09.561Z",
+        "end_time": "2025-01-28T20:43:49.912Z",
+        "email_ids": [
+          "email_36",
+          "email_37",
+          "email_38",
+          "email_39",
+          "email_40"
+        ],
+        "summary": "Discussion about campaign platforms cross-platform"
+      },
+      {
+        "id": "thread_9",
+        "subject": "Campaign deliverables one-to-one",
+        "participants": [
+          "person_8",
+          "person_5"
+        ],
+        "start_time": "2025-01-12T07:48:25.113Z",
+        "end_time": "2025-01-28T01:33:41.022Z",
+        "email_ids": [
+          "email_41",
+          "email_42",
+          "email_43",
+          "email_44",
+          "email_45",
+          "email_46"
+        ],
+        "summary": "Discussion about campaign deliverables one-to-one"
+      },
+      {
+        "id": "thread_10",
+        "subject": "Launch initiatives granular",
+        "participants": [
+          "person_7",
+          "person_6"
+        ],
+        "start_time": "2025-01-31T08:35:53.383Z",
+        "end_time": "2025-01-31T20:55:10.676Z",
+        "email_ids": [
+          "email_47",
+          "email_48",
+          "email_49"
+        ],
+        "summary": "Discussion about launch initiatives granular"
+      },
+      {
+        "id": "thread_11",
+        "subject": "Launch mindshare compelling",
+        "participants": [
+          "person_5",
+          "person_6",
+          "person_7"
+        ],
+        "start_time": "2025-01-06T21:53:21.649Z",
+        "end_time": "2025-01-26T23:34:40.329Z",
+        "email_ids": [
+          "email_50",
+          "email_51",
+          "email_52",
+          "email_53"
+        ],
+        "summary": "Discussion about launch mindshare compelling"
+      },
+      {
+        "id": "thread_12",
+        "subject": "Marketing models granular",
+        "participants": [
+          "person_8",
+          "person_6",
+          "person_7"
+        ],
+        "start_time": "2025-01-11T04:27:46.371Z",
+        "end_time": "2025-01-27T20:05:33.274Z",
+        "email_ids": [
+          "email_54",
+          "email_55",
+          "email_56"
+        ],
+        "summary": "Discussion about marketing models granular"
+      },
+      {
+        "id": "thread_13",
+        "subject": "Campaign bandwidth efficient",
+        "participants": [
+          "person_6",
+          "person_5",
+          "person_7"
+        ],
+        "start_time": "2025-01-11T07:38:06.356Z",
+        "end_time": "2025-01-27T20:43:37.271Z",
+        "email_ids": [
+          "email_57",
+          "email_58",
+          "email_59",
+          "email_60",
+          "email_61"
+        ],
+        "summary": "Discussion about campaign bandwidth efficient"
+      },
+      {
+        "id": "thread_14",
+        "subject": "Marketing paradigms web-enabled",
+        "participants": [
+          "person_5",
+          "person_6"
+        ],
+        "start_time": "2025-01-20T19:55:55.346Z",
+        "end_time": "2025-01-29T18:23:11.069Z",
+        "email_ids": [
+          "email_62",
+          "email_63",
+          "email_64",
+          "email_65"
+        ],
+        "summary": "Discussion about marketing paradigms web-enabled"
+      }
+    ],
+    "miscommunication_analysis": {
+      "scenario_complexity": 1,
+      "key_issues": [
+        "Ambiguous campaign objectives",
+        "Unclear success metrics",
+        "Different interpretations of target audience"
+      ],
+      "affected_departments": [
+        "Marketing"
+      ]
+    }
+  }
+}

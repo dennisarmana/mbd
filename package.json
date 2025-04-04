@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "generate": "node scripts/generate-data.js",
-    "generate-sample": "node scripts/generate-sample.js"
+    "generate-sample": "node scripts/generate-sample.js",
+    "generate-first-three": "node scripts/generate-first-three.js"
   },
   "dependencies": {
     "@faker-js/faker": "^8.3.1",
