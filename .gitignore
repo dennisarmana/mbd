@@ -1,4 +1,21 @@
+# Dependencies
 node_modules/
+
+# OS files
 .DS_Store
 .windsurfrules
+
+# Tool files
 MBD/.obsidian/
+
+# Generated datasets
+# Exclude generated datasets to keep repo clean
+# but include exemplar or sample datasets
+data/mixed-scenarios/*/
+!data/mixed-scenarios/README.md
+data/personal-emails/*/
+!data/personal-emails/README.md
+
+# Keep sample files as examples
+!data/mixed-scenarios/samples/
+!data/personal-emails/samples/
