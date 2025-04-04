@@ -1,0 +1,3999 @@
+{
+  "scenario": {
+    "id": "feature_priority",
+    "name": "Feature Priority Misalignment",
+    "description": "Product team sees a feature as optional, marketing sees it as crucial",
+    "complexity_level": 3,
+    "key_issues": [
+      "Different interpretations of market requirements",
+      "Conflicting priorities between departments",
+      "Miscommunication about feature importance"
+    ],
+    "time_span": {
+      "start_date": "2025-03-01T00:00:00.000Z",
+      "end_date": "2025-04-01T00:00:00.000Z"
+    }
+  },
+  "company": {
+    "name": "Acme3Corp",
+    "domain": "acme3.com",
+    "departments": [
+      {
+        "id": "dept_0",
+        "name": "Executive",
+        "parent_department": null
+      },
+      {
+        "id": "dept_1",
+        "name": "Marketing",
+        "parent_department": "dept_0"
+      },
+      {
+        "id": "dept_2",
+        "name": "Product",
+        "parent_department": null
+      },
+      {
+        "id": "dept_3",
+        "name": "Engineering",
+        "parent_department": null
+      },
+      {
+        "id": "dept_4",
+        "name": "Design",
+        "parent_department": null
+      },
+      {
+        "id": "dept_5",
+        "name": "Sales",
+        "parent_department": null
+      },
+      {
+        "id": "dept_6",
+        "name": "Finance",
+        "parent_department": null
+      }
+    ],
+    "persons": [
+      {
+        "id": "person_0",
+        "name": "June Zemlak",
+        "email": "Abagail_Hartmann37@acme3.com",
+        "department_id": "dept_0",
+        "role": "Executive Director",
+        "boss_id": null,
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_1",
+        "name": "Leah Parisian",
+        "email": "Clinton_Schaefer@acme3.com",
+        "department_id": "dept_0",
+        "role": "Manager",
+        "boss_id": "person_0",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_2",
+        "name": "Jeannette Dietrich",
+        "email": "Clemmie.Hauck39@acme3.com",
+        "department_id": "dept_0",
+        "role": "Specialist",
+        "boss_id": "person_0",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_3",
+        "name": "Inez Nicolas",
+        "email": "Richie_Bernhard@acme3.com",
+        "department_id": "dept_0",
+        "role": "Specialist",
+        "boss_id": "person_0",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_4",
+        "name": "Brenda Howell",
+        "email": "Amari.Toy@acme3.com",
+        "department_id": "dept_0",
+        "role": "Analyst",
+        "boss_id": "person_0",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_5",
+        "name": "Kristina DuBuque",
+        "email": "Jerrold_Wolf@acme3.com",
+        "department_id": "dept_0",
+        "role": "Analyst",
+        "boss_id": "person_0",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_6",
+        "name": "Whitney Spencer",
+        "email": "Albina_Grimes@acme3.com",
+        "department_id": "dept_0",
+        "role": "Analyst",
+        "boss_id": "person_0",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_7",
+        "name": "Cassandra Gleason",
+        "email": "Eino_Farrell@acme3.com",
+        "department_id": "dept_0",
+        "role": "Specialist",
+        "boss_id": "person_0",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_8",
+        "name": "Brian Hand",
+        "email": "Princess_Wuckert7@acme3.com",
+        "department_id": "dept_1",
+        "role": "Marketing Director",
+        "boss_id": "person_0",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_9",
+        "name": "Ray Rau",
+        "email": "Cedrick.Schuppe19@acme3.com",
+        "department_id": "dept_1",
+        "role": "Content Creator",
+        "boss_id": "person_8",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_10",
+        "name": "Jackie Buckridge I",
+        "email": "Leda_Simonis@acme3.com",
+        "department_id": "dept_1",
+        "role": "Campaign Manager",
+        "boss_id": "person_8",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_11",
+        "name": "Donald Sipes",
+        "email": "Glenda.Braun@acme3.com",
+        "department_id": "dept_1",
+        "role": "Campaign Manager",
+        "boss_id": "person_8",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_12",
+        "name": "Felipe Franecki",
+        "email": "Brice.Frami@acme3.com",
+        "department_id": "dept_1",
+        "role": "Campaign Manager",
+        "boss_id": "person_8",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_13",
+        "name": "Chelsea Langosh",
+        "email": "Ramiro.Walker@acme3.com",
+        "department_id": "dept_1",
+        "role": "Marketing Specialist",
+        "boss_id": "person_8",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_14",
+        "name": "Duane Erdman",
+        "email": "Kraig.Bradtke22@acme3.com",
+        "department_id": "dept_1",
+        "role": "Marketing Specialist",
+        "boss_id": "person_8",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_15",
+        "name": "Rick Koss",
+        "email": "Misty_Crona@acme3.com",
+        "department_id": "dept_1",
+        "role": "Campaign Manager",
+        "boss_id": "person_8",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_16",
+        "name": "Tina Hagenes",
+        "email": "Corbin_Buckridge@acme3.com",
+        "department_id": "dept_1",
+        "role": "Campaign Manager",
+        "boss_id": "person_8",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_17",
+        "name": "Camille Williamson",
+        "email": "Maximus_Ruecker34@acme3.com",
+        "department_id": "dept_1",
+        "role": "Content Creator",
+        "boss_id": "person_8",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_18",
+        "name": "Mr. Marc Beahan",
+        "email": "Karina.Jacobs58@acme3.com",
+        "department_id": "dept_2",
+        "role": "Product Director",
+        "boss_id": null,
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_19",
+        "name": "Salvatore DuBuque",
+        "email": "Mohammad_Daugherty@acme3.com",
+        "department_id": "dept_2",
+        "role": "Business Analyst",
+        "boss_id": "person_18",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_20",
+        "name": "Yvette Steuber",
+        "email": "Toney.Reynolds@acme3.com",
+        "department_id": "dept_2",
+        "role": "Product Owner",
+        "boss_id": "person_18",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_21",
+        "name": "Warren Kub II",
+        "email": "Gussie.Koepp0@acme3.com",
+        "department_id": "dept_2",
+        "role": "Business Analyst",
+        "boss_id": "person_18",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_22",
+        "name": "Marty Rolfson MD",
+        "email": "Eladio_Wisoky@acme3.com",
+        "department_id": "dept_2",
+        "role": "Product Manager",
+        "boss_id": "person_18",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_23",
+        "name": "Nadine Champlin-Haley",
+        "email": "Paolo.Anderson63@acme3.com",
+        "department_id": "dept_2",
+        "role": "Product Manager",
+        "boss_id": "person_18",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_24",
+        "name": "Bethany McDermott",
+        "email": "Brent.Feil@acme3.com",
+        "department_id": "dept_3",
+        "role": "Engineering Director",
+        "boss_id": null,
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_25",
+        "name": "Betsy Kessler",
+        "email": "Dortha.Funk48@acme3.com",
+        "department_id": "dept_3",
+        "role": "Software Engineer",
+        "boss_id": "person_24",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_26",
+        "name": "Jose Mayer",
+        "email": "Alexandrea_Stiedemann40@acme3.com",
+        "department_id": "dept_3",
+        "role": "Software Engineer",
+        "boss_id": "person_24",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_27",
+        "name": "Chris Schmitt",
+        "email": "Bethany_Shields7@acme3.com",
+        "department_id": "dept_3",
+        "role": "QA Engineer",
+        "boss_id": "person_24",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_28",
+        "name": "Julio Franecki",
+        "email": "Shaina_Wintheiser@acme3.com",
+        "department_id": "dept_3",
+        "role": "QA Engineer",
+        "boss_id": "person_24",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_29",
+        "name": "Dustin Lang II",
+        "email": "Erik.Kuhlman58@acme3.com",
+        "department_id": "dept_3",
+        "role": "QA Engineer",
+        "boss_id": "person_24",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_30",
+        "name": "Levi Lakin",
+        "email": "Erin.Hammes@acme3.com",
+        "department_id": "dept_3",
+        "role": "QA Engineer",
+        "boss_id": "person_24",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_31",
+        "name": "Georgia Franey",
+        "email": "Irwin_Brown50@acme3.com",
+        "department_id": "dept_3",
+        "role": "Software Engineer",
+        "boss_id": "person_24",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_32",
+        "name": "Wilfred Bednar",
+        "email": "Makenzie.Murray97@acme3.com",
+        "department_id": "dept_3",
+        "role": "Software Engineer",
+        "boss_id": "person_24",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_33",
+        "name": "Ruby Auer",
+        "email": "Ansel_Muller@acme3.com",
+        "department_id": "dept_3",
+        "role": "QA Engineer",
+        "boss_id": "person_24",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_34",
+        "name": "Kent Rippin",
+        "email": "Walter_Cole@acme3.com",
+        "department_id": "dept_3",
+        "role": "QA Engineer",
+        "boss_id": "person_24",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_35",
+        "name": "Eddie Wehner",
+        "email": "Andreanne_Mayer4@acme3.com",
+        "department_id": "dept_4",
+        "role": "Design Director",
+        "boss_id": null,
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_36",
+        "name": "Kelli Crist",
+        "email": "Hester.Hilpert12@acme3.com",
+        "department_id": "dept_4",
+        "role": "Visual Designer",
+        "boss_id": "person_35",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_37",
+        "name": "Lois McCullough",
+        "email": "Reba_Simonis86@acme3.com",
+        "department_id": "dept_4",
+        "role": "UX Researcher",
+        "boss_id": "person_35",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_38",
+        "name": "Sue Streich",
+        "email": "Fatima_Connelly68@acme3.com",
+        "department_id": "dept_4",
+        "role": "Visual Designer",
+        "boss_id": "person_35",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_39",
+        "name": "Bryant Howell",
+        "email": "Brad_Moen@acme3.com",
+        "department_id": "dept_4",
+        "role": "UX Researcher",
+        "boss_id": "person_35",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_40",
+        "name": "Lynn Carter",
+        "email": "Thora.Ryan@acme3.com",
+        "department_id": "dept_4",
+        "role": "UI Designer",
+        "boss_id": "person_35",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_41",
+        "name": "Johnny Hammes-Braun",
+        "email": "Ole.Wintheiser@acme3.com",
+        "department_id": "dept_4",
+        "role": "Visual Designer",
+        "boss_id": "person_35",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_42",
+        "name": "Delia Jacobs",
+        "email": "Gabrielle_Muller@acme3.com",
+        "department_id": "dept_4",
+        "role": "UI Designer",
+        "boss_id": "person_35",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_43",
+        "name": "Jean Raynor-Fay",
+        "email": "Cletus.Braun55@acme3.com",
+        "department_id": "dept_5",
+        "role": "Sales Director",
+        "boss_id": null,
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_44",
+        "name": "Lori Littel",
+        "email": "Ally.Considine55@acme3.com",
+        "department_id": "dept_5",
+        "role": "Sales Representative",
+        "boss_id": "person_43",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_45",
+        "name": "Renee Gerhold",
+        "email": "Jimmy_Cummings99@acme3.com",
+        "department_id": "dept_5",
+        "role": "Sales Analyst",
+        "boss_id": "person_43",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_46",
+        "name": "Rosa Nitzsche",
+        "email": "Betsy_Cremin46@acme3.com",
+        "department_id": "dept_5",
+        "role": "Sales Analyst",
+        "boss_id": "person_43",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_47",
+        "name": "Evelyn Runolfsson",
+        "email": "Colt.Casper@acme3.com",
+        "department_id": "dept_5",
+        "role": "Sales Analyst",
+        "boss_id": "person_43",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_48",
+        "name": "Mrs. Delia Upton",
+        "email": "Roselyn.Ledner@acme3.com",
+        "department_id": "dept_5",
+        "role": "Account Manager",
+        "boss_id": "person_43",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_49",
+        "name": "Jamie McDermott",
+        "email": "Jo.Ullrich@acme3.com",
+        "department_id": "dept_5",
+        "role": "Account Manager",
+        "boss_id": "person_43",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_50",
+        "name": "Emily Torp",
+        "email": "Abigail_MacGyver78@acme3.com",
+        "department_id": "dept_5",
+        "role": "Sales Analyst",
+        "boss_id": "person_43",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_51",
+        "name": "Francisco Gerlach Jr.",
+        "email": "Roscoe_Goyette@acme3.com",
+        "department_id": "dept_5",
+        "role": "Sales Representative",
+        "boss_id": "person_43",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_52",
+        "name": "Maggie Schuppe",
+        "email": "Sarai.Farrell78@acme3.com",
+        "department_id": "dept_6",
+        "role": "Finance Director",
+        "boss_id": null,
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_53",
+        "name": "Janie Murphy",
+        "email": "Shaniya.OKon@acme3.com",
+        "department_id": "dept_6",
+        "role": "Budget Manager",
+        "boss_id": "person_52",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_54",
+        "name": "Jean Lynch",
+        "email": "Scotty.Davis40@acme3.com",
+        "department_id": "dept_6",
+        "role": "Financial Analyst",
+        "boss_id": "person_52",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_55",
+        "name": "Kerry Zboncak",
+        "email": "Rosanna.Spencer@acme3.com",
+        "department_id": "dept_6",
+        "role": "Financial Analyst",
+        "boss_id": "person_52",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_56",
+        "name": "Sandy Kunde",
+        "email": "Odessa.Cummerata41@acme3.com",
+        "department_id": "dept_6",
+        "role": "Financial Analyst",
+        "boss_id": "person_52",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_57",
+        "name": "James Schaden",
+        "email": "Elmore.Sanford56@acme3.com",
+        "department_id": "dept_6",
+        "role": "Financial Analyst",
+        "boss_id": "person_52",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_58",
+        "name": "Dewey Lehner",
+        "email": "Shemar_Hirthe43@acme3.com",
+        "department_id": "dept_6",
+        "role": "Accountant",
+        "boss_id": "person_52",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_59",
+        "name": "Jenna Kuphal-Smith",
+        "email": "Myriam_Mertz@acme3.com",
+        "department_id": "dept_6",
+        "role": "Financial Analyst",
+        "boss_id": "person_52",
+        "communication_style": "diplomatic"
+      }
+    ]
+  },
+  "emails": [
+    {
+      "id": "email_0",
+      "threadId": "thread_0",
+      "subject": "Requirements for niches B2C",
+      "from": "Eladio_Wisoky@acme3.com",
+      "fromName": "Marty Rolfson MD",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Maximus_Ruecker34@acme3.com",
+        "Walter_Cole@acme3.com"
+      ],
+      "toNames": [
+        "Camille Williamson",
+        "Kent Rippin"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-28T02:12:08.117Z",
+      "body": "Hi Camille,\n\nCan we discuss Requirements for niches B2C in more detail? I think there are some aspects we need to clarify before moving forward.\n\nThanks,\nMarty Rolfson MD"
+    },
+    {
+      "id": "email_1",
+      "threadId": "thread_0",
+      "subject": "Requirements for niches B2C",
+      "from": "Maximus_Ruecker34@acme3.com",
+      "fromName": "Camille Williamson",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Eladio_Wisoky@acme3.com",
+        "Walter_Cole@acme3.com"
+      ],
+      "toNames": [
+        "Marty Rolfson MD",
+        "Kent Rippin"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-28T18:31:25.105Z",
+      "body": "Hi Marty,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nCamille Williamson"
+    },
+    {
+      "id": "email_2",
+      "threadId": "thread_0",
+      "subject": "Requirements for niches B2C",
+      "from": "Walter_Cole@acme3.com",
+      "fromName": "Kent Rippin",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Eladio_Wisoky@acme3.com",
+        "Maximus_Ruecker34@acme3.com"
+      ],
+      "toNames": [
+        "Marty Rolfson MD",
+        "Camille Williamson"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-29T11:26:17.201Z",
+      "body": "Hi Marty,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nKent Rippin"
+    },
+    {
+      "id": "email_3",
+      "threadId": "thread_1",
+      "subject": "Requirements for eyeballs robust",
+      "from": "Karina.Jacobs58@acme3.com",
+      "fromName": "Mr. Marc Beahan",
+      "fromRole": "Product Director",
+      "fromDepartment": "Product",
+      "to": [
+        "Maximus_Ruecker34@acme3.com",
+        "Makenzie.Murray97@acme3.com"
+      ],
+      "toNames": [
+        "Camille Williamson",
+        "Wilfred Bednar"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-31T19:22:16.115Z",
+      "body": "Hi Camille,\n\nI wanted to bring up Requirements for eyeballs robust for discussion. We need to make some decisions soon. What are your thoughts on this?\n\nThank you for your attention to this matter,\nMr. Marc Beahan\nProduct Director\nKarina.Jacobs58@acme3.com"
+    },
+    {
+      "id": "email_4",
+      "threadId": "thread_1",
+      "subject": "Requirements for eyeballs robust",
+      "from": "Maximus_Ruecker34@acme3.com",
+      "fromName": "Camille Williamson",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Karina.Jacobs58@acme3.com",
+        "Makenzie.Murray97@acme3.com"
+      ],
+      "toNames": [
+        "Mr. Marc Beahan",
+        "Wilfred Bednar"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-31T19:52:55.369Z",
+      "body": "Hi Mr.,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nCheers,\nCamille Williamson"
+    },
+    {
+      "id": "email_5",
+      "threadId": "thread_1",
+      "subject": "Requirements for eyeballs robust",
+      "from": "Makenzie.Murray97@acme3.com",
+      "fromName": "Wilfred Bednar",
+      "fromRole": "Software Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Karina.Jacobs58@acme3.com",
+        "Maximus_Ruecker34@acme3.com"
+      ],
+      "toNames": [
+        "Mr. Marc Beahan",
+        "Camille Williamson"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-31T20:22:34.975Z",
+      "body": "Hi Mr.,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nWilfred Bednar\nSoftware Engineer\nMakenzie.Murray97@acme3.com"
+    },
+    {
+      "id": "email_6",
+      "threadId": "thread_1",
+      "subject": "Requirements for eyeballs robust",
+      "from": "Maximus_Ruecker34@acme3.com",
+      "fromName": "Camille Williamson",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Karina.Jacobs58@acme3.com",
+        "Makenzie.Murray97@acme3.com"
+      ],
+      "toNames": [
+        "Mr. Marc Beahan",
+        "Wilfred Bednar"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-31T20:52:49.355Z",
+      "body": "Hi Mr.,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nCamille Williamson"
+    },
+    {
+      "id": "email_7",
+      "threadId": "thread_1",
+      "subject": "Requirements for eyeballs robust",
+      "from": "Makenzie.Murray97@acme3.com",
+      "fromName": "Wilfred Bednar",
+      "fromRole": "Software Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Karina.Jacobs58@acme3.com",
+        "Maximus_Ruecker34@acme3.com"
+      ],
+      "toNames": [
+        "Mr. Marc Beahan",
+        "Camille Williamson"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-31T21:24:01.231Z",
+      "body": "Hi Mr.,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nWilfred Bednar\nSoftware Engineer\nMakenzie.Murray97@acme3.com"
+    },
+    {
+      "id": "email_8",
+      "threadId": "thread_1",
+      "subject": "Requirements for eyeballs robust",
+      "from": "Maximus_Ruecker34@acme3.com",
+      "fromName": "Camille Williamson",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Karina.Jacobs58@acme3.com",
+        "Makenzie.Murray97@acme3.com"
+      ],
+      "toNames": [
+        "Mr. Marc Beahan",
+        "Wilfred Bednar"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-31T21:58:59.252Z",
+      "body": "Hi Mr.,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nCamille Williamson"
+    },
+    {
+      "id": "email_9",
+      "threadId": "thread_2",
+      "subject": "Requirements for bandwidth interactive",
+      "from": "Toney.Reynolds@acme3.com",
+      "fromName": "Yvette Steuber",
+      "fromRole": "Product Owner",
+      "fromDepartment": "Product",
+      "to": [
+        "Corbin_Buckridge@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Tina Hagenes",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-25T08:31:01.791Z",
+      "body": "Hi Tina,\n\nI wanted to bring up Requirements for bandwidth interactive for discussion. We need to make some decisions soon. What are your thoughts on this?\n\nKind regards,\nYvette Steuber\nProduct Owner"
+    },
+    {
+      "id": "email_10",
+      "threadId": "thread_2",
+      "subject": "Requirements for bandwidth interactive",
+      "from": "Toney.Reynolds@acme3.com",
+      "fromName": "Yvette Steuber",
+      "fromRole": "Product Owner",
+      "fromDepartment": "Product",
+      "to": [
+        "Corbin_Buckridge@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Tina Hagenes",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-25T19:29:26.753Z",
+      "body": "Hi Tina,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nYvette Steuber\nProduct Owner"
+    },
+    {
+      "id": "email_11",
+      "threadId": "thread_2",
+      "subject": "Requirements for bandwidth interactive",
+      "from": "Toney.Reynolds@acme3.com",
+      "fromName": "Yvette Steuber",
+      "fromRole": "Product Owner",
+      "fromDepartment": "Product",
+      "to": [
+        "Corbin_Buckridge@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Tina Hagenes",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-26T08:39:13.082Z",
+      "body": "Hi Tina,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nYvette Steuber\nProduct Owner"
+    },
+    {
+      "id": "email_12",
+      "threadId": "thread_2",
+      "subject": "Requirements for bandwidth interactive",
+      "from": "Corbin_Buckridge@acme3.com",
+      "fromName": "Tina Hagenes",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-27T00:00:16.335Z",
+      "body": "Hi Yvette,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nTina Hagenes\nCampaign Manager\nCorbin_Buckridge@acme3.com"
+    },
+    {
+      "id": "email_13",
+      "threadId": "thread_2",
+      "subject": "Requirements for bandwidth interactive",
+      "from": "Corbin_Buckridge@acme3.com",
+      "fromName": "Tina Hagenes",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-27T17:44:45.964Z",
+      "body": "Hi Yvette,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nBest regards,\nTina Hagenes\nCampaign Manager\nCorbin_Buckridge@acme3.com"
+    },
+    {
+      "id": "email_14",
+      "threadId": "thread_2",
+      "subject": "Requirements for bandwidth interactive",
+      "from": "Shaina_Wintheiser@acme3.com",
+      "fromName": "Julio Franecki",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Corbin_Buckridge@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Tina Hagenes"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-28T18:21:22.873Z",
+      "body": "Hi Yvette,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nJulio Franecki"
+    },
+    {
+      "id": "email_15",
+      "threadId": "thread_2",
+      "subject": "Requirements for bandwidth interactive",
+      "from": "Shaina_Wintheiser@acme3.com",
+      "fromName": "Julio Franecki",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Corbin_Buckridge@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Tina Hagenes"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-29T17:36:39.456Z",
+      "body": "Hi Yvette,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nJulio Franecki"
+    },
+    {
+      "id": "email_16",
+      "threadId": "thread_3",
+      "subject": "Requirements for e-business real-time",
+      "from": "Gussie.Koepp0@acme3.com",
+      "fromName": "Warren Kub II",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Princess_Wuckert7@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Brian Hand",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-22T11:47:36.200Z",
+      "body": "Hi Brian,\n\nCan we discuss Requirements for e-business real-time in more detail? I think there are some aspects we need to clarify before moving forward.\n\nCheers,\nWarren Kub II"
+    },
+    {
+      "id": "email_17",
+      "threadId": "thread_3",
+      "subject": "Requirements for e-business real-time",
+      "from": "Princess_Wuckert7@acme3.com",
+      "fromName": "Brian Hand",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Gussie.Koepp0@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Warren Kub II",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-23T12:53:23.791Z",
+      "body": "Hi Warren,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nBrian Hand"
+    },
+    {
+      "id": "email_18",
+      "threadId": "thread_3",
+      "subject": "Requirements for e-business real-time",
+      "from": "Gussie.Koepp0@acme3.com",
+      "fromName": "Warren Kub II",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Princess_Wuckert7@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Brian Hand",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-24T19:24:25.511Z",
+      "body": "Hi Brian,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nCheers,\nWarren Kub II"
+    },
+    {
+      "id": "email_19",
+      "threadId": "thread_3",
+      "subject": "Requirements for e-business real-time",
+      "from": "Shaina_Wintheiser@acme3.com",
+      "fromName": "Julio Franecki",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Gussie.Koepp0@acme3.com",
+        "Princess_Wuckert7@acme3.com"
+      ],
+      "toNames": [
+        "Warren Kub II",
+        "Brian Hand"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-26T02:55:59.721Z",
+      "body": "Hi Warren,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nCheers,\nJulio Franecki"
+    },
+    {
+      "id": "email_20",
+      "threadId": "thread_3",
+      "subject": "Requirements for e-business real-time",
+      "from": "Shaina_Wintheiser@acme3.com",
+      "fromName": "Julio Franecki",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Gussie.Koepp0@acme3.com",
+        "Princess_Wuckert7@acme3.com"
+      ],
+      "toNames": [
+        "Warren Kub II",
+        "Brian Hand"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-27T02:17:34.074Z",
+      "body": "Hi Warren,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nJulio Franecki"
+    },
+    {
+      "id": "email_21",
+      "threadId": "thread_3",
+      "subject": "Requirements for e-business real-time",
+      "from": "Princess_Wuckert7@acme3.com",
+      "fromName": "Brian Hand",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Gussie.Koepp0@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Warren Kub II",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-27T19:28:07.572Z",
+      "body": "Hi Warren,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nBrian Hand"
+    },
+    {
+      "id": "email_22",
+      "threadId": "thread_3",
+      "subject": "Requirements for e-business real-time",
+      "from": "Shaina_Wintheiser@acme3.com",
+      "fromName": "Julio Franecki",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Gussie.Koepp0@acme3.com",
+        "Princess_Wuckert7@acme3.com"
+      ],
+      "toNames": [
+        "Warren Kub II",
+        "Brian Hand"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-28T19:53:53.243Z",
+      "body": "Hi Warren,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nJulio Franecki"
+    },
+    {
+      "id": "email_23",
+      "threadId": "thread_3",
+      "subject": "Requirements for e-business real-time",
+      "from": "Gussie.Koepp0@acme3.com",
+      "fromName": "Warren Kub II",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Princess_Wuckert7@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Brian Hand",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-29T22:10:05.302Z",
+      "body": "Hi Brian,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nWarren Kub II"
+    },
+    {
+      "id": "email_24",
+      "threadId": "thread_4",
+      "subject": "Priority for niches enterprise",
+      "from": "Gussie.Koepp0@acme3.com",
+      "fromName": "Warren Kub II",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Ramiro.Walker@acme3.com",
+        "Bethany_Shields7@acme3.com"
+      ],
+      "toNames": [
+        "Chelsea Langosh",
+        "Chris Schmitt"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-12T22:27:40.582Z",
+      "body": "Hi Chelsea,\n\nCan we discuss Priority for niches enterprise in more detail? I think there are some aspects we need to clarify before moving forward.\n\nCheers,\nWarren Kub II"
+    },
+    {
+      "id": "email_25",
+      "threadId": "thread_4",
+      "subject": "Priority for niches enterprise",
+      "from": "Bethany_Shields7@acme3.com",
+      "fromName": "Chris Schmitt",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Gussie.Koepp0@acme3.com",
+        "Ramiro.Walker@acme3.com"
+      ],
+      "toNames": [
+        "Warren Kub II",
+        "Chelsea Langosh"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-19T06:33:16.091Z",
+      "body": "Hi Warren,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nChris Schmitt\nQA Engineer\nBethany_Shields7@acme3.com"
+    },
+    {
+      "id": "email_26",
+      "threadId": "thread_4",
+      "subject": "Priority for niches enterprise",
+      "from": "Bethany_Shields7@acme3.com",
+      "fromName": "Chris Schmitt",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Gussie.Koepp0@acme3.com",
+        "Ramiro.Walker@acme3.com"
+      ],
+      "toNames": [
+        "Warren Kub II",
+        "Chelsea Langosh"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-26T01:44:43.092Z",
+      "body": "Hi Warren,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nChris Schmitt\nQA Engineer\nBethany_Shields7@acme3.com"
+    },
+    {
+      "id": "email_27",
+      "threadId": "thread_5",
+      "subject": "Feature action-items sexy",
+      "from": "Mohammad_Daugherty@acme3.com",
+      "fromName": "Salvatore DuBuque",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Brice.Frami@acme3.com",
+        "Erik.Kuhlman58@acme3.com"
+      ],
+      "toNames": [
+        "Felipe Franecki",
+        "Dustin Lang II"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-29T21:33:39.293Z",
+      "body": "Hi Felipe,\n\nCan we discuss Feature action-items sexy in more detail? I think there are some aspects we need to clarify before moving forward.\n\nBest regards,\nSalvatore DuBuque\nBusiness Analyst\nMohammad_Daugherty@acme3.com"
+    },
+    {
+      "id": "email_28",
+      "threadId": "thread_5",
+      "subject": "Feature action-items sexy",
+      "from": "Erik.Kuhlman58@acme3.com",
+      "fromName": "Dustin Lang II",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Mohammad_Daugherty@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Salvatore DuBuque",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T04:28:03.096Z",
+      "body": "Hi Salvatore,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nRegards,\nDustin Lang II\nQA Engineer"
+    },
+    {
+      "id": "email_29",
+      "threadId": "thread_5",
+      "subject": "Feature action-items sexy",
+      "from": "Mohammad_Daugherty@acme3.com",
+      "fromName": "Salvatore DuBuque",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Brice.Frami@acme3.com",
+        "Erik.Kuhlman58@acme3.com"
+      ],
+      "toNames": [
+        "Felipe Franecki",
+        "Dustin Lang II"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T10:53:09.131Z",
+      "body": "Hi Felipe,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nSalvatore DuBuque\nBusiness Analyst\nMohammad_Daugherty@acme3.com"
+    },
+    {
+      "id": "email_30",
+      "threadId": "thread_5",
+      "subject": "Feature action-items sexy",
+      "from": "Brice.Frami@acme3.com",
+      "fromName": "Felipe Franecki",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Mohammad_Daugherty@acme3.com",
+        "Erik.Kuhlman58@acme3.com"
+      ],
+      "toNames": [
+        "Salvatore DuBuque",
+        "Dustin Lang II"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T15:38:26.975Z",
+      "body": "Hi Salvatore,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nRegards,\nFelipe Franecki\nCampaign Manager"
+    },
+    {
+      "id": "email_31",
+      "threadId": "thread_5",
+      "subject": "Feature action-items sexy",
+      "from": "Mohammad_Daugherty@acme3.com",
+      "fromName": "Salvatore DuBuque",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Brice.Frami@acme3.com",
+        "Erik.Kuhlman58@acme3.com"
+      ],
+      "toNames": [
+        "Felipe Franecki",
+        "Dustin Lang II"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T21:58:50.193Z",
+      "body": "Hi Felipe,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nSalvatore DuBuque\nBusiness Analyst\nMohammad_Daugherty@acme3.com"
+    },
+    {
+      "id": "email_32",
+      "threadId": "thread_5",
+      "subject": "Feature action-items sexy",
+      "from": "Erik.Kuhlman58@acme3.com",
+      "fromName": "Dustin Lang II",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Mohammad_Daugherty@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Salvatore DuBuque",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-31T01:05:17.155Z",
+      "body": "Hi Salvatore,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nRegards,\nDustin Lang II\nQA Engineer"
+    },
+    {
+      "id": "email_33",
+      "threadId": "thread_5",
+      "subject": "Feature action-items sexy",
+      "from": "Erik.Kuhlman58@acme3.com",
+      "fromName": "Dustin Lang II",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Mohammad_Daugherty@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Salvatore DuBuque",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-31T07:06:50.096Z",
+      "body": "Hi Salvatore,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nRegards,\nDustin Lang II\nQA Engineer"
+    },
+    {
+      "id": "email_34",
+      "threadId": "thread_5",
+      "subject": "Feature action-items sexy",
+      "from": "Mohammad_Daugherty@acme3.com",
+      "fromName": "Salvatore DuBuque",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Brice.Frami@acme3.com",
+        "Erik.Kuhlman58@acme3.com"
+      ],
+      "toNames": [
+        "Felipe Franecki",
+        "Dustin Lang II"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-31T10:36:46.122Z",
+      "body": "Hi Felipe,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nSalvatore DuBuque\nBusiness Analyst\nMohammad_Daugherty@acme3.com"
+    },
+    {
+      "id": "email_35",
+      "threadId": "thread_6",
+      "subject": "Priority for bandwidth magnetic",
+      "from": "Eladio_Wisoky@acme3.com",
+      "fromName": "Marty Rolfson MD",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Brice.Frami@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Felipe Franecki",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-16T02:16:02.906Z",
+      "body": "Hi Felipe,\n\nI wanted to bring up Priority for bandwidth magnetic for discussion. We need to make some decisions soon. What are your thoughts on this?\n\nThanks,\nMarty Rolfson MD"
+    },
+    {
+      "id": "email_36",
+      "threadId": "thread_6",
+      "subject": "Priority for bandwidth magnetic",
+      "from": "Shaina_Wintheiser@acme3.com",
+      "fromName": "Julio Franecki",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Eladio_Wisoky@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Marty Rolfson MD",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-19T17:09:36.390Z",
+      "body": "Hi Marty,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nJulio Franecki"
+    },
+    {
+      "id": "email_37",
+      "threadId": "thread_6",
+      "subject": "Priority for bandwidth magnetic",
+      "from": "Shaina_Wintheiser@acme3.com",
+      "fromName": "Julio Franecki",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Eladio_Wisoky@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Marty Rolfson MD",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-22T16:37:27.491Z",
+      "body": "Hi Marty,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nCheers,\nJulio Franecki"
+    },
+    {
+      "id": "email_38",
+      "threadId": "thread_6",
+      "subject": "Priority for bandwidth magnetic",
+      "from": "Eladio_Wisoky@acme3.com",
+      "fromName": "Marty Rolfson MD",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Brice.Frami@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Felipe Franecki",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-26T09:57:12.597Z",
+      "body": "Hi Felipe,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nMarty Rolfson MD"
+    },
+    {
+      "id": "email_39",
+      "threadId": "thread_7",
+      "subject": "Priority for synergies real-time",
+      "from": "Toney.Reynolds@acme3.com",
+      "fromName": "Yvette Steuber",
+      "fromRole": "Product Owner",
+      "fromDepartment": "Product",
+      "to": [
+        "Maximus_Ruecker34@acme3.com",
+        "Erin.Hammes@acme3.com"
+      ],
+      "toNames": [
+        "Camille Williamson",
+        "Levi Lakin"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-07T05:29:24.343Z",
+      "body": "Hi Camille,\n\nI wanted to bring up Priority for synergies real-time for discussion. We need to make some decisions soon. What are your thoughts on this?\n\nKind regards,\nYvette Steuber\nProduct Owner"
+    },
+    {
+      "id": "email_40",
+      "threadId": "thread_7",
+      "subject": "Priority for synergies real-time",
+      "from": "Maximus_Ruecker34@acme3.com",
+      "fromName": "Camille Williamson",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Erin.Hammes@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Levi Lakin"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-11T10:53:36.061Z",
+      "body": "Hi Yvette,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nCamille Williamson"
+    },
+    {
+      "id": "email_41",
+      "threadId": "thread_7",
+      "subject": "Priority for synergies real-time",
+      "from": "Erin.Hammes@acme3.com",
+      "fromName": "Levi Lakin",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Maximus_Ruecker34@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Camille Williamson"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-14T06:18:01.260Z",
+      "body": "Hi Yvette,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nLevi Lakin\nQA Engineer"
+    },
+    {
+      "id": "email_42",
+      "threadId": "thread_7",
+      "subject": "Priority for synergies real-time",
+      "from": "Erin.Hammes@acme3.com",
+      "fromName": "Levi Lakin",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Maximus_Ruecker34@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Camille Williamson"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-17T13:27:43.704Z",
+      "body": "Hi Yvette,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nLevi Lakin\nQA Engineer"
+    },
+    {
+      "id": "email_43",
+      "threadId": "thread_7",
+      "subject": "Priority for synergies real-time",
+      "from": "Maximus_Ruecker34@acme3.com",
+      "fromName": "Camille Williamson",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Erin.Hammes@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Levi Lakin"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-22T01:48:38.545Z",
+      "body": "Hi Yvette,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nCamille Williamson"
+    },
+    {
+      "id": "email_44",
+      "threadId": "thread_7",
+      "subject": "Priority for synergies real-time",
+      "from": "Maximus_Ruecker34@acme3.com",
+      "fromName": "Camille Williamson",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Erin.Hammes@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Levi Lakin"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-26T19:21:10.660Z",
+      "body": "Hi Yvette,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nCamille Williamson"
+    },
+    {
+      "id": "email_45",
+      "threadId": "thread_8",
+      "subject": "Priority for users distributed",
+      "from": "Toney.Reynolds@acme3.com",
+      "fromName": "Yvette Steuber",
+      "fromRole": "Product Owner",
+      "fromDepartment": "Product",
+      "to": [
+        "Leda_Simonis@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Jackie Buckridge I",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-09T11:16:23.989Z",
+      "body": "Hi Jackie,\n\nCan we discuss Priority for users distributed in more detail? I think there are some aspects we need to clarify before moving forward.\n\nKind regards,\nYvette Steuber\nProduct Owner"
+    },
+    {
+      "id": "email_46",
+      "threadId": "thread_8",
+      "subject": "Priority for users distributed",
+      "from": "Leda_Simonis@acme3.com",
+      "fromName": "Jackie Buckridge I",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-12T07:29:35.557Z",
+      "body": "Hi Yvette,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nJackie Buckridge I\nCampaign Manager\nLeda_Simonis@acme3.com"
+    },
+    {
+      "id": "email_47",
+      "threadId": "thread_8",
+      "subject": "Priority for users distributed",
+      "from": "Shaina_Wintheiser@acme3.com",
+      "fromName": "Julio Franecki",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Leda_Simonis@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Jackie Buckridge I"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-18T06:06:57.232Z",
+      "body": "Hi Yvette,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nCheers,\nJulio Franecki"
+    },
+    {
+      "id": "email_48",
+      "threadId": "thread_8",
+      "subject": "Priority for users distributed",
+      "from": "Toney.Reynolds@acme3.com",
+      "fromName": "Yvette Steuber",
+      "fromRole": "Product Owner",
+      "fromDepartment": "Product",
+      "to": [
+        "Leda_Simonis@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Jackie Buckridge I",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-22T18:56:07.235Z",
+      "body": "Hi Jackie,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nYvette Steuber\nProduct Owner"
+    },
+    {
+      "id": "email_49",
+      "threadId": "thread_9",
+      "subject": "Feature bandwidth customized",
+      "from": "Paolo.Anderson63@acme3.com",
+      "fromName": "Nadine Champlin-Haley",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Princess_Wuckert7@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Brian Hand",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-17T13:27:07.861Z",
+      "body": "Hi Brian,\n\nI wanted to bring up Feature bandwidth customized for discussion. We need to make some decisions soon. What are your thoughts on this?\n\nThanks,\nNadine Champlin-Haley"
+    },
+    {
+      "id": "email_50",
+      "threadId": "thread_9",
+      "subject": "Feature bandwidth customized",
+      "from": "Paolo.Anderson63@acme3.com",
+      "fromName": "Nadine Champlin-Haley",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Princess_Wuckert7@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Brian Hand",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-20T04:35:16.523Z",
+      "body": "Hi Brian,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nNadine Champlin-Haley"
+    },
+    {
+      "id": "email_51",
+      "threadId": "thread_9",
+      "subject": "Feature bandwidth customized",
+      "from": "Shaina_Wintheiser@acme3.com",
+      "fromName": "Julio Franecki",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Princess_Wuckert7@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Brian Hand"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-22T21:25:10.558Z",
+      "body": "Hi Nadine,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nJulio Franecki"
+    },
+    {
+      "id": "email_52",
+      "threadId": "thread_9",
+      "subject": "Feature bandwidth customized",
+      "from": "Princess_Wuckert7@acme3.com",
+      "fromName": "Brian Hand",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-24T06:07:50.149Z",
+      "body": "Hi Nadine,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nCheers,\nBrian Hand"
+    },
+    {
+      "id": "email_53",
+      "threadId": "thread_9",
+      "subject": "Feature bandwidth customized",
+      "from": "Shaina_Wintheiser@acme3.com",
+      "fromName": "Julio Franecki",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Princess_Wuckert7@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Brian Hand"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-26T12:21:15.789Z",
+      "body": "Hi Nadine,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nJulio Franecki"
+    },
+    {
+      "id": "email_54",
+      "threadId": "thread_10",
+      "subject": "Requirements for functionalities web-enabled",
+      "from": "Gussie.Koepp0@acme3.com",
+      "fromName": "Warren Kub II",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Leda_Simonis@acme3.com",
+        "Erin.Hammes@acme3.com"
+      ],
+      "toNames": [
+        "Jackie Buckridge I",
+        "Levi Lakin"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-07T15:54:44.671Z",
+      "body": "Hi Jackie,\n\nCan we discuss Requirements for functionalities web-enabled in more detail? I think there are some aspects we need to clarify before moving forward.\n\nCheers,\nWarren Kub II"
+    },
+    {
+      "id": "email_55",
+      "threadId": "thread_10",
+      "subject": "Requirements for functionalities web-enabled",
+      "from": "Leda_Simonis@acme3.com",
+      "fromName": "Jackie Buckridge I",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Gussie.Koepp0@acme3.com",
+        "Erin.Hammes@acme3.com"
+      ],
+      "toNames": [
+        "Warren Kub II",
+        "Levi Lakin"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-10T01:38:43.858Z",
+      "body": "Hi Warren,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nJackie Buckridge I\nCampaign Manager\nLeda_Simonis@acme3.com"
+    },
+    {
+      "id": "email_56",
+      "threadId": "thread_10",
+      "subject": "Requirements for functionalities web-enabled",
+      "from": "Erin.Hammes@acme3.com",
+      "fromName": "Levi Lakin",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Gussie.Koepp0@acme3.com",
+        "Leda_Simonis@acme3.com"
+      ],
+      "toNames": [
+        "Warren Kub II",
+        "Jackie Buckridge I"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-15T18:21:55.417Z",
+      "body": "Hi Warren,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nLevi Lakin\nQA Engineer"
+    },
+    {
+      "id": "email_57",
+      "threadId": "thread_10",
+      "subject": "Requirements for functionalities web-enabled",
+      "from": "Gussie.Koepp0@acme3.com",
+      "fromName": "Warren Kub II",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Leda_Simonis@acme3.com",
+        "Erin.Hammes@acme3.com"
+      ],
+      "toNames": [
+        "Jackie Buckridge I",
+        "Levi Lakin"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-21T20:22:10.252Z",
+      "body": "Hi Jackie,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nWarren Kub II"
+    },
+    {
+      "id": "email_58",
+      "threadId": "thread_11",
+      "subject": "Requirements for applications leading-edge",
+      "from": "Paolo.Anderson63@acme3.com",
+      "fromName": "Nadine Champlin-Haley",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Kraig.Bradtke22@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Duane Erdman",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-14T01:45:58.120Z",
+      "body": "Hi Duane,\n\nI wanted to bring up Requirements for applications leading-edge for discussion. We need to make some decisions soon. What are your thoughts on this?\n\nThanks,\nNadine Champlin-Haley"
+    },
+    {
+      "id": "email_59",
+      "threadId": "thread_11",
+      "subject": "Requirements for applications leading-edge",
+      "from": "Paolo.Anderson63@acme3.com",
+      "fromName": "Nadine Champlin-Haley",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Kraig.Bradtke22@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Duane Erdman",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-16T13:56:13.403Z",
+      "body": "Hi Duane,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nNadine Champlin-Haley"
+    },
+    {
+      "id": "email_60",
+      "threadId": "thread_11",
+      "subject": "Requirements for applications leading-edge",
+      "from": "Kraig.Bradtke22@acme3.com",
+      "fromName": "Duane Erdman",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-22T05:10:21.787Z",
+      "body": "Hi Nadine,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nDuane Erdman\nMarketing Specialist\nKraig.Bradtke22@acme3.com"
+    },
+    {
+      "id": "email_61",
+      "threadId": "thread_12",
+      "subject": "Feature e-commerce sexy",
+      "from": "Mohammad_Daugherty@acme3.com",
+      "fromName": "Salvatore DuBuque",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Ramiro.Walker@acme3.com",
+        "Brent.Feil@acme3.com"
+      ],
+      "toNames": [
+        "Chelsea Langosh",
+        "Bethany McDermott"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-14T11:31:32.497Z",
+      "body": "Hi Chelsea,\n\nCan we discuss Feature e-commerce sexy in more detail? I think there are some aspects we need to clarify before moving forward.\n\nBest regards,\nSalvatore DuBuque\nBusiness Analyst\nMohammad_Daugherty@acme3.com"
+    },
+    {
+      "id": "email_62",
+      "threadId": "thread_12",
+      "subject": "Feature e-commerce sexy",
+      "from": "Ramiro.Walker@acme3.com",
+      "fromName": "Chelsea Langosh",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Mohammad_Daugherty@acme3.com",
+        "Brent.Feil@acme3.com"
+      ],
+      "toNames": [
+        "Salvatore DuBuque",
+        "Bethany McDermott"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-16T11:10:23.811Z",
+      "body": "Hi Salvatore,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nChelsea Langosh"
+    },
+    {
+      "id": "email_63",
+      "threadId": "thread_12",
+      "subject": "Feature e-commerce sexy",
+      "from": "Brent.Feil@acme3.com",
+      "fromName": "Bethany McDermott",
+      "fromRole": "Engineering Director",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Mohammad_Daugherty@acme3.com",
+        "Ramiro.Walker@acme3.com"
+      ],
+      "toNames": [
+        "Salvatore DuBuque",
+        "Chelsea Langosh"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-18T04:05:28.884Z",
+      "body": "Hi Salvatore,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThanks,\nBethany McDermott"
+    },
+    {
+      "id": "email_64",
+      "threadId": "thread_12",
+      "subject": "Feature e-commerce sexy",
+      "from": "Brent.Feil@acme3.com",
+      "fromName": "Bethany McDermott",
+      "fromRole": "Engineering Director",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Mohammad_Daugherty@acme3.com",
+        "Ramiro.Walker@acme3.com"
+      ],
+      "toNames": [
+        "Salvatore DuBuque",
+        "Chelsea Langosh"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-21T23:57:55.324Z",
+      "body": "Hi Salvatore,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nBethany McDermott"
+    },
+    {
+      "id": "email_65",
+      "threadId": "thread_12",
+      "subject": "Feature e-commerce sexy",
+      "from": "Ramiro.Walker@acme3.com",
+      "fromName": "Chelsea Langosh",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Mohammad_Daugherty@acme3.com",
+        "Brent.Feil@acme3.com"
+      ],
+      "toNames": [
+        "Salvatore DuBuque",
+        "Bethany McDermott"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-25T04:30:38.826Z",
+      "body": "Hi Salvatore,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nChelsea Langosh"
+    },
+    {
+      "id": "email_66",
+      "threadId": "thread_13",
+      "subject": "Priority for niches intuitive",
+      "from": "Paolo.Anderson63@acme3.com",
+      "fromName": "Nadine Champlin-Haley",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Cedrick.Schuppe19@acme3.com",
+        "Brent.Feil@acme3.com"
+      ],
+      "toNames": [
+        "Ray Rau",
+        "Bethany McDermott"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-07T15:42:59.879Z",
+      "body": "Hi Ray,\n\nI wanted to bring up Priority for niches intuitive for discussion. We need to make some decisions soon. What are your thoughts on this?\n\nThanks,\nNadine Champlin-Haley"
+    },
+    {
+      "id": "email_67",
+      "threadId": "thread_13",
+      "subject": "Priority for niches intuitive",
+      "from": "Brent.Feil@acme3.com",
+      "fromName": "Bethany McDermott",
+      "fromRole": "Engineering Director",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Cedrick.Schuppe19@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Ray Rau"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-12T01:38:05.520Z",
+      "body": "Hi Nadine,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nBethany McDermott"
+    },
+    {
+      "id": "email_68",
+      "threadId": "thread_13",
+      "subject": "Priority for niches intuitive",
+      "from": "Cedrick.Schuppe19@acme3.com",
+      "fromName": "Ray Rau",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Brent.Feil@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Bethany McDermott"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-16T01:49:23.902Z",
+      "body": "Hi Nadine,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nRay Rau"
+    },
+    {
+      "id": "email_69",
+      "threadId": "thread_13",
+      "subject": "Priority for niches intuitive",
+      "from": "Cedrick.Schuppe19@acme3.com",
+      "fromName": "Ray Rau",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Brent.Feil@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Bethany McDermott"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-18T06:02:40.506Z",
+      "body": "Hi Nadine,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nCheers,\nRay Rau"
+    },
+    {
+      "id": "email_70",
+      "threadId": "thread_13",
+      "subject": "Priority for niches intuitive",
+      "from": "Cedrick.Schuppe19@acme3.com",
+      "fromName": "Ray Rau",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Brent.Feil@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Bethany McDermott"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-22T15:20:25.946Z",
+      "body": "Hi Nadine,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nCheers,\nRay Rau"
+    },
+    {
+      "id": "email_71",
+      "threadId": "thread_13",
+      "subject": "Priority for niches intuitive",
+      "from": "Cedrick.Schuppe19@acme3.com",
+      "fromName": "Ray Rau",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Brent.Feil@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Bethany McDermott"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-26T21:42:02.042Z",
+      "body": "Hi Nadine,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nCheers,\nRay Rau"
+    },
+    {
+      "id": "email_72",
+      "threadId": "thread_14",
+      "subject": "Priority for initiatives user-centric",
+      "from": "Mohammad_Daugherty@acme3.com",
+      "fromName": "Salvatore DuBuque",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Kraig.Bradtke22@acme3.com",
+        "Bethany_Shields7@acme3.com"
+      ],
+      "toNames": [
+        "Duane Erdman",
+        "Chris Schmitt"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-07T10:05:54.582Z",
+      "body": "Hi Duane,\n\nCan we discuss Priority for initiatives user-centric in more detail? I think there are some aspects we need to clarify before moving forward.\n\nBest regards,\nSalvatore DuBuque\nBusiness Analyst\nMohammad_Daugherty@acme3.com"
+    },
+    {
+      "id": "email_73",
+      "threadId": "thread_14",
+      "subject": "Priority for initiatives user-centric",
+      "from": "Mohammad_Daugherty@acme3.com",
+      "fromName": "Salvatore DuBuque",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Kraig.Bradtke22@acme3.com",
+        "Bethany_Shields7@acme3.com"
+      ],
+      "toNames": [
+        "Duane Erdman",
+        "Chris Schmitt"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-09T23:56:51.621Z",
+      "body": "Hi Duane,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nSalvatore DuBuque\nBusiness Analyst\nMohammad_Daugherty@acme3.com"
+    },
+    {
+      "id": "email_74",
+      "threadId": "thread_14",
+      "subject": "Priority for initiatives user-centric",
+      "from": "Bethany_Shields7@acme3.com",
+      "fromName": "Chris Schmitt",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Mohammad_Daugherty@acme3.com",
+        "Kraig.Bradtke22@acme3.com"
+      ],
+      "toNames": [
+        "Salvatore DuBuque",
+        "Duane Erdman"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-12T18:21:11.423Z",
+      "body": "Hi Salvatore,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nChris Schmitt\nQA Engineer\nBethany_Shields7@acme3.com"
+    },
+    {
+      "id": "email_75",
+      "threadId": "thread_14",
+      "subject": "Priority for initiatives user-centric",
+      "from": "Bethany_Shields7@acme3.com",
+      "fromName": "Chris Schmitt",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Mohammad_Daugherty@acme3.com",
+        "Kraig.Bradtke22@acme3.com"
+      ],
+      "toNames": [
+        "Salvatore DuBuque",
+        "Duane Erdman"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-15T20:40:26.524Z",
+      "body": "Hi Salvatore,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nChris Schmitt\nQA Engineer\nBethany_Shields7@acme3.com"
+    },
+    {
+      "id": "email_76",
+      "threadId": "thread_14",
+      "subject": "Priority for initiatives user-centric",
+      "from": "Mohammad_Daugherty@acme3.com",
+      "fromName": "Salvatore DuBuque",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Kraig.Bradtke22@acme3.com",
+        "Bethany_Shields7@acme3.com"
+      ],
+      "toNames": [
+        "Duane Erdman",
+        "Chris Schmitt"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-18T02:47:02.462Z",
+      "body": "Hi Duane,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nSalvatore DuBuque\nBusiness Analyst\nMohammad_Daugherty@acme3.com"
+    },
+    {
+      "id": "email_77",
+      "threadId": "thread_15",
+      "subject": "Priority for solutions B2C",
+      "from": "Toney.Reynolds@acme3.com",
+      "fromName": "Yvette Steuber",
+      "fromRole": "Product Owner",
+      "fromDepartment": "Product",
+      "to": [
+        "Corbin_Buckridge@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Tina Hagenes",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-15T18:16:11.911Z",
+      "body": "Hi Tina,\n\nCan we discuss Priority for solutions B2C in more detail? I think there are some aspects we need to clarify before moving forward.\n\nKind regards,\nYvette Steuber\nProduct Owner"
+    },
+    {
+      "id": "email_78",
+      "threadId": "thread_15",
+      "subject": "Priority for solutions B2C",
+      "from": "Corbin_Buckridge@acme3.com",
+      "fromName": "Tina Hagenes",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-19T17:37:44.652Z",
+      "body": "Hi Yvette,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nTina Hagenes\nCampaign Manager\nCorbin_Buckridge@acme3.com"
+    },
+    {
+      "id": "email_79",
+      "threadId": "thread_15",
+      "subject": "Priority for solutions B2C",
+      "from": "Toney.Reynolds@acme3.com",
+      "fromName": "Yvette Steuber",
+      "fromRole": "Product Owner",
+      "fromDepartment": "Product",
+      "to": [
+        "Corbin_Buckridge@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Tina Hagenes",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-23T16:04:35.174Z",
+      "body": "Hi Tina,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nYvette Steuber\nProduct Owner"
+    },
+    {
+      "id": "email_80",
+      "threadId": "thread_15",
+      "subject": "Priority for solutions B2C",
+      "from": "Ansel_Muller@acme3.com",
+      "fromName": "Ruby Auer",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Corbin_Buckridge@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Tina Hagenes"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-26T10:33:18.915Z",
+      "body": "Hi Yvette,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nRuby Auer\nQA Engineer\nAnsel_Muller@acme3.com"
+    },
+    {
+      "id": "email_81",
+      "threadId": "thread_15",
+      "subject": "Priority for solutions B2C",
+      "from": "Corbin_Buckridge@acme3.com",
+      "fromName": "Tina Hagenes",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T08:34:16.560Z",
+      "body": "Hi Yvette,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nBest regards,\nTina Hagenes\nCampaign Manager\nCorbin_Buckridge@acme3.com"
+    },
+    {
+      "id": "email_82",
+      "threadId": "thread_16",
+      "subject": "Feature bandwidth customized",
+      "from": "Paolo.Anderson63@acme3.com",
+      "fromName": "Nadine Champlin-Haley",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Kraig.Bradtke22@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Duane Erdman",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-17T10:18:07.975Z",
+      "body": "Hi Duane,\n\nCan we discuss Feature bandwidth customized in more detail? I think there are some aspects we need to clarify before moving forward.\n\nThanks,\nNadine Champlin-Haley"
+    },
+    {
+      "id": "email_83",
+      "threadId": "thread_16",
+      "subject": "Feature bandwidth customized",
+      "from": "Kraig.Bradtke22@acme3.com",
+      "fromName": "Duane Erdman",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-18T21:11:27.991Z",
+      "body": "Hi Nadine,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nDuane Erdman\nMarketing Specialist\nKraig.Bradtke22@acme3.com"
+    },
+    {
+      "id": "email_84",
+      "threadId": "thread_16",
+      "subject": "Feature bandwidth customized",
+      "from": "Kraig.Bradtke22@acme3.com",
+      "fromName": "Duane Erdman",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-20T08:20:00.528Z",
+      "body": "Hi Nadine,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nDuane Erdman\nMarketing Specialist\nKraig.Bradtke22@acme3.com"
+    },
+    {
+      "id": "email_85",
+      "threadId": "thread_16",
+      "subject": "Feature bandwidth customized",
+      "from": "Kraig.Bradtke22@acme3.com",
+      "fromName": "Duane Erdman",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-21T14:39:54.973Z",
+      "body": "Hi Nadine,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nDuane Erdman\nMarketing Specialist\nKraig.Bradtke22@acme3.com"
+    },
+    {
+      "id": "email_86",
+      "threadId": "thread_16",
+      "subject": "Feature bandwidth customized",
+      "from": "Ansel_Muller@acme3.com",
+      "fromName": "Ruby Auer",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Kraig.Bradtke22@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Duane Erdman"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-22T10:51:59.712Z",
+      "body": "Hi Nadine,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nRuby Auer\nQA Engineer\nAnsel_Muller@acme3.com"
+    },
+    {
+      "id": "email_87",
+      "threadId": "thread_16",
+      "subject": "Feature bandwidth customized",
+      "from": "Kraig.Bradtke22@acme3.com",
+      "fromName": "Duane Erdman",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-23T06:09:42.303Z",
+      "body": "Hi Nadine,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nDuane Erdman\nMarketing Specialist\nKraig.Bradtke22@acme3.com"
+    },
+    {
+      "id": "email_88",
+      "threadId": "thread_16",
+      "subject": "Feature bandwidth customized",
+      "from": "Ansel_Muller@acme3.com",
+      "fromName": "Ruby Auer",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Kraig.Bradtke22@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Duane Erdman"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-25T06:03:56.674Z",
+      "body": "Hi Nadine,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nRuby Auer\nQA Engineer\nAnsel_Muller@acme3.com"
+    },
+    {
+      "id": "email_89",
+      "threadId": "thread_16",
+      "subject": "Feature bandwidth customized",
+      "from": "Ansel_Muller@acme3.com",
+      "fromName": "Ruby Auer",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Kraig.Bradtke22@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Duane Erdman"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-26T23:06:22.494Z",
+      "body": "Hi Nadine,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThank you for your attention to this matter,\nRuby Auer\nQA Engineer\nAnsel_Muller@acme3.com"
+    },
+    {
+      "id": "email_90",
+      "threadId": "thread_17",
+      "subject": "Requirements for schemas end-to-end",
+      "from": "Paolo.Anderson63@acme3.com",
+      "fromName": "Nadine Champlin-Haley",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Cedrick.Schuppe19@acme3.com",
+        "Makenzie.Murray97@acme3.com"
+      ],
+      "toNames": [
+        "Ray Rau",
+        "Wilfred Bednar"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-29T22:59:54.848Z",
+      "body": "Hi Ray,\n\nI wanted to bring up Requirements for schemas end-to-end for discussion. We need to make some decisions soon. What are your thoughts on this?\n\nThanks,\nNadine Champlin-Haley"
+    },
+    {
+      "id": "email_91",
+      "threadId": "thread_17",
+      "subject": "Requirements for schemas end-to-end",
+      "from": "Makenzie.Murray97@acme3.com",
+      "fromName": "Wilfred Bednar",
+      "fromRole": "Software Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Cedrick.Schuppe19@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Ray Rau"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T08:06:27.611Z",
+      "body": "Hi Nadine,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nBest regards,\nWilfred Bednar\nSoftware Engineer\nMakenzie.Murray97@acme3.com"
+    },
+    {
+      "id": "email_92",
+      "threadId": "thread_17",
+      "subject": "Requirements for schemas end-to-end",
+      "from": "Cedrick.Schuppe19@acme3.com",
+      "fromName": "Ray Rau",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Makenzie.Murray97@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Wilfred Bednar"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T21:56:23.754Z",
+      "body": "Hi Nadine,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nRay Rau"
+    },
+    {
+      "id": "email_93",
+      "threadId": "thread_17",
+      "subject": "Requirements for schemas end-to-end",
+      "from": "Cedrick.Schuppe19@acme3.com",
+      "fromName": "Ray Rau",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Makenzie.Murray97@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Wilfred Bednar"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-31T10:00:10.088Z",
+      "body": "Hi Nadine,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nCheers,\nRay Rau"
+    },
+    {
+      "id": "email_94",
+      "threadId": "thread_18",
+      "subject": "Feature functionalities global",
+      "from": "Karina.Jacobs58@acme3.com",
+      "fromName": "Mr. Marc Beahan",
+      "fromRole": "Product Director",
+      "fromDepartment": "Product",
+      "to": [
+        "Brice.Frami@acme3.com",
+        "Erik.Kuhlman58@acme3.com"
+      ],
+      "toNames": [
+        "Felipe Franecki",
+        "Dustin Lang II"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-29T08:51:26.708Z",
+      "body": "Hi Felipe,\n\nCan we discuss Feature functionalities global in more detail? I think there are some aspects we need to clarify before moving forward.\n\nThank you for your attention to this matter,\nMr. Marc Beahan\nProduct Director\nKarina.Jacobs58@acme3.com"
+    },
+    {
+      "id": "email_95",
+      "threadId": "thread_18",
+      "subject": "Feature functionalities global",
+      "from": "Erik.Kuhlman58@acme3.com",
+      "fromName": "Dustin Lang II",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Karina.Jacobs58@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Mr. Marc Beahan",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-29T15:59:18.323Z",
+      "body": "Hi Mr.,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nRegards,\nDustin Lang II\nQA Engineer"
+    },
+    {
+      "id": "email_96",
+      "threadId": "thread_18",
+      "subject": "Feature functionalities global",
+      "from": "Erik.Kuhlman58@acme3.com",
+      "fromName": "Dustin Lang II",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Karina.Jacobs58@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Mr. Marc Beahan",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-29T23:34:28.755Z",
+      "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nRegards,\nDustin Lang II\nQA Engineer"
+    },
+    {
+      "id": "email_97",
+      "threadId": "thread_18",
+      "subject": "Feature functionalities global",
+      "from": "Karina.Jacobs58@acme3.com",
+      "fromName": "Mr. Marc Beahan",
+      "fromRole": "Product Director",
+      "fromDepartment": "Product",
+      "to": [
+        "Brice.Frami@acme3.com",
+        "Erik.Kuhlman58@acme3.com"
+      ],
+      "toNames": [
+        "Felipe Franecki",
+        "Dustin Lang II"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T04:45:37.812Z",
+      "body": "Hi Felipe,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nMr. Marc Beahan\nProduct Director\nKarina.Jacobs58@acme3.com"
+    },
+    {
+      "id": "email_98",
+      "threadId": "thread_18",
+      "subject": "Feature functionalities global",
+      "from": "Erik.Kuhlman58@acme3.com",
+      "fromName": "Dustin Lang II",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Karina.Jacobs58@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Mr. Marc Beahan",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T09:00:14.034Z",
+      "body": "Hi Mr.,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nRegards,\nDustin Lang II\nQA Engineer"
+    },
+    {
+      "id": "email_99",
+      "threadId": "thread_18",
+      "subject": "Feature functionalities global",
+      "from": "Erik.Kuhlman58@acme3.com",
+      "fromName": "Dustin Lang II",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Karina.Jacobs58@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Mr. Marc Beahan",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T18:56:45.716Z",
+      "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nRegards,\nDustin Lang II\nQA Engineer"
+    },
+    {
+      "id": "email_100",
+      "threadId": "thread_18",
+      "subject": "Feature functionalities global",
+      "from": "Karina.Jacobs58@acme3.com",
+      "fromName": "Mr. Marc Beahan",
+      "fromRole": "Product Director",
+      "fromDepartment": "Product",
+      "to": [
+        "Brice.Frami@acme3.com",
+        "Erik.Kuhlman58@acme3.com"
+      ],
+      "toNames": [
+        "Felipe Franecki",
+        "Dustin Lang II"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-31T02:28:41.196Z",
+      "body": "Hi Felipe,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThank you for your attention to this matter,\nMr. Marc Beahan\nProduct Director\nKarina.Jacobs58@acme3.com"
+    },
+    {
+      "id": "email_101",
+      "threadId": "thread_19",
+      "subject": "Requirements for users sticky",
+      "from": "Toney.Reynolds@acme3.com",
+      "fromName": "Yvette Steuber",
+      "fromRole": "Product Owner",
+      "fromDepartment": "Product",
+      "to": [
+        "Brice.Frami@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Felipe Franecki",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-20T13:01:40.253Z",
+      "body": "Hi Felipe,\n\nI wanted to bring up Requirements for users sticky for discussion. We need to make some decisions soon. What are your thoughts on this?\n\nKind regards,\nYvette Steuber\nProduct Owner"
+    },
+    {
+      "id": "email_102",
+      "threadId": "thread_19",
+      "subject": "Requirements for users sticky",
+      "from": "Ansel_Muller@acme3.com",
+      "fromName": "Ruby Auer",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-21T10:06:05.242Z",
+      "body": "Hi Yvette,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nRuby Auer\nQA Engineer\nAnsel_Muller@acme3.com"
+    },
+    {
+      "id": "email_103",
+      "threadId": "thread_19",
+      "subject": "Requirements for users sticky",
+      "from": "Ansel_Muller@acme3.com",
+      "fromName": "Ruby Auer",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-22T09:23:43.743Z",
+      "body": "Hi Yvette,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nRuby Auer\nQA Engineer\nAnsel_Muller@acme3.com"
+    },
+    {
+      "id": "email_104",
+      "threadId": "thread_19",
+      "subject": "Requirements for users sticky",
+      "from": "Ansel_Muller@acme3.com",
+      "fromName": "Ruby Auer",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-23T02:44:14.789Z",
+      "body": "Hi Yvette,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nRuby Auer\nQA Engineer\nAnsel_Muller@acme3.com"
+    },
+    {
+      "id": "email_105",
+      "threadId": "thread_19",
+      "subject": "Requirements for users sticky",
+      "from": "Ansel_Muller@acme3.com",
+      "fromName": "Ruby Auer",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-24T00:16:27.124Z",
+      "body": "Hi Yvette,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nRuby Auer\nQA Engineer\nAnsel_Muller@acme3.com"
+    },
+    {
+      "id": "email_106",
+      "threadId": "thread_19",
+      "subject": "Requirements for users sticky",
+      "from": "Ansel_Muller@acme3.com",
+      "fromName": "Ruby Auer",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-25T14:40:52.130Z",
+      "body": "Hi Yvette,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nRuby Auer\nQA Engineer\nAnsel_Muller@acme3.com"
+    },
+    {
+      "id": "email_107",
+      "threadId": "thread_19",
+      "subject": "Requirements for users sticky",
+      "from": "Ansel_Muller@acme3.com",
+      "fromName": "Ruby Auer",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-26T18:44:30.526Z",
+      "body": "Hi Yvette,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nRuby Auer\nQA Engineer\nAnsel_Muller@acme3.com"
+    },
+    {
+      "id": "email_108",
+      "threadId": "thread_20",
+      "subject": "Feature ROI real-time",
+      "from": "Toney.Reynolds@acme3.com",
+      "fromName": "Yvette Steuber",
+      "fromRole": "Product Owner",
+      "fromDepartment": "Product",
+      "to": [
+        "Cedrick.Schuppe19@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Ray Rau",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T00:29:17.293Z",
+      "body": "Hi Ray,\n\nI wanted to bring up Feature ROI real-time for discussion. We need to make some decisions soon. What are your thoughts on this?\n\nKind regards,\nYvette Steuber\nProduct Owner"
+    },
+    {
+      "id": "email_109",
+      "threadId": "thread_20",
+      "subject": "Feature ROI real-time",
+      "from": "Shaina_Wintheiser@acme3.com",
+      "fromName": "Julio Franecki",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Cedrick.Schuppe19@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Ray Rau"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T07:40:32.847Z",
+      "body": "Hi Yvette,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nJulio Franecki"
+    },
+    {
+      "id": "email_110",
+      "threadId": "thread_20",
+      "subject": "Feature ROI real-time",
+      "from": "Shaina_Wintheiser@acme3.com",
+      "fromName": "Julio Franecki",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Cedrick.Schuppe19@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Ray Rau"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T13:48:38.946Z",
+      "body": "Hi Yvette,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nCheers,\nJulio Franecki"
+    },
+    {
+      "id": "email_111",
+      "threadId": "thread_20",
+      "subject": "Feature ROI real-time",
+      "from": "Shaina_Wintheiser@acme3.com",
+      "fromName": "Julio Franecki",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Cedrick.Schuppe19@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Ray Rau"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T16:48:56.021Z",
+      "body": "Hi Yvette,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nJulio Franecki"
+    },
+    {
+      "id": "email_112",
+      "threadId": "thread_20",
+      "subject": "Feature ROI real-time",
+      "from": "Cedrick.Schuppe19@acme3.com",
+      "fromName": "Ray Rau",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T19:32:38.508Z",
+      "body": "Hi Yvette,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nRay Rau"
+    },
+    {
+      "id": "email_113",
+      "threadId": "thread_20",
+      "subject": "Feature ROI real-time",
+      "from": "Cedrick.Schuppe19@acme3.com",
+      "fromName": "Ray Rau",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-31T01:10:56.118Z",
+      "body": "Hi Yvette,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nRay Rau"
+    },
+    {
+      "id": "email_114",
+      "threadId": "thread_20",
+      "subject": "Feature ROI real-time",
+      "from": "Toney.Reynolds@acme3.com",
+      "fromName": "Yvette Steuber",
+      "fromRole": "Product Owner",
+      "fromDepartment": "Product",
+      "to": [
+        "Cedrick.Schuppe19@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Ray Rau",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-31T08:24:24.533Z",
+      "body": "Hi Ray,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nYvette Steuber\nProduct Owner"
+    },
+    {
+      "id": "email_115",
+      "threadId": "thread_21",
+      "subject": "Feature platforms e-business",
+      "from": "Toney.Reynolds@acme3.com",
+      "fromName": "Yvette Steuber",
+      "fromRole": "Product Owner",
+      "fromDepartment": "Product",
+      "to": [
+        "Brice.Frami@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Felipe Franecki",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-25T01:16:02.017Z",
+      "body": "Hi Felipe,\n\nCan we discuss Feature platforms e-business in more detail? I think there are some aspects we need to clarify before moving forward.\n\nKind regards,\nYvette Steuber\nProduct Owner"
+    },
+    {
+      "id": "email_116",
+      "threadId": "thread_21",
+      "subject": "Feature platforms e-business",
+      "from": "Brice.Frami@acme3.com",
+      "fromName": "Felipe Franecki",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-26T01:28:13.017Z",
+      "body": "Hi Yvette,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nRegards,\nFelipe Franecki\nCampaign Manager"
+    },
+    {
+      "id": "email_117",
+      "threadId": "thread_21",
+      "subject": "Feature platforms e-business",
+      "from": "Ansel_Muller@acme3.com",
+      "fromName": "Ruby Auer",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-26T22:31:42.555Z",
+      "body": "Hi Yvette,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nRuby Auer\nQA Engineer\nAnsel_Muller@acme3.com"
+    },
+    {
+      "id": "email_118",
+      "threadId": "thread_21",
+      "subject": "Feature platforms e-business",
+      "from": "Brice.Frami@acme3.com",
+      "fromName": "Felipe Franecki",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-27T09:07:12.618Z",
+      "body": "Hi Yvette,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nRegards,\nFelipe Franecki\nCampaign Manager"
+    },
+    {
+      "id": "email_119",
+      "threadId": "thread_21",
+      "subject": "Feature platforms e-business",
+      "from": "Ansel_Muller@acme3.com",
+      "fromName": "Ruby Auer",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Brice.Frami@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Felipe Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-28T05:37:21.314Z",
+      "body": "Hi Yvette,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nRuby Auer\nQA Engineer\nAnsel_Muller@acme3.com"
+    },
+    {
+      "id": "email_120",
+      "threadId": "thread_21",
+      "subject": "Feature platforms e-business",
+      "from": "Brice.Frami@acme3.com",
+      "fromName": "Felipe Franecki",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-28T18:45:00.949Z",
+      "body": "Hi Yvette,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nRegards,\nFelipe Franecki\nCampaign Manager"
+    },
+    {
+      "id": "email_121",
+      "threadId": "thread_21",
+      "subject": "Feature platforms e-business",
+      "from": "Brice.Frami@acme3.com",
+      "fromName": "Felipe Franecki",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-29T03:27:56.061Z",
+      "body": "Hi Yvette,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nRegards,\nFelipe Franecki\nCampaign Manager"
+    },
+    {
+      "id": "email_122",
+      "threadId": "thread_21",
+      "subject": "Feature platforms e-business",
+      "from": "Brice.Frami@acme3.com",
+      "fromName": "Felipe Franecki",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Toney.Reynolds@acme3.com",
+        "Ansel_Muller@acme3.com"
+      ],
+      "toNames": [
+        "Yvette Steuber",
+        "Ruby Auer"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-30T00:35:38.280Z",
+      "body": "Hi Yvette,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nRegards,\nFelipe Franecki\nCampaign Manager"
+    },
+    {
+      "id": "email_123",
+      "threadId": "thread_22",
+      "subject": "Feature bandwidth real-time",
+      "from": "Paolo.Anderson63@acme3.com",
+      "fromName": "Nadine Champlin-Haley",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Corbin_Buckridge@acme3.com",
+        "Walter_Cole@acme3.com"
+      ],
+      "toNames": [
+        "Tina Hagenes",
+        "Kent Rippin"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-27T11:56:11.728Z",
+      "body": "Hi Tina,\n\nI wanted to bring up Feature bandwidth real-time for discussion. We need to make some decisions soon. What are your thoughts on this?\n\nThanks,\nNadine Champlin-Haley"
+    },
+    {
+      "id": "email_124",
+      "threadId": "thread_22",
+      "subject": "Feature bandwidth real-time",
+      "from": "Walter_Cole@acme3.com",
+      "fromName": "Kent Rippin",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Corbin_Buckridge@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Tina Hagenes"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-27T22:30:25.285Z",
+      "body": "Hi Nadine,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nKent Rippin"
+    },
+    {
+      "id": "email_125",
+      "threadId": "thread_22",
+      "subject": "Feature bandwidth real-time",
+      "from": "Walter_Cole@acme3.com",
+      "fromName": "Kent Rippin",
+      "fromRole": "QA Engineer",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Corbin_Buckridge@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Tina Hagenes"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-28T18:06:20.099Z",
+      "body": "Hi Nadine,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nKent Rippin"
+    },
+    {
+      "id": "email_126",
+      "threadId": "thread_22",
+      "subject": "Feature bandwidth real-time",
+      "from": "Corbin_Buckridge@acme3.com",
+      "fromName": "Tina Hagenes",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Paolo.Anderson63@acme3.com",
+        "Walter_Cole@acme3.com"
+      ],
+      "toNames": [
+        "Nadine Champlin-Haley",
+        "Kent Rippin"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-29T17:04:09.930Z",
+      "body": "Hi Nadine,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nTina Hagenes\nCampaign Manager\nCorbin_Buckridge@acme3.com"
+    },
+    {
+      "id": "email_127",
+      "threadId": "thread_23",
+      "subject": "Requirements for deliverables revolutionary",
+      "from": "Mohammad_Daugherty@acme3.com",
+      "fromName": "Salvatore DuBuque",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Cedrick.Schuppe19@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Ray Rau",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-20T19:21:36.960Z",
+      "body": "Hi Ray,\n\nCan we discuss Requirements for deliverables revolutionary in more detail? I think there are some aspects we need to clarify before moving forward.\n\nBest regards,\nSalvatore DuBuque\nBusiness Analyst\nMohammad_Daugherty@acme3.com"
+    },
+    {
+      "id": "email_128",
+      "threadId": "thread_23",
+      "subject": "Requirements for deliverables revolutionary",
+      "from": "Mohammad_Daugherty@acme3.com",
+      "fromName": "Salvatore DuBuque",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Cedrick.Schuppe19@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Ray Rau",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-21T17:34:38.113Z",
+      "body": "Hi Ray,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nBest regards,\nSalvatore DuBuque\nBusiness Analyst\nMohammad_Daugherty@acme3.com"
+    },
+    {
+      "id": "email_129",
+      "threadId": "thread_23",
+      "subject": "Requirements for deliverables revolutionary",
+      "from": "Cedrick.Schuppe19@acme3.com",
+      "fromName": "Ray Rau",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Mohammad_Daugherty@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Salvatore DuBuque",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-23T06:21:30.991Z",
+      "body": "Hi Salvatore,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nCheers,\nRay Rau"
+    },
+    {
+      "id": "email_130",
+      "threadId": "thread_23",
+      "subject": "Requirements for deliverables revolutionary",
+      "from": "Mohammad_Daugherty@acme3.com",
+      "fromName": "Salvatore DuBuque",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Cedrick.Schuppe19@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Ray Rau",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-24T05:36:30.041Z",
+      "body": "Hi Ray,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nSalvatore DuBuque\nBusiness Analyst\nMohammad_Daugherty@acme3.com"
+    },
+    {
+      "id": "email_131",
+      "threadId": "thread_23",
+      "subject": "Requirements for deliverables revolutionary",
+      "from": "Cedrick.Schuppe19@acme3.com",
+      "fromName": "Ray Rau",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Mohammad_Daugherty@acme3.com",
+        "Shaina_Wintheiser@acme3.com"
+      ],
+      "toNames": [
+        "Salvatore DuBuque",
+        "Julio Franecki"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-25T11:41:06.502Z",
+      "body": "Hi Salvatore,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nCheers,\nRay Rau"
+    },
+    {
+      "id": "email_132",
+      "threadId": "thread_24",
+      "subject": "Priority for solutions B2B",
+      "from": "Karina.Jacobs58@acme3.com",
+      "fromName": "Mr. Marc Beahan",
+      "fromRole": "Product Director",
+      "fromDepartment": "Product",
+      "to": [
+        "Maximus_Ruecker34@acme3.com",
+        "Brent.Feil@acme3.com"
+      ],
+      "toNames": [
+        "Camille Williamson",
+        "Bethany McDermott"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-21T19:52:56.715Z",
+      "body": "Hi Camille,\n\nI wanted to bring up Priority for solutions B2B for discussion. We need to make some decisions soon. What are your thoughts on this?\n\nThank you for your attention to this matter,\nMr. Marc Beahan\nProduct Director\nKarina.Jacobs58@acme3.com"
+    },
+    {
+      "id": "email_133",
+      "threadId": "thread_24",
+      "subject": "Priority for solutions B2B",
+      "from": "Karina.Jacobs58@acme3.com",
+      "fromName": "Mr. Marc Beahan",
+      "fromRole": "Product Director",
+      "fromDepartment": "Product",
+      "to": [
+        "Maximus_Ruecker34@acme3.com",
+        "Brent.Feil@acme3.com"
+      ],
+      "toNames": [
+        "Camille Williamson",
+        "Bethany McDermott"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-24T18:16:02.921Z",
+      "body": "Hi Camille,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nMr. Marc Beahan\nProduct Director\nKarina.Jacobs58@acme3.com"
+    },
+    {
+      "id": "email_134",
+      "threadId": "thread_24",
+      "subject": "Priority for solutions B2B",
+      "from": "Brent.Feil@acme3.com",
+      "fromName": "Bethany McDermott",
+      "fromRole": "Engineering Director",
+      "fromDepartment": "Engineering",
+      "to": [
+        "Karina.Jacobs58@acme3.com",
+        "Maximus_Ruecker34@acme3.com"
+      ],
+      "toNames": [
+        "Mr. Marc Beahan",
+        "Camille Williamson"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-26T13:32:19.548Z",
+      "body": "Hi Mr.,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThanks,\nBethany McDermott"
+    },
+    {
+      "id": "email_135",
+      "threadId": "thread_24",
+      "subject": "Priority for solutions B2B",
+      "from": "Karina.Jacobs58@acme3.com",
+      "fromName": "Mr. Marc Beahan",
+      "fromRole": "Product Director",
+      "fromDepartment": "Product",
+      "to": [
+        "Maximus_Ruecker34@acme3.com",
+        "Brent.Feil@acme3.com"
+      ],
+      "toNames": [
+        "Camille Williamson",
+        "Bethany McDermott"
+      ],
+      "cc": [],
+      "timestamp": "2025-03-29T05:20:23.403Z",
+      "body": "Hi Camille,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nMr. Marc Beahan\nProduct Director\nKarina.Jacobs58@acme3.com"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread_0",
+      "subject": "Requirements for niches B2C",
+      "participants": [
+        {
+          "id": "person_22",
+          "name": "Marty Rolfson MD",
+          "email": "Eladio_Wisoky@acme3.com",
+          "role": "Product Manager",
+          "department": "Product"
+        },
+        {
+          "id": "person_17",
+          "name": "Camille Williamson",
+          "email": "Maximus_Ruecker34@acme3.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_34",
+          "name": "Kent Rippin",
+          "email": "Walter_Cole@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_1",
+      "subject": "Requirements for eyeballs robust",
+      "participants": [
+        {
+          "id": "person_18",
+          "name": "Mr. Marc Beahan",
+          "email": "Karina.Jacobs58@acme3.com",
+          "role": "Product Director",
+          "department": "Product"
+        },
+        {
+          "id": "person_17",
+          "name": "Camille Williamson",
+          "email": "Maximus_Ruecker34@acme3.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_32",
+          "name": "Wilfred Bednar",
+          "email": "Makenzie.Murray97@acme3.com",
+          "role": "Software Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_2",
+      "subject": "Requirements for bandwidth interactive",
+      "participants": [
+        {
+          "id": "person_20",
+          "name": "Yvette Steuber",
+          "email": "Toney.Reynolds@acme3.com",
+          "role": "Product Owner",
+          "department": "Product"
+        },
+        {
+          "id": "person_16",
+          "name": "Tina Hagenes",
+          "email": "Corbin_Buckridge@acme3.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_28",
+          "name": "Julio Franecki",
+          "email": "Shaina_Wintheiser@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_3",
+      "subject": "Requirements for e-business real-time",
+      "participants": [
+        {
+          "id": "person_21",
+          "name": "Warren Kub II",
+          "email": "Gussie.Koepp0@acme3.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_8",
+          "name": "Brian Hand",
+          "email": "Princess_Wuckert7@acme3.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_28",
+          "name": "Julio Franecki",
+          "email": "Shaina_Wintheiser@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_4",
+      "subject": "Priority for niches enterprise",
+      "participants": [
+        {
+          "id": "person_21",
+          "name": "Warren Kub II",
+          "email": "Gussie.Koepp0@acme3.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_13",
+          "name": "Chelsea Langosh",
+          "email": "Ramiro.Walker@acme3.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_27",
+          "name": "Chris Schmitt",
+          "email": "Bethany_Shields7@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_5",
+      "subject": "Feature action-items sexy",
+      "participants": [
+        {
+          "id": "person_19",
+          "name": "Salvatore DuBuque",
+          "email": "Mohammad_Daugherty@acme3.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_12",
+          "name": "Felipe Franecki",
+          "email": "Brice.Frami@acme3.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_29",
+          "name": "Dustin Lang II",
+          "email": "Erik.Kuhlman58@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_6",
+      "subject": "Priority for bandwidth magnetic",
+      "participants": [
+        {
+          "id": "person_22",
+          "name": "Marty Rolfson MD",
+          "email": "Eladio_Wisoky@acme3.com",
+          "role": "Product Manager",
+          "department": "Product"
+        },
+        {
+          "id": "person_12",
+          "name": "Felipe Franecki",
+          "email": "Brice.Frami@acme3.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_28",
+          "name": "Julio Franecki",
+          "email": "Shaina_Wintheiser@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_7",
+      "subject": "Priority for synergies real-time",
+      "participants": [
+        {
+          "id": "person_20",
+          "name": "Yvette Steuber",
+          "email": "Toney.Reynolds@acme3.com",
+          "role": "Product Owner",
+          "department": "Product"
+        },
+        {
+          "id": "person_17",
+          "name": "Camille Williamson",
+          "email": "Maximus_Ruecker34@acme3.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_30",
+          "name": "Levi Lakin",
+          "email": "Erin.Hammes@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_8",
+      "subject": "Priority for users distributed",
+      "participants": [
+        {
+          "id": "person_20",
+          "name": "Yvette Steuber",
+          "email": "Toney.Reynolds@acme3.com",
+          "role": "Product Owner",
+          "department": "Product"
+        },
+        {
+          "id": "person_10",
+          "name": "Jackie Buckridge I",
+          "email": "Leda_Simonis@acme3.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_28",
+          "name": "Julio Franecki",
+          "email": "Shaina_Wintheiser@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_9",
+      "subject": "Feature bandwidth customized",
+      "participants": [
+        {
+          "id": "person_23",
+          "name": "Nadine Champlin-Haley",
+          "email": "Paolo.Anderson63@acme3.com",
+          "role": "Product Manager",
+          "department": "Product"
+        },
+        {
+          "id": "person_8",
+          "name": "Brian Hand",
+          "email": "Princess_Wuckert7@acme3.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_28",
+          "name": "Julio Franecki",
+          "email": "Shaina_Wintheiser@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_10",
+      "subject": "Requirements for functionalities web-enabled",
+      "participants": [
+        {
+          "id": "person_21",
+          "name": "Warren Kub II",
+          "email": "Gussie.Koepp0@acme3.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_10",
+          "name": "Jackie Buckridge I",
+          "email": "Leda_Simonis@acme3.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_30",
+          "name": "Levi Lakin",
+          "email": "Erin.Hammes@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_11",
+      "subject": "Requirements for applications leading-edge",
+      "participants": [
+        {
+          "id": "person_23",
+          "name": "Nadine Champlin-Haley",
+          "email": "Paolo.Anderson63@acme3.com",
+          "role": "Product Manager",
+          "department": "Product"
+        },
+        {
+          "id": "person_14",
+          "name": "Duane Erdman",
+          "email": "Kraig.Bradtke22@acme3.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_28",
+          "name": "Julio Franecki",
+          "email": "Shaina_Wintheiser@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_12",
+      "subject": "Feature e-commerce sexy",
+      "participants": [
+        {
+          "id": "person_19",
+          "name": "Salvatore DuBuque",
+          "email": "Mohammad_Daugherty@acme3.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_13",
+          "name": "Chelsea Langosh",
+          "email": "Ramiro.Walker@acme3.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_24",
+          "name": "Bethany McDermott",
+          "email": "Brent.Feil@acme3.com",
+          "role": "Engineering Director",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_13",
+      "subject": "Priority for niches intuitive",
+      "participants": [
+        {
+          "id": "person_23",
+          "name": "Nadine Champlin-Haley",
+          "email": "Paolo.Anderson63@acme3.com",
+          "role": "Product Manager",
+          "department": "Product"
+        },
+        {
+          "id": "person_9",
+          "name": "Ray Rau",
+          "email": "Cedrick.Schuppe19@acme3.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_24",
+          "name": "Bethany McDermott",
+          "email": "Brent.Feil@acme3.com",
+          "role": "Engineering Director",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_14",
+      "subject": "Priority for initiatives user-centric",
+      "participants": [
+        {
+          "id": "person_19",
+          "name": "Salvatore DuBuque",
+          "email": "Mohammad_Daugherty@acme3.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_14",
+          "name": "Duane Erdman",
+          "email": "Kraig.Bradtke22@acme3.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_27",
+          "name": "Chris Schmitt",
+          "email": "Bethany_Shields7@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_15",
+      "subject": "Priority for solutions B2C",
+      "participants": [
+        {
+          "id": "person_20",
+          "name": "Yvette Steuber",
+          "email": "Toney.Reynolds@acme3.com",
+          "role": "Product Owner",
+          "department": "Product"
+        },
+        {
+          "id": "person_16",
+          "name": "Tina Hagenes",
+          "email": "Corbin_Buckridge@acme3.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_33",
+          "name": "Ruby Auer",
+          "email": "Ansel_Muller@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_16",
+      "subject": "Feature bandwidth customized",
+      "participants": [
+        {
+          "id": "person_23",
+          "name": "Nadine Champlin-Haley",
+          "email": "Paolo.Anderson63@acme3.com",
+          "role": "Product Manager",
+          "department": "Product"
+        },
+        {
+          "id": "person_14",
+          "name": "Duane Erdman",
+          "email": "Kraig.Bradtke22@acme3.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_33",
+          "name": "Ruby Auer",
+          "email": "Ansel_Muller@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_17",
+      "subject": "Requirements for schemas end-to-end",
+      "participants": [
+        {
+          "id": "person_23",
+          "name": "Nadine Champlin-Haley",
+          "email": "Paolo.Anderson63@acme3.com",
+          "role": "Product Manager",
+          "department": "Product"
+        },
+        {
+          "id": "person_9",
+          "name": "Ray Rau",
+          "email": "Cedrick.Schuppe19@acme3.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_32",
+          "name": "Wilfred Bednar",
+          "email": "Makenzie.Murray97@acme3.com",
+          "role": "Software Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_18",
+      "subject": "Feature functionalities global",
+      "participants": [
+        {
+          "id": "person_18",
+          "name": "Mr. Marc Beahan",
+          "email": "Karina.Jacobs58@acme3.com",
+          "role": "Product Director",
+          "department": "Product"
+        },
+        {
+          "id": "person_12",
+          "name": "Felipe Franecki",
+          "email": "Brice.Frami@acme3.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_29",
+          "name": "Dustin Lang II",
+          "email": "Erik.Kuhlman58@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_19",
+      "subject": "Requirements for users sticky",
+      "participants": [
+        {
+          "id": "person_20",
+          "name": "Yvette Steuber",
+          "email": "Toney.Reynolds@acme3.com",
+          "role": "Product Owner",
+          "department": "Product"
+        },
+        {
+          "id": "person_12",
+          "name": "Felipe Franecki",
+          "email": "Brice.Frami@acme3.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_33",
+          "name": "Ruby Auer",
+          "email": "Ansel_Muller@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_20",
+      "subject": "Feature ROI real-time",
+      "participants": [
+        {
+          "id": "person_20",
+          "name": "Yvette Steuber",
+          "email": "Toney.Reynolds@acme3.com",
+          "role": "Product Owner",
+          "department": "Product"
+        },
+        {
+          "id": "person_9",
+          "name": "Ray Rau",
+          "email": "Cedrick.Schuppe19@acme3.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_28",
+          "name": "Julio Franecki",
+          "email": "Shaina_Wintheiser@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_21",
+      "subject": "Feature platforms e-business",
+      "participants": [
+        {
+          "id": "person_20",
+          "name": "Yvette Steuber",
+          "email": "Toney.Reynolds@acme3.com",
+          "role": "Product Owner",
+          "department": "Product"
+        },
+        {
+          "id": "person_12",
+          "name": "Felipe Franecki",
+          "email": "Brice.Frami@acme3.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_33",
+          "name": "Ruby Auer",
+          "email": "Ansel_Muller@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_22",
+      "subject": "Feature bandwidth real-time",
+      "participants": [
+        {
+          "id": "person_23",
+          "name": "Nadine Champlin-Haley",
+          "email": "Paolo.Anderson63@acme3.com",
+          "role": "Product Manager",
+          "department": "Product"
+        },
+        {
+          "id": "person_16",
+          "name": "Tina Hagenes",
+          "email": "Corbin_Buckridge@acme3.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_34",
+          "name": "Kent Rippin",
+          "email": "Walter_Cole@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_23",
+      "subject": "Requirements for deliverables revolutionary",
+      "participants": [
+        {
+          "id": "person_19",
+          "name": "Salvatore DuBuque",
+          "email": "Mohammad_Daugherty@acme3.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_9",
+          "name": "Ray Rau",
+          "email": "Cedrick.Schuppe19@acme3.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_28",
+          "name": "Julio Franecki",
+          "email": "Shaina_Wintheiser@acme3.com",
+          "role": "QA Engineer",
+          "department": "Engineering"
+        }
+      ]
+    },
+    {
+      "id": "thread_24",
+      "subject": "Priority for solutions B2B",
+      "participants": [
+        {
+          "id": "person_18",
+          "name": "Mr. Marc Beahan",
+          "email": "Karina.Jacobs58@acme3.com",
+          "role": "Product Director",
+          "department": "Product"
+        },
+        {
+          "id": "person_17",
+          "name": "Camille Williamson",
+          "email": "Maximus_Ruecker34@acme3.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_24",
+          "name": "Bethany McDermott",
+          "email": "Brent.Feil@acme3.com",
+          "role": "Engineering Director",
+          "department": "Engineering"
+        }
+      ]
+    }
+  ]
+}

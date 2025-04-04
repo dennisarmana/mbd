@@ -1,0 +1,3080 @@
+{
+  "scenario": {
+    "id": "product_launch_timeline",
+    "name": "Product Launch Timeline",
+    "description": "Marketing and product teams disagree on the launch date",
+    "complexity_level": 2,
+    "key_issues": [
+      "Different understanding of \"ready to launch\"",
+      "Dependency tracking issues",
+      "Miscommunication about approval processes"
+    ],
+    "time_span": {
+      "start_date": "2025-02-01T00:00:00.000Z",
+      "end_date": "2025-03-01T00:00:00.000Z"
+    }
+  },
+  "company": {
+    "name": "Acme2Corp",
+    "domain": "acme2.com",
+    "departments": [
+      {
+        "id": "dept_0",
+        "name": "Executive",
+        "parent_department": null
+      },
+      {
+        "id": "dept_1",
+        "name": "Marketing",
+        "parent_department": "dept_0"
+      },
+      {
+        "id": "dept_2",
+        "name": "Product",
+        "parent_department": null
+      },
+      {
+        "id": "dept_3",
+        "name": "Engineering",
+        "parent_department": null
+      },
+      {
+        "id": "dept_4",
+        "name": "Design",
+        "parent_department": null
+      },
+      {
+        "id": "dept_5",
+        "name": "Sales",
+        "parent_department": null
+      }
+    ],
+    "persons": [
+      {
+        "id": "person_0",
+        "name": "Virginia Heathcote",
+        "email": "Delbert.Hills35@acme2.com",
+        "department_id": "dept_0",
+        "role": "Executive Director",
+        "boss_id": null,
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_1",
+        "name": "Sherman Kihn-Heathcote",
+        "email": "Norma_Kovacek31@acme2.com",
+        "department_id": "dept_0",
+        "role": "Manager",
+        "boss_id": "person_0",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_2",
+        "name": "Lila Klein",
+        "email": "Mohammad_Durgan80@acme2.com",
+        "department_id": "dept_0",
+        "role": "Specialist",
+        "boss_id": "person_0",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_3",
+        "name": "Cynthia Marquardt",
+        "email": "Melissa.Adams@acme2.com",
+        "department_id": "dept_0",
+        "role": "Analyst",
+        "boss_id": "person_0",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_4",
+        "name": "Maria Ferry",
+        "email": "Nettie.McCullough@acme2.com",
+        "department_id": "dept_0",
+        "role": "Specialist",
+        "boss_id": "person_0",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_5",
+        "name": "April Fahey",
+        "email": "Stuart.Rice-Zieme@acme2.com",
+        "department_id": "dept_1",
+        "role": "Marketing Director",
+        "boss_id": "person_0",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_6",
+        "name": "Lora Gibson",
+        "email": "Tomas_Kub20@acme2.com",
+        "department_id": "dept_1",
+        "role": "Marketing Specialist",
+        "boss_id": "person_5",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_7",
+        "name": "Lewis Larkin",
+        "email": "Roscoe_Erdman42@acme2.com",
+        "department_id": "dept_1",
+        "role": "Campaign Manager",
+        "boss_id": "person_5",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_8",
+        "name": "Clifton Koelpin",
+        "email": "Ashlee.Sauer@acme2.com",
+        "department_id": "dept_1",
+        "role": "Marketing Specialist",
+        "boss_id": "person_5",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_9",
+        "name": "Elias Maggio MD",
+        "email": "Gonzalo.Hammes-Morissette@acme2.com",
+        "department_id": "dept_1",
+        "role": "Campaign Manager",
+        "boss_id": "person_5",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_10",
+        "name": "Ashley Leuschke",
+        "email": "Abdul.Pfannerstill@acme2.com",
+        "department_id": "dept_1",
+        "role": "Campaign Manager",
+        "boss_id": "person_5",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_11",
+        "name": "Sammy Kuphal Sr.",
+        "email": "Arturo.Armstrong@acme2.com",
+        "department_id": "dept_1",
+        "role": "Content Creator",
+        "boss_id": "person_5",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_12",
+        "name": "Kelly Gleason",
+        "email": "Malinda_Hodkiewicz-Howell@acme2.com",
+        "department_id": "dept_1",
+        "role": "Campaign Manager",
+        "boss_id": "person_5",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_13",
+        "name": "Ryan Kris II",
+        "email": "Thalia_Lakin59@acme2.com",
+        "department_id": "dept_2",
+        "role": "Product Director",
+        "boss_id": null,
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_14",
+        "name": "Constance Simonis",
+        "email": "Albin_Aufderhar13@acme2.com",
+        "department_id": "dept_2",
+        "role": "Business Analyst",
+        "boss_id": "person_13",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_15",
+        "name": "Garry Kohler",
+        "email": "Mariam.Huel@acme2.com",
+        "department_id": "dept_2",
+        "role": "Business Analyst",
+        "boss_id": "person_13",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_16",
+        "name": "Byron Stehr",
+        "email": "Amber_Runte29@acme2.com",
+        "department_id": "dept_2",
+        "role": "Business Analyst",
+        "boss_id": "person_13",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_17",
+        "name": "Winifred Witting",
+        "email": "Addison_Kuvalis-Brakus82@acme2.com",
+        "department_id": "dept_2",
+        "role": "Product Manager",
+        "boss_id": "person_13",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_18",
+        "name": "Gloria Ebert",
+        "email": "Verda_Kuhn95@acme2.com",
+        "department_id": "dept_3",
+        "role": "Engineering Director",
+        "boss_id": null,
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_19",
+        "name": "Violet Klein",
+        "email": "Ettie_Ziemann@acme2.com",
+        "department_id": "dept_3",
+        "role": "Software Engineer",
+        "boss_id": "person_18",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_20",
+        "name": "Lyle Upton",
+        "email": "Nikki_Kerluke50@acme2.com",
+        "department_id": "dept_3",
+        "role": "DevOps Engineer",
+        "boss_id": "person_18",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_21",
+        "name": "Lionel Harvey",
+        "email": "Evalyn_Bernier@acme2.com",
+        "department_id": "dept_3",
+        "role": "DevOps Engineer",
+        "boss_id": "person_18",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_22",
+        "name": "Lee Berge",
+        "email": "Susan.King@acme2.com",
+        "department_id": "dept_3",
+        "role": "QA Engineer",
+        "boss_id": "person_18",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_23",
+        "name": "Lela Schultz",
+        "email": "Sterling_Schuster84@acme2.com",
+        "department_id": "dept_3",
+        "role": "Software Engineer",
+        "boss_id": "person_18",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_24",
+        "name": "June Rath",
+        "email": "Garret_Altenwerth@acme2.com",
+        "department_id": "dept_4",
+        "role": "Design Director",
+        "boss_id": null,
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_25",
+        "name": "Cathy Bergnaum",
+        "email": "Rickie_Jenkins5@acme2.com",
+        "department_id": "dept_4",
+        "role": "UX Researcher",
+        "boss_id": "person_24",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_26",
+        "name": "Ray Lesch",
+        "email": "Janae_Rutherford85@acme2.com",
+        "department_id": "dept_4",
+        "role": "UI Designer",
+        "boss_id": "person_24",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_27",
+        "name": "Dr. Jorge Koss",
+        "email": "Deion.Metz50@acme2.com",
+        "department_id": "dept_4",
+        "role": "UX Researcher",
+        "boss_id": "person_24",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_28",
+        "name": "Myrtle Hilpert",
+        "email": "Alysha.Kuphal85@acme2.com",
+        "department_id": "dept_4",
+        "role": "UI Designer",
+        "boss_id": "person_24",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_29",
+        "name": "Mr. Philip Green",
+        "email": "Ricardo.Hickle@acme2.com",
+        "department_id": "dept_4",
+        "role": "Visual Designer",
+        "boss_id": "person_24",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_30",
+        "name": "Dr. Marjorie Bradtke",
+        "email": "Frederic_Reinger47@acme2.com",
+        "department_id": "dept_4",
+        "role": "Visual Designer",
+        "boss_id": "person_24",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_31",
+        "name": "Beulah Schaden",
+        "email": "Spencer_Stanton10@acme2.com",
+        "department_id": "dept_4",
+        "role": "UX Researcher",
+        "boss_id": "person_24",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_32",
+        "name": "Sean Walker",
+        "email": "Haskell_Rempel@acme2.com",
+        "department_id": "dept_4",
+        "role": "Visual Designer",
+        "boss_id": "person_24",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_33",
+        "name": "Alfredo Bernier",
+        "email": "Oleta.Waters@acme2.com",
+        "department_id": "dept_5",
+        "role": "Sales Director",
+        "boss_id": null,
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_34",
+        "name": "Roxanne Hettinger",
+        "email": "Kellie_Kirlin@acme2.com",
+        "department_id": "dept_5",
+        "role": "Sales Representative",
+        "boss_id": "person_33",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_35",
+        "name": "Mr. Nicolas Labadie",
+        "email": "Marisol_Braun98@acme2.com",
+        "department_id": "dept_5",
+        "role": "Sales Representative",
+        "boss_id": "person_33",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_36",
+        "name": "Cassandra Klocko",
+        "email": "Lydia_Fisher55@acme2.com",
+        "department_id": "dept_5",
+        "role": "Sales Representative",
+        "boss_id": "person_33",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_37",
+        "name": "Margie Haley",
+        "email": "Nathaniel.Mills@acme2.com",
+        "department_id": "dept_5",
+        "role": "Sales Representative",
+        "boss_id": "person_33",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_38",
+        "name": "Raymond Gleason",
+        "email": "Alessandra.OConnell33@acme2.com",
+        "department_id": "dept_5",
+        "role": "Sales Representative",
+        "boss_id": "person_33",
+        "communication_style": "formal"
+      }
+    ]
+  },
+  "emails": [
+    {
+      "id": "email_0",
+      "threadId": "thread_0",
+      "subject": "Product launch lifetime value out-of-the-box",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-20T11:49:19.513Z",
+      "body": "Hi Lora,\n\nI'm planning the communications for our product launch. We should be ready to announce on the 15th. Does that timeline work for the product team?\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_1",
+      "threadId": "thread_0",
+      "subject": "Product launch lifetime value out-of-the-box",
+      "from": "Tomas_Kub20@acme2.com",
+      "fromName": "Lora Gibson",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-22T04:10:08.121Z",
+      "body": "Hi Lewis,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThank you for your attention to this matter,\nLora Gibson\nMarketing Specialist\nTomas_Kub20@acme2.com"
+    },
+    {
+      "id": "email_2",
+      "threadId": "thread_0",
+      "subject": "Product launch lifetime value out-of-the-box",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-24T19:42:39.334Z",
+      "body": "Hi Lora,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_3",
+      "threadId": "thread_1",
+      "subject": "Release e-business cross-media",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-26T18:01:30.957Z",
+      "body": "Hi Constance,\n\nI'm planning the communications for our product launch. We should be ready to announce on the 15th. Does that timeline work for the product team?\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_4",
+      "threadId": "thread_1",
+      "subject": "Release e-business cross-media",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-27T05:17:28.968Z",
+      "body": "Hi Constance,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_5",
+      "threadId": "thread_1",
+      "subject": "Release e-business cross-media",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-27T16:18:44.028Z",
+      "body": "Hi Constance,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_6",
+      "threadId": "thread_1",
+      "subject": "Release e-business cross-media",
+      "from": "Albin_Aufderhar13@acme2.com",
+      "fromName": "Constance Simonis",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Arturo.Armstrong@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr."
+      ],
+      "cc": [],
+      "timestamp": "2025-02-28T01:34:39.749Z",
+      "body": "Hi Sammy,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nRegards,\nConstance Simonis\nBusiness Analyst"
+    },
+    {
+      "id": "email_7",
+      "threadId": "thread_1",
+      "subject": "Release e-business cross-media",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-28T06:39:15.538Z",
+      "body": "Hi Constance,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_8",
+      "threadId": "thread_2",
+      "subject": "Launch timeline e-commerce B2C",
+      "from": "Ashlee.Sauer@acme2.com",
+      "fromName": "Clifton Koelpin",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Amber_Runte29@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Byron Stehr"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-06T07:33:45.518Z",
+      "body": "Hi Lora,\n\nBased on our roadmap, I've scheduled the product launch for next month. Can you confirm that the development will be completed by then?\n\nCheers,\nClifton Koelpin"
+    },
+    {
+      "id": "email_9",
+      "threadId": "thread_2",
+      "subject": "Launch timeline e-commerce B2C",
+      "from": "Amber_Runte29@acme2.com",
+      "fromName": "Byron Stehr",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Ashlee.Sauer@acme2.com",
+        "Tomas_Kub20@acme2.com"
+      ],
+      "toNames": [
+        "Clifton Koelpin",
+        "Lora Gibson"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-09T03:29:31.404Z",
+      "body": "Hi Clifton,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nByron Stehr"
+    },
+    {
+      "id": "email_10",
+      "threadId": "thread_2",
+      "subject": "Launch timeline e-commerce B2C",
+      "from": "Amber_Runte29@acme2.com",
+      "fromName": "Byron Stehr",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Ashlee.Sauer@acme2.com",
+        "Tomas_Kub20@acme2.com"
+      ],
+      "toNames": [
+        "Clifton Koelpin",
+        "Lora Gibson"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-12T04:41:18.716Z",
+      "body": "Hi Clifton,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThanks,\nByron Stehr"
+    },
+    {
+      "id": "email_11",
+      "threadId": "thread_2",
+      "subject": "Launch timeline e-commerce B2C",
+      "from": "Tomas_Kub20@acme2.com",
+      "fromName": "Lora Gibson",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Ashlee.Sauer@acme2.com",
+        "Amber_Runte29@acme2.com"
+      ],
+      "toNames": [
+        "Clifton Koelpin",
+        "Byron Stehr"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-14T05:42:41.009Z",
+      "body": "Hi Clifton,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThank you for your attention to this matter,\nLora Gibson\nMarketing Specialist\nTomas_Kub20@acme2.com"
+    },
+    {
+      "id": "email_12",
+      "threadId": "thread_2",
+      "subject": "Launch timeline e-commerce B2C",
+      "from": "Ashlee.Sauer@acme2.com",
+      "fromName": "Clifton Koelpin",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Amber_Runte29@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Byron Stehr"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-17T09:22:48.602Z",
+      "body": "Hi Lora,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nCheers,\nClifton Koelpin"
+    },
+    {
+      "id": "email_13",
+      "threadId": "thread_2",
+      "subject": "Launch timeline e-commerce B2C",
+      "from": "Amber_Runte29@acme2.com",
+      "fromName": "Byron Stehr",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Ashlee.Sauer@acme2.com",
+        "Tomas_Kub20@acme2.com"
+      ],
+      "toNames": [
+        "Clifton Koelpin",
+        "Lora Gibson"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-20T19:04:23.744Z",
+      "body": "Hi Clifton,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThanks,\nByron Stehr"
+    },
+    {
+      "id": "email_14",
+      "threadId": "thread_2",
+      "subject": "Launch timeline e-commerce B2C",
+      "from": "Ashlee.Sauer@acme2.com",
+      "fromName": "Clifton Koelpin",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Amber_Runte29@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Byron Stehr"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-23T01:03:38.445Z",
+      "body": "Hi Lora,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nClifton Koelpin"
+    },
+    {
+      "id": "email_15",
+      "threadId": "thread_3",
+      "subject": "Release e-commerce clicks-and-mortar",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-24T16:51:26.974Z",
+      "body": "Hi Sammy,\n\nBased on our roadmap, I've scheduled the product launch for next month. Can you confirm that the development will be completed by then?\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_16",
+      "threadId": "thread_3",
+      "subject": "Release e-commerce clicks-and-mortar",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-25T06:52:09.406Z",
+      "body": "Hi Sammy,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_17",
+      "threadId": "thread_3",
+      "subject": "Release e-commerce clicks-and-mortar",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-26T06:34:21.062Z",
+      "body": "Hi Sammy,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_18",
+      "threadId": "thread_4",
+      "subject": "Launch timeline bandwidth real-time",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Amber_Runte29@acme2.com",
+        "Mariam.Huel@acme2.com"
+      ],
+      "toNames": [
+        "Byron Stehr",
+        "Garry Kohler"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-06T12:51:34.632Z",
+      "body": "Hi Byron,\n\nI'm planning the communications for our product launch. We should be ready to announce on the 15th. Does that timeline work for the product team?\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_19",
+      "threadId": "thread_4",
+      "subject": "Launch timeline bandwidth real-time",
+      "from": "Mariam.Huel@acme2.com",
+      "fromName": "Garry Kohler",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Amber_Runte29@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Byron Stehr"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-09T22:38:52.928Z",
+      "body": "Hi Lewis,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nGarry Kohler\nBusiness Analyst\nMariam.Huel@acme2.com"
+    },
+    {
+      "id": "email_20",
+      "threadId": "thread_4",
+      "subject": "Launch timeline bandwidth real-time",
+      "from": "Mariam.Huel@acme2.com",
+      "fromName": "Garry Kohler",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Amber_Runte29@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Byron Stehr"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-12T01:47:25.836Z",
+      "body": "Hi Lewis,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGarry Kohler\nBusiness Analyst\nMariam.Huel@acme2.com"
+    },
+    {
+      "id": "email_21",
+      "threadId": "thread_4",
+      "subject": "Launch timeline bandwidth real-time",
+      "from": "Mariam.Huel@acme2.com",
+      "fromName": "Garry Kohler",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Amber_Runte29@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Byron Stehr"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-15T17:11:32.123Z",
+      "body": "Hi Lewis,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGarry Kohler\nBusiness Analyst\nMariam.Huel@acme2.com"
+    },
+    {
+      "id": "email_22",
+      "threadId": "thread_4",
+      "subject": "Launch timeline bandwidth real-time",
+      "from": "Mariam.Huel@acme2.com",
+      "fromName": "Garry Kohler",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Amber_Runte29@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Byron Stehr"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-17T23:15:56.865Z",
+      "body": "Hi Lewis,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThank you for your attention to this matter,\nGarry Kohler\nBusiness Analyst\nMariam.Huel@acme2.com"
+    },
+    {
+      "id": "email_23",
+      "threadId": "thread_4",
+      "subject": "Launch timeline bandwidth real-time",
+      "from": "Amber_Runte29@acme2.com",
+      "fromName": "Byron Stehr",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Mariam.Huel@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Garry Kohler"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-21T03:52:25.055Z",
+      "body": "Hi Lewis,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nByron Stehr"
+    },
+    {
+      "id": "email_24",
+      "threadId": "thread_4",
+      "subject": "Launch timeline bandwidth real-time",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Amber_Runte29@acme2.com",
+        "Mariam.Huel@acme2.com"
+      ],
+      "toNames": [
+        "Byron Stehr",
+        "Garry Kohler"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-23T08:56:51.489Z",
+      "body": "Hi Byron,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_25",
+      "threadId": "thread_5",
+      "subject": "Product launch niches innovative",
+      "from": "Gonzalo.Hammes-Morissette@acme2.com",
+      "fromName": "Elias Maggio MD",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Mariam.Huel@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Garry Kohler"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-16T10:38:46.076Z",
+      "body": "Hi Sammy,\n\nI'm planning the communications for our product launch. We should be ready to announce on the 15th. Does that timeline work for the product team?\n\nThanks,\nElias Maggio MD"
+    },
+    {
+      "id": "email_26",
+      "threadId": "thread_5",
+      "subject": "Product launch niches innovative",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Gonzalo.Hammes-Morissette@acme2.com",
+        "Mariam.Huel@acme2.com"
+      ],
+      "toNames": [
+        "Elias Maggio MD",
+        "Garry Kohler"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-17T13:06:45.208Z",
+      "body": "Hi Elias,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_27",
+      "threadId": "thread_5",
+      "subject": "Product launch niches innovative",
+      "from": "Gonzalo.Hammes-Morissette@acme2.com",
+      "fromName": "Elias Maggio MD",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Mariam.Huel@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Garry Kohler"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-19T22:52:55.876Z",
+      "body": "Hi Sammy,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nElias Maggio MD"
+    },
+    {
+      "id": "email_28",
+      "threadId": "thread_5",
+      "subject": "Product launch niches innovative",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Gonzalo.Hammes-Morissette@acme2.com",
+        "Mariam.Huel@acme2.com"
+      ],
+      "toNames": [
+        "Elias Maggio MD",
+        "Garry Kohler"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-21T18:54:54.611Z",
+      "body": "Hi Elias,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_29",
+      "threadId": "thread_5",
+      "subject": "Product launch niches innovative",
+      "from": "Mariam.Huel@acme2.com",
+      "fromName": "Garry Kohler",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Gonzalo.Hammes-Morissette@acme2.com",
+        "Arturo.Armstrong@acme2.com"
+      ],
+      "toNames": [
+        "Elias Maggio MD",
+        "Sammy Kuphal Sr."
+      ],
+      "cc": [
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "timestamp": "2025-02-23T18:03:03.372Z",
+      "body": "Hi Elias,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nGarry Kohler\nBusiness Analyst\nMariam.Huel@acme2.com"
+    },
+    {
+      "id": "email_30",
+      "threadId": "thread_6",
+      "subject": "Release methodologies real-time",
+      "from": "Tomas_Kub20@acme2.com",
+      "fromName": "Lora Gibson",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Ashlee.Sauer@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "Clifton Koelpin",
+        "Ryan Kris II"
+      ],
+      "cc": [
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "timestamp": "2025-02-09T12:13:24.364Z",
+      "body": "Hi Clifton,\n\nI'm planning the communications for our product launch. We should be ready to announce on the 15th. Does that timeline work for the product team?\n\nThank you for your attention to this matter,\nLora Gibson\nMarketing Specialist\nTomas_Kub20@acme2.com"
+    },
+    {
+      "id": "email_31",
+      "threadId": "thread_6",
+      "subject": "Release methodologies real-time",
+      "from": "Ashlee.Sauer@acme2.com",
+      "fromName": "Clifton Koelpin",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Ryan Kris II"
+      ],
+      "cc": [
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "timestamp": "2025-02-12T08:57:12.931Z",
+      "body": "Hi Lora,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nCheers,\nClifton Koelpin"
+    },
+    {
+      "id": "email_32",
+      "threadId": "thread_6",
+      "subject": "Release methodologies real-time",
+      "from": "Thalia_Lakin59@acme2.com",
+      "fromName": "Ryan Kris II",
+      "fromRole": "Product Director",
+      "fromDepartment": "Product",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Ashlee.Sauer@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Clifton Koelpin"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-14T12:52:52.075Z",
+      "body": "Hi Lora,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nRyan Kris II"
+    },
+    {
+      "id": "email_33",
+      "threadId": "thread_6",
+      "subject": "Release methodologies real-time",
+      "from": "Addison_Kuvalis-Brakus82@acme2.com",
+      "fromName": "Winifred Witting",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Ashlee.Sauer@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Clifton Koelpin"
+      ],
+      "cc": [
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "timestamp": "2025-02-18T17:36:20.705Z",
+      "body": "Hi Lora,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nWinifred Witting\nProduct Manager"
+    },
+    {
+      "id": "email_34",
+      "threadId": "thread_6",
+      "subject": "Release methodologies real-time",
+      "from": "Addison_Kuvalis-Brakus82@acme2.com",
+      "fromName": "Winifred Witting",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Ashlee.Sauer@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Clifton Koelpin"
+      ],
+      "cc": [
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "timestamp": "2025-02-21T06:49:41.311Z",
+      "body": "Hi Lora,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nWinifred Witting\nProduct Manager"
+    },
+    {
+      "id": "email_35",
+      "threadId": "thread_7",
+      "subject": "Release action-items open-source",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Gonzalo.Hammes-Morissette@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "Elias Maggio MD",
+        "Ryan Kris II"
+      ],
+      "cc": [
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "timestamp": "2025-02-08T07:35:14.098Z",
+      "body": "Hi Elias,\n\nI'm planning the communications for our product launch. We should be ready to announce on the 15th. Does that timeline work for the product team?\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_36",
+      "threadId": "thread_7",
+      "subject": "Release action-items open-source",
+      "from": "Thalia_Lakin59@acme2.com",
+      "fromName": "Ryan Kris II",
+      "fromRole": "Product Director",
+      "fromDepartment": "Product",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Gonzalo.Hammes-Morissette@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Elias Maggio MD"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-11T19:11:18.269Z",
+      "body": "Hi Sammy,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nRyan Kris II"
+    },
+    {
+      "id": "email_37",
+      "threadId": "thread_7",
+      "subject": "Release action-items open-source",
+      "from": "Addison_Kuvalis-Brakus82@acme2.com",
+      "fromName": "Winifred Witting",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Gonzalo.Hammes-Morissette@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Elias Maggio MD"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-15T01:49:41.083Z",
+      "body": "Hi Sammy,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nWinifred Witting\nProduct Manager"
+    },
+    {
+      "id": "email_38",
+      "threadId": "thread_7",
+      "subject": "Release action-items open-source",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Gonzalo.Hammes-Morissette@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "Elias Maggio MD",
+        "Ryan Kris II"
+      ],
+      "cc": [
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "timestamp": "2025-02-20T00:23:29.000Z",
+      "body": "Hi Elias,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_39",
+      "threadId": "thread_8",
+      "subject": "Launch timeline e-business one-to-one",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Malinda_Hodkiewicz-Howell@acme2.com",
+        "Amber_Runte29@acme2.com"
+      ],
+      "toNames": [
+        "Kelly Gleason",
+        "Byron Stehr"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-27T22:57:02.221Z",
+      "body": "Hi Kelly,\n\nBased on our roadmap, I've scheduled the product launch for next month. Can you confirm that the development will be completed by then?\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_40",
+      "threadId": "thread_8",
+      "subject": "Launch timeline e-business one-to-one",
+      "from": "Albin_Aufderhar13@acme2.com",
+      "fromName": "Constance Simonis",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Malinda_Hodkiewicz-Howell@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Kelly Gleason"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-28T00:59:47.085Z",
+      "body": "Hi Lewis,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nRegards,\nConstance Simonis\nBusiness Analyst"
+    },
+    {
+      "id": "email_41",
+      "threadId": "thread_8",
+      "subject": "Launch timeline e-business one-to-one",
+      "from": "Amber_Runte29@acme2.com",
+      "fromName": "Byron Stehr",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Malinda_Hodkiewicz-Howell@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Kelly Gleason"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-28T03:55:53.214Z",
+      "body": "Hi Lewis,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nByron Stehr"
+    },
+    {
+      "id": "email_42",
+      "threadId": "thread_8",
+      "subject": "Launch timeline e-business one-to-one",
+      "from": "Albin_Aufderhar13@acme2.com",
+      "fromName": "Constance Simonis",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Malinda_Hodkiewicz-Howell@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Kelly Gleason"
+      ],
+      "cc": [
+        "Amber_Runte29@acme2.com"
+      ],
+      "timestamp": "2025-02-28T08:59:07.138Z",
+      "body": "Hi Lewis,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nRegards,\nConstance Simonis\nBusiness Analyst"
+    },
+    {
+      "id": "email_43",
+      "threadId": "thread_8",
+      "subject": "Launch timeline e-business one-to-one",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Malinda_Hodkiewicz-Howell@acme2.com",
+        "Amber_Runte29@acme2.com"
+      ],
+      "toNames": [
+        "Kelly Gleason",
+        "Byron Stehr"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-28T14:12:14.086Z",
+      "body": "Hi Kelly,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_44",
+      "threadId": "thread_9",
+      "subject": "Release applications plug-and-play",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Stuart.Rice-Zieme@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "April Fahey",
+        "Ryan Kris II"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-24T03:29:50.422Z",
+      "body": "Hi April,\n\nBased on our roadmap, I've scheduled the product launch for next month. Can you confirm that the development will be completed by then?\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_45",
+      "threadId": "thread_9",
+      "subject": "Release applications plug-and-play",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Stuart.Rice-Zieme@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "April Fahey",
+        "Ryan Kris II"
+      ],
+      "cc": [
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "timestamp": "2025-02-25T07:46:26.793Z",
+      "body": "Hi April,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_46",
+      "threadId": "thread_9",
+      "subject": "Release applications plug-and-play",
+      "from": "Stuart.Rice-Zieme@acme2.com",
+      "fromName": "April Fahey",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Ryan Kris II"
+      ],
+      "cc": [
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "timestamp": "2025-02-26T15:00:26.126Z",
+      "body": "Hi Sammy,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nApril Fahey\nMarketing Director\nStuart.Rice-Zieme@acme2.com"
+    },
+    {
+      "id": "email_47",
+      "threadId": "thread_9",
+      "subject": "Release applications plug-and-play",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Stuart.Rice-Zieme@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "April Fahey",
+        "Ryan Kris II"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-27T23:00:58.815Z",
+      "body": "Hi April,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_48",
+      "threadId": "thread_10",
+      "subject": "Product launch channels end-to-end",
+      "from": "Tomas_Kub20@acme2.com",
+      "fromName": "Lora Gibson",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Ryan Kris II"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-17T00:54:52.289Z",
+      "body": "Hi Sammy,\n\nBased on our roadmap, I've scheduled the product launch for next month. Can you confirm that the development will be completed by then?\n\nThank you for your attention to this matter,\nLora Gibson\nMarketing Specialist\nTomas_Kub20@acme2.com"
+    },
+    {
+      "id": "email_49",
+      "threadId": "thread_10",
+      "subject": "Product launch channels end-to-end",
+      "from": "Thalia_Lakin59@acme2.com",
+      "fromName": "Ryan Kris II",
+      "fromRole": "Product Director",
+      "fromDepartment": "Product",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Arturo.Armstrong@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Sammy Kuphal Sr."
+      ],
+      "cc": [],
+      "timestamp": "2025-02-18T21:13:56.063Z",
+      "body": "Hi Lora,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nRyan Kris II"
+    },
+    {
+      "id": "email_50",
+      "threadId": "thread_10",
+      "subject": "Product launch channels end-to-end",
+      "from": "Albin_Aufderhar13@acme2.com",
+      "fromName": "Constance Simonis",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Arturo.Armstrong@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Sammy Kuphal Sr."
+      ],
+      "cc": [],
+      "timestamp": "2025-02-20T04:42:46.886Z",
+      "body": "Hi Lora,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nRegards,\nConstance Simonis\nBusiness Analyst"
+    },
+    {
+      "id": "email_51",
+      "threadId": "thread_10",
+      "subject": "Product launch channels end-to-end",
+      "from": "Tomas_Kub20@acme2.com",
+      "fromName": "Lora Gibson",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Ryan Kris II"
+      ],
+      "cc": [
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "timestamp": "2025-02-21T13:25:25.669Z",
+      "body": "Hi Sammy,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nLora Gibson\nMarketing Specialist\nTomas_Kub20@acme2.com"
+    },
+    {
+      "id": "email_52",
+      "threadId": "thread_10",
+      "subject": "Product launch channels end-to-end",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Ryan Kris II"
+      ],
+      "cc": [
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "timestamp": "2025-02-23T08:09:39.866Z",
+      "body": "Hi Lora,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_53",
+      "threadId": "thread_10",
+      "subject": "Product launch channels end-to-end",
+      "from": "Tomas_Kub20@acme2.com",
+      "fromName": "Lora Gibson",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Ryan Kris II"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-24T10:32:23.500Z",
+      "body": "Hi Sammy,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThank you for your attention to this matter,\nLora Gibson\nMarketing Specialist\nTomas_Kub20@acme2.com"
+    },
+    {
+      "id": "email_54",
+      "threadId": "thread_10",
+      "subject": "Product launch channels end-to-end",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Ryan Kris II"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-25T20:46:40.193Z",
+      "body": "Hi Lora,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_55",
+      "threadId": "thread_11",
+      "subject": "Launch timeline models enterprise",
+      "from": "Stuart.Rice-Zieme@acme2.com",
+      "fromName": "April Fahey",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Ashlee.Sauer@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Clifton Koelpin",
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-22T08:03:37.074Z",
+      "body": "Hi Clifton,\n\nBased on our roadmap, I've scheduled the product launch for next month. Can you confirm that the development will be completed by then?\n\nThank you for your attention to this matter,\nApril Fahey\nMarketing Director\nStuart.Rice-Zieme@acme2.com"
+    },
+    {
+      "id": "email_56",
+      "threadId": "thread_11",
+      "subject": "Launch timeline models enterprise",
+      "from": "Albin_Aufderhar13@acme2.com",
+      "fromName": "Constance Simonis",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Stuart.Rice-Zieme@acme2.com",
+        "Ashlee.Sauer@acme2.com"
+      ],
+      "toNames": [
+        "April Fahey",
+        "Clifton Koelpin"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-22T23:30:37.355Z",
+      "body": "Hi April,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nRegards,\nConstance Simonis\nBusiness Analyst"
+    },
+    {
+      "id": "email_57",
+      "threadId": "thread_11",
+      "subject": "Launch timeline models enterprise",
+      "from": "Albin_Aufderhar13@acme2.com",
+      "fromName": "Constance Simonis",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Stuart.Rice-Zieme@acme2.com",
+        "Ashlee.Sauer@acme2.com"
+      ],
+      "toNames": [
+        "April Fahey",
+        "Clifton Koelpin"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-24T01:42:33.314Z",
+      "body": "Hi April,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nRegards,\nConstance Simonis\nBusiness Analyst"
+    },
+    {
+      "id": "email_58",
+      "threadId": "thread_11",
+      "subject": "Launch timeline models enterprise",
+      "from": "Albin_Aufderhar13@acme2.com",
+      "fromName": "Constance Simonis",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Stuart.Rice-Zieme@acme2.com",
+        "Ashlee.Sauer@acme2.com"
+      ],
+      "toNames": [
+        "April Fahey",
+        "Clifton Koelpin"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-24T15:10:27.156Z",
+      "body": "Hi April,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nRegards,\nConstance Simonis\nBusiness Analyst"
+    },
+    {
+      "id": "email_59",
+      "threadId": "thread_11",
+      "subject": "Launch timeline models enterprise",
+      "from": "Ashlee.Sauer@acme2.com",
+      "fromName": "Clifton Koelpin",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Stuart.Rice-Zieme@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "April Fahey",
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-25T07:18:48.694Z",
+      "body": "Hi April,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nCheers,\nClifton Koelpin"
+    },
+    {
+      "id": "email_60",
+      "threadId": "thread_11",
+      "subject": "Launch timeline models enterprise",
+      "from": "Albin_Aufderhar13@acme2.com",
+      "fromName": "Constance Simonis",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Stuart.Rice-Zieme@acme2.com",
+        "Ashlee.Sauer@acme2.com"
+      ],
+      "toNames": [
+        "April Fahey",
+        "Clifton Koelpin"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-26T08:34:42.979Z",
+      "body": "Hi April,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nRegards,\nConstance Simonis\nBusiness Analyst"
+    },
+    {
+      "id": "email_61",
+      "threadId": "thread_12",
+      "subject": "Launch timeline experiences enterprise",
+      "from": "Gonzalo.Hammes-Morissette@acme2.com",
+      "fromName": "Elias Maggio MD",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Ashlee.Sauer@acme2.com",
+        "Amber_Runte29@acme2.com"
+      ],
+      "toNames": [
+        "Clifton Koelpin",
+        "Byron Stehr"
+      ],
+      "cc": [
+        "Mariam.Huel@acme2.com"
+      ],
+      "timestamp": "2025-02-09T19:09:21.104Z",
+      "body": "Hi Clifton,\n\nI'm planning the communications for our product launch. We should be ready to announce on the 15th. Does that timeline work for the product team?\n\nThanks,\nElias Maggio MD"
+    },
+    {
+      "id": "email_62",
+      "threadId": "thread_12",
+      "subject": "Launch timeline experiences enterprise",
+      "from": "Mariam.Huel@acme2.com",
+      "fromName": "Garry Kohler",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Gonzalo.Hammes-Morissette@acme2.com",
+        "Ashlee.Sauer@acme2.com"
+      ],
+      "toNames": [
+        "Elias Maggio MD",
+        "Clifton Koelpin"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-13T08:49:14.439Z",
+      "body": "Hi Elias,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nGarry Kohler\nBusiness Analyst\nMariam.Huel@acme2.com"
+    },
+    {
+      "id": "email_63",
+      "threadId": "thread_12",
+      "subject": "Launch timeline experiences enterprise",
+      "from": "Amber_Runte29@acme2.com",
+      "fromName": "Byron Stehr",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Gonzalo.Hammes-Morissette@acme2.com",
+        "Ashlee.Sauer@acme2.com"
+      ],
+      "toNames": [
+        "Elias Maggio MD",
+        "Clifton Koelpin"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-17T09:02:32.994Z",
+      "body": "Hi Elias,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThanks,\nByron Stehr"
+    },
+    {
+      "id": "email_64",
+      "threadId": "thread_12",
+      "subject": "Launch timeline experiences enterprise",
+      "from": "Mariam.Huel@acme2.com",
+      "fromName": "Garry Kohler",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Gonzalo.Hammes-Morissette@acme2.com",
+        "Ashlee.Sauer@acme2.com"
+      ],
+      "toNames": [
+        "Elias Maggio MD",
+        "Clifton Koelpin"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-21T12:59:33.829Z",
+      "body": "Hi Elias,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nGarry Kohler\nBusiness Analyst\nMariam.Huel@acme2.com"
+    },
+    {
+      "id": "email_65",
+      "threadId": "thread_13",
+      "subject": "Release content transparent",
+      "from": "Abdul.Pfannerstill@acme2.com",
+      "fromName": "Ashley Leuschke",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Thalia_Lakin59@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Ryan Kris II",
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-13T02:58:53.943Z",
+      "body": "Hi Ryan,\n\nI'm planning the communications for our product launch. We should be ready to announce on the 15th. Does that timeline work for the product team?\n\nThanks,\nAshley Leuschke"
+    },
+    {
+      "id": "email_66",
+      "threadId": "thread_13",
+      "subject": "Release content transparent",
+      "from": "Abdul.Pfannerstill@acme2.com",
+      "fromName": "Ashley Leuschke",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Thalia_Lakin59@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Ryan Kris II",
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-15T19:07:03.326Z",
+      "body": "Hi Ryan,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nAshley Leuschke"
+    },
+    {
+      "id": "email_67",
+      "threadId": "thread_13",
+      "subject": "Release content transparent",
+      "from": "Abdul.Pfannerstill@acme2.com",
+      "fromName": "Ashley Leuschke",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Thalia_Lakin59@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Ryan Kris II",
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-19T02:01:03.539Z",
+      "body": "Hi Ryan,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nAshley Leuschke"
+    },
+    {
+      "id": "email_68",
+      "threadId": "thread_13",
+      "subject": "Release content transparent",
+      "from": "Albin_Aufderhar13@acme2.com",
+      "fromName": "Constance Simonis",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Abdul.Pfannerstill@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "Ashley Leuschke",
+        "Ryan Kris II"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-21T03:48:22.226Z",
+      "body": "Hi Ashley,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nRegards,\nConstance Simonis\nBusiness Analyst"
+    },
+    {
+      "id": "email_69",
+      "threadId": "thread_14",
+      "subject": "Release web services magnetic",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Abdul.Pfannerstill@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Ashley Leuschke",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-24T03:29:54.393Z",
+      "body": "Hi Ashley,\n\nBased on our roadmap, I've scheduled the product launch for next month. Can you confirm that the development will be completed by then?\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_70",
+      "threadId": "thread_14",
+      "subject": "Release web services magnetic",
+      "from": "Abdul.Pfannerstill@acme2.com",
+      "fromName": "Ashley Leuschke",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-24T16:44:44.684Z",
+      "body": "Hi Lewis,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nAshley Leuschke"
+    },
+    {
+      "id": "email_71",
+      "threadId": "thread_14",
+      "subject": "Release web services magnetic",
+      "from": "Addison_Kuvalis-Brakus82@acme2.com",
+      "fromName": "Winifred Witting",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Abdul.Pfannerstill@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Ashley Leuschke"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-25T07:51:13.856Z",
+      "body": "Hi Lewis,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nWinifred Witting\nProduct Manager"
+    },
+    {
+      "id": "email_72",
+      "threadId": "thread_14",
+      "subject": "Release web services magnetic",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Abdul.Pfannerstill@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Ashley Leuschke",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-25T20:38:49.908Z",
+      "body": "Hi Ashley,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_73",
+      "threadId": "thread_15",
+      "subject": "Release infrastructures frictionless",
+      "from": "Malinda_Hodkiewicz-Howell@acme2.com",
+      "fromName": "Kelly Gleason",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Thalia_Lakin59@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Ryan Kris II",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-27T17:55:55.857Z",
+      "body": "Hi Ryan,\n\nI'm planning the communications for our product launch. We should be ready to announce on the 15th. Does that timeline work for the product team?\n\nThank you for your attention to this matter,\nKelly Gleason\nCampaign Manager\nMalinda_Hodkiewicz-Howell@acme2.com"
+    },
+    {
+      "id": "email_74",
+      "threadId": "thread_15",
+      "subject": "Release infrastructures frictionless",
+      "from": "Addison_Kuvalis-Brakus82@acme2.com",
+      "fromName": "Winifred Witting",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Malinda_Hodkiewicz-Howell@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "Kelly Gleason",
+        "Ryan Kris II"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-27T21:09:42.773Z",
+      "body": "Hi Kelly,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nWinifred Witting\nProduct Manager"
+    },
+    {
+      "id": "email_75",
+      "threadId": "thread_15",
+      "subject": "Release infrastructures frictionless",
+      "from": "Addison_Kuvalis-Brakus82@acme2.com",
+      "fromName": "Winifred Witting",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Malinda_Hodkiewicz-Howell@acme2.com",
+        "Thalia_Lakin59@acme2.com"
+      ],
+      "toNames": [
+        "Kelly Gleason",
+        "Ryan Kris II"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-27T23:44:46.952Z",
+      "body": "Hi Kelly,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nWinifred Witting\nProduct Manager"
+    },
+    {
+      "id": "email_76",
+      "threadId": "thread_15",
+      "subject": "Release infrastructures frictionless",
+      "from": "Malinda_Hodkiewicz-Howell@acme2.com",
+      "fromName": "Kelly Gleason",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Thalia_Lakin59@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Ryan Kris II",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-28T04:42:45.146Z",
+      "body": "Hi Ryan,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nKelly Gleason\nCampaign Manager\nMalinda_Hodkiewicz-Howell@acme2.com"
+    },
+    {
+      "id": "email_77",
+      "threadId": "thread_15",
+      "subject": "Release infrastructures frictionless",
+      "from": "Malinda_Hodkiewicz-Howell@acme2.com",
+      "fromName": "Kelly Gleason",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Thalia_Lakin59@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Ryan Kris II",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-28T09:36:37.358Z",
+      "body": "Hi Ryan,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nKelly Gleason\nCampaign Manager\nMalinda_Hodkiewicz-Howell@acme2.com"
+    },
+    {
+      "id": "email_78",
+      "threadId": "thread_15",
+      "subject": "Release infrastructures frictionless",
+      "from": "Malinda_Hodkiewicz-Howell@acme2.com",
+      "fromName": "Kelly Gleason",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Thalia_Lakin59@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Ryan Kris II",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-28T14:40:11.310Z",
+      "body": "Hi Ryan,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nKelly Gleason\nCampaign Manager\nMalinda_Hodkiewicz-Howell@acme2.com"
+    },
+    {
+      "id": "email_79",
+      "threadId": "thread_15",
+      "subject": "Release infrastructures frictionless",
+      "from": "Thalia_Lakin59@acme2.com",
+      "fromName": "Ryan Kris II",
+      "fromRole": "Product Director",
+      "fromDepartment": "Product",
+      "to": [
+        "Malinda_Hodkiewicz-Howell@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Kelly Gleason",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-28T18:08:37.185Z",
+      "body": "Hi Kelly,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThanks,\nRyan Kris II"
+    },
+    {
+      "id": "email_80",
+      "threadId": "thread_16",
+      "subject": "Product launch ROI rich",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Amber_Runte29@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Byron Stehr"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-28T13:31:35.859Z",
+      "body": "Hi Lora,\n\nBased on our roadmap, I've scheduled the product launch for next month. Can you confirm that the development will be completed by then?\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_81",
+      "threadId": "thread_16",
+      "subject": "Product launch ROI rich",
+      "from": "Amber_Runte29@acme2.com",
+      "fromName": "Byron Stehr",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Tomas_Kub20@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Lora Gibson"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-28T15:03:50.660Z",
+      "body": "Hi Lewis,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nByron Stehr"
+    },
+    {
+      "id": "email_82",
+      "threadId": "thread_16",
+      "subject": "Product launch ROI rich",
+      "from": "Tomas_Kub20@acme2.com",
+      "fromName": "Lora Gibson",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Amber_Runte29@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Byron Stehr"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-28T17:08:53.264Z",
+      "body": "Hi Lewis,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nLora Gibson\nMarketing Specialist\nTomas_Kub20@acme2.com"
+    },
+    {
+      "id": "email_83",
+      "threadId": "thread_17",
+      "subject": "Launch timeline methodologies front-end",
+      "from": "Tomas_Kub20@acme2.com",
+      "fromName": "Lora Gibson",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-20T15:28:49.990Z",
+      "body": "Hi Lewis,\n\nI'm planning the communications for our product launch. We should be ready to announce on the 15th. Does that timeline work for the product team?\n\nThank you for your attention to this matter,\nLora Gibson\nMarketing Specialist\nTomas_Kub20@acme2.com"
+    },
+    {
+      "id": "email_84",
+      "threadId": "thread_17",
+      "subject": "Launch timeline methodologies front-end",
+      "from": "Tomas_Kub20@acme2.com",
+      "fromName": "Lora Gibson",
+      "fromRole": "Marketing Specialist",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roscoe_Erdman42@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Lewis Larkin",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-21T07:33:05.849Z",
+      "body": "Hi Lewis,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nLora Gibson\nMarketing Specialist\nTomas_Kub20@acme2.com"
+    },
+    {
+      "id": "email_85",
+      "threadId": "thread_17",
+      "subject": "Launch timeline methodologies front-end",
+      "from": "Addison_Kuvalis-Brakus82@acme2.com",
+      "fromName": "Winifred Witting",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Roscoe_Erdman42@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Lewis Larkin"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-22T11:34:30.789Z",
+      "body": "Hi Lora,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nWinifred Witting\nProduct Manager"
+    },
+    {
+      "id": "email_86",
+      "threadId": "thread_17",
+      "subject": "Launch timeline methodologies front-end",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-23T21:57:39.221Z",
+      "body": "Hi Lora,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_87",
+      "threadId": "thread_17",
+      "subject": "Launch timeline methodologies front-end",
+      "from": "Roscoe_Erdman42@acme2.com",
+      "fromName": "Lewis Larkin",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-24T20:04:46.361Z",
+      "body": "Hi Lora,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nCheers,\nLewis Larkin"
+    },
+    {
+      "id": "email_88",
+      "threadId": "thread_17",
+      "subject": "Launch timeline methodologies front-end",
+      "from": "Addison_Kuvalis-Brakus82@acme2.com",
+      "fromName": "Winifred Witting",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Tomas_Kub20@acme2.com",
+        "Roscoe_Erdman42@acme2.com"
+      ],
+      "toNames": [
+        "Lora Gibson",
+        "Lewis Larkin"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-26T03:17:49.473Z",
+      "body": "Hi Lora,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nWinifred Witting\nProduct Manager"
+    },
+    {
+      "id": "email_89",
+      "threadId": "thread_18",
+      "subject": "Product launch partnerships revolutionary",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Malinda_Hodkiewicz-Howell@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Kelly Gleason",
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-20T06:03:13.571Z",
+      "body": "Hi Kelly,\n\nBased on our roadmap, I've scheduled the product launch for next month. Can you confirm that the development will be completed by then?\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_90",
+      "threadId": "thread_18",
+      "subject": "Product launch partnerships revolutionary",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Malinda_Hodkiewicz-Howell@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Kelly Gleason",
+        "Constance Simonis"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-21T00:33:49.427Z",
+      "body": "Hi Kelly,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_91",
+      "threadId": "thread_18",
+      "subject": "Product launch partnerships revolutionary",
+      "from": "Mariam.Huel@acme2.com",
+      "fromName": "Garry Kohler",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Malinda_Hodkiewicz-Howell@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Kelly Gleason"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-22T14:51:12.059Z",
+      "body": "Hi Sammy,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGarry Kohler\nBusiness Analyst\nMariam.Huel@acme2.com"
+    },
+    {
+      "id": "email_92",
+      "threadId": "thread_18",
+      "subject": "Product launch partnerships revolutionary",
+      "from": "Arturo.Armstrong@acme2.com",
+      "fromName": "Sammy Kuphal Sr.",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Malinda_Hodkiewicz-Howell@acme2.com",
+        "Albin_Aufderhar13@acme2.com"
+      ],
+      "toNames": [
+        "Kelly Gleason",
+        "Constance Simonis"
+      ],
+      "cc": [
+        "Mariam.Huel@acme2.com"
+      ],
+      "timestamp": "2025-02-24T02:06:32.814Z",
+      "body": "Hi Kelly,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nSammy Kuphal Sr."
+    },
+    {
+      "id": "email_93",
+      "threadId": "thread_18",
+      "subject": "Product launch partnerships revolutionary",
+      "from": "Mariam.Huel@acme2.com",
+      "fromName": "Garry Kohler",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Malinda_Hodkiewicz-Howell@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Kelly Gleason"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-25T03:55:19.860Z",
+      "body": "Hi Sammy,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThank you for your attention to this matter,\nGarry Kohler\nBusiness Analyst\nMariam.Huel@acme2.com"
+    },
+    {
+      "id": "email_94",
+      "threadId": "thread_18",
+      "subject": "Product launch partnerships revolutionary",
+      "from": "Albin_Aufderhar13@acme2.com",
+      "fromName": "Constance Simonis",
+      "fromRole": "Business Analyst",
+      "fromDepartment": "Product",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Malinda_Hodkiewicz-Howell@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Kelly Gleason"
+      ],
+      "cc": [
+        "Mariam.Huel@acme2.com"
+      ],
+      "timestamp": "2025-02-25T23:53:30.968Z",
+      "body": "Hi Sammy,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nRegards,\nConstance Simonis\nBusiness Analyst"
+    },
+    {
+      "id": "email_95",
+      "threadId": "thread_19",
+      "subject": "Release platforms frictionless",
+      "from": "Abdul.Pfannerstill@acme2.com",
+      "fromName": "Ashley Leuschke",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-23T20:57:12.854Z",
+      "body": "Hi Sammy,\n\nBased on our roadmap, I've scheduled the product launch for next month. Can you confirm that the development will be completed by then?\n\nThanks,\nAshley Leuschke"
+    },
+    {
+      "id": "email_96",
+      "threadId": "thread_19",
+      "subject": "Release platforms frictionless",
+      "from": "Addison_Kuvalis-Brakus82@acme2.com",
+      "fromName": "Winifred Witting",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Abdul.Pfannerstill@acme2.com",
+        "Arturo.Armstrong@acme2.com"
+      ],
+      "toNames": [
+        "Ashley Leuschke",
+        "Sammy Kuphal Sr."
+      ],
+      "cc": [],
+      "timestamp": "2025-02-24T07:29:57.677Z",
+      "body": "Hi Ashley,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nWinifred Witting\nProduct Manager"
+    },
+    {
+      "id": "email_97",
+      "threadId": "thread_19",
+      "subject": "Release platforms frictionless",
+      "from": "Abdul.Pfannerstill@acme2.com",
+      "fromName": "Ashley Leuschke",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-25T00:40:05.254Z",
+      "body": "Hi Sammy,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThanks,\nAshley Leuschke"
+    },
+    {
+      "id": "email_98",
+      "threadId": "thread_19",
+      "subject": "Release platforms frictionless",
+      "from": "Addison_Kuvalis-Brakus82@acme2.com",
+      "fromName": "Winifred Witting",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Abdul.Pfannerstill@acme2.com",
+        "Arturo.Armstrong@acme2.com"
+      ],
+      "toNames": [
+        "Ashley Leuschke",
+        "Sammy Kuphal Sr."
+      ],
+      "cc": [],
+      "timestamp": "2025-02-25T08:19:14.319Z",
+      "body": "Hi Ashley,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nWinifred Witting\nProduct Manager"
+    },
+    {
+      "id": "email_99",
+      "threadId": "thread_19",
+      "subject": "Release platforms frictionless",
+      "from": "Abdul.Pfannerstill@acme2.com",
+      "fromName": "Ashley Leuschke",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-25T16:19:00.631Z",
+      "body": "Hi Sammy,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThanks,\nAshley Leuschke"
+    },
+    {
+      "id": "email_100",
+      "threadId": "thread_19",
+      "subject": "Release platforms frictionless",
+      "from": "Addison_Kuvalis-Brakus82@acme2.com",
+      "fromName": "Winifred Witting",
+      "fromRole": "Product Manager",
+      "fromDepartment": "Product",
+      "to": [
+        "Abdul.Pfannerstill@acme2.com",
+        "Arturo.Armstrong@acme2.com"
+      ],
+      "toNames": [
+        "Ashley Leuschke",
+        "Sammy Kuphal Sr."
+      ],
+      "cc": [],
+      "timestamp": "2025-02-26T00:33:42.977Z",
+      "body": "Hi Ashley,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nWinifred Witting\nProduct Manager"
+    },
+    {
+      "id": "email_101",
+      "threadId": "thread_19",
+      "subject": "Release platforms frictionless",
+      "from": "Abdul.Pfannerstill@acme2.com",
+      "fromName": "Ashley Leuschke",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Arturo.Armstrong@acme2.com",
+        "Addison_Kuvalis-Brakus82@acme2.com"
+      ],
+      "toNames": [
+        "Sammy Kuphal Sr.",
+        "Winifred Witting"
+      ],
+      "cc": [],
+      "timestamp": "2025-02-26T13:40:33.829Z",
+      "body": "Hi Sammy,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThanks,\nAshley Leuschke"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread_0",
+      "subject": "Product launch lifetime value out-of-the-box",
+      "participants": [
+        {
+          "id": "person_7",
+          "name": "Lewis Larkin",
+          "email": "Roscoe_Erdman42@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_6",
+          "name": "Lora Gibson",
+          "email": "Tomas_Kub20@acme2.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_14",
+          "name": "Constance Simonis",
+          "email": "Albin_Aufderhar13@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_1",
+      "subject": "Release e-business cross-media",
+      "participants": [
+        {
+          "id": "person_11",
+          "name": "Sammy Kuphal Sr.",
+          "email": "Arturo.Armstrong@acme2.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_14",
+          "name": "Constance Simonis",
+          "email": "Albin_Aufderhar13@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_2",
+      "subject": "Launch timeline e-commerce B2C",
+      "participants": [
+        {
+          "id": "person_8",
+          "name": "Clifton Koelpin",
+          "email": "Ashlee.Sauer@acme2.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_6",
+          "name": "Lora Gibson",
+          "email": "Tomas_Kub20@acme2.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_16",
+          "name": "Byron Stehr",
+          "email": "Amber_Runte29@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_3",
+      "subject": "Release e-commerce clicks-and-mortar",
+      "participants": [
+        {
+          "id": "person_7",
+          "name": "Lewis Larkin",
+          "email": "Roscoe_Erdman42@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_11",
+          "name": "Sammy Kuphal Sr.",
+          "email": "Arturo.Armstrong@acme2.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_14",
+          "name": "Constance Simonis",
+          "email": "Albin_Aufderhar13@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_16",
+          "name": "Byron Stehr",
+          "email": "Amber_Runte29@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_4",
+      "subject": "Launch timeline bandwidth real-time",
+      "participants": [
+        {
+          "id": "person_7",
+          "name": "Lewis Larkin",
+          "email": "Roscoe_Erdman42@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_16",
+          "name": "Byron Stehr",
+          "email": "Amber_Runte29@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_15",
+          "name": "Garry Kohler",
+          "email": "Mariam.Huel@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_5",
+      "subject": "Product launch niches innovative",
+      "participants": [
+        {
+          "id": "person_9",
+          "name": "Elias Maggio MD",
+          "email": "Gonzalo.Hammes-Morissette@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_11",
+          "name": "Sammy Kuphal Sr.",
+          "email": "Arturo.Armstrong@acme2.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_15",
+          "name": "Garry Kohler",
+          "email": "Mariam.Huel@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_17",
+          "name": "Winifred Witting",
+          "email": "Addison_Kuvalis-Brakus82@acme2.com",
+          "role": "Product Manager",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_6",
+      "subject": "Release methodologies real-time",
+      "participants": [
+        {
+          "id": "person_6",
+          "name": "Lora Gibson",
+          "email": "Tomas_Kub20@acme2.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_8",
+          "name": "Clifton Koelpin",
+          "email": "Ashlee.Sauer@acme2.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_13",
+          "name": "Ryan Kris II",
+          "email": "Thalia_Lakin59@acme2.com",
+          "role": "Product Director",
+          "department": "Product"
+        },
+        {
+          "id": "person_17",
+          "name": "Winifred Witting",
+          "email": "Addison_Kuvalis-Brakus82@acme2.com",
+          "role": "Product Manager",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_7",
+      "subject": "Release action-items open-source",
+      "participants": [
+        {
+          "id": "person_11",
+          "name": "Sammy Kuphal Sr.",
+          "email": "Arturo.Armstrong@acme2.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_9",
+          "name": "Elias Maggio MD",
+          "email": "Gonzalo.Hammes-Morissette@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_13",
+          "name": "Ryan Kris II",
+          "email": "Thalia_Lakin59@acme2.com",
+          "role": "Product Director",
+          "department": "Product"
+        },
+        {
+          "id": "person_17",
+          "name": "Winifred Witting",
+          "email": "Addison_Kuvalis-Brakus82@acme2.com",
+          "role": "Product Manager",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_8",
+      "subject": "Launch timeline e-business one-to-one",
+      "participants": [
+        {
+          "id": "person_7",
+          "name": "Lewis Larkin",
+          "email": "Roscoe_Erdman42@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_12",
+          "name": "Kelly Gleason",
+          "email": "Malinda_Hodkiewicz-Howell@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_16",
+          "name": "Byron Stehr",
+          "email": "Amber_Runte29@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_14",
+          "name": "Constance Simonis",
+          "email": "Albin_Aufderhar13@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_9",
+      "subject": "Release applications plug-and-play",
+      "participants": [
+        {
+          "id": "person_11",
+          "name": "Sammy Kuphal Sr.",
+          "email": "Arturo.Armstrong@acme2.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_5",
+          "name": "April Fahey",
+          "email": "Stuart.Rice-Zieme@acme2.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_13",
+          "name": "Ryan Kris II",
+          "email": "Thalia_Lakin59@acme2.com",
+          "role": "Product Director",
+          "department": "Product"
+        },
+        {
+          "id": "person_17",
+          "name": "Winifred Witting",
+          "email": "Addison_Kuvalis-Brakus82@acme2.com",
+          "role": "Product Manager",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_10",
+      "subject": "Product launch channels end-to-end",
+      "participants": [
+        {
+          "id": "person_6",
+          "name": "Lora Gibson",
+          "email": "Tomas_Kub20@acme2.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_11",
+          "name": "Sammy Kuphal Sr.",
+          "email": "Arturo.Armstrong@acme2.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_13",
+          "name": "Ryan Kris II",
+          "email": "Thalia_Lakin59@acme2.com",
+          "role": "Product Director",
+          "department": "Product"
+        },
+        {
+          "id": "person_14",
+          "name": "Constance Simonis",
+          "email": "Albin_Aufderhar13@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_11",
+      "subject": "Launch timeline models enterprise",
+      "participants": [
+        {
+          "id": "person_5",
+          "name": "April Fahey",
+          "email": "Stuart.Rice-Zieme@acme2.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_8",
+          "name": "Clifton Koelpin",
+          "email": "Ashlee.Sauer@acme2.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_14",
+          "name": "Constance Simonis",
+          "email": "Albin_Aufderhar13@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_16",
+          "name": "Byron Stehr",
+          "email": "Amber_Runte29@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_12",
+      "subject": "Launch timeline experiences enterprise",
+      "participants": [
+        {
+          "id": "person_9",
+          "name": "Elias Maggio MD",
+          "email": "Gonzalo.Hammes-Morissette@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_8",
+          "name": "Clifton Koelpin",
+          "email": "Ashlee.Sauer@acme2.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_16",
+          "name": "Byron Stehr",
+          "email": "Amber_Runte29@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_15",
+          "name": "Garry Kohler",
+          "email": "Mariam.Huel@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_13",
+      "subject": "Release content transparent",
+      "participants": [
+        {
+          "id": "person_10",
+          "name": "Ashley Leuschke",
+          "email": "Abdul.Pfannerstill@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_13",
+          "name": "Ryan Kris II",
+          "email": "Thalia_Lakin59@acme2.com",
+          "role": "Product Director",
+          "department": "Product"
+        },
+        {
+          "id": "person_14",
+          "name": "Constance Simonis",
+          "email": "Albin_Aufderhar13@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_14",
+      "subject": "Release web services magnetic",
+      "participants": [
+        {
+          "id": "person_7",
+          "name": "Lewis Larkin",
+          "email": "Roscoe_Erdman42@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_10",
+          "name": "Ashley Leuschke",
+          "email": "Abdul.Pfannerstill@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_17",
+          "name": "Winifred Witting",
+          "email": "Addison_Kuvalis-Brakus82@acme2.com",
+          "role": "Product Manager",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_15",
+      "subject": "Release infrastructures frictionless",
+      "participants": [
+        {
+          "id": "person_12",
+          "name": "Kelly Gleason",
+          "email": "Malinda_Hodkiewicz-Howell@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_13",
+          "name": "Ryan Kris II",
+          "email": "Thalia_Lakin59@acme2.com",
+          "role": "Product Director",
+          "department": "Product"
+        },
+        {
+          "id": "person_17",
+          "name": "Winifred Witting",
+          "email": "Addison_Kuvalis-Brakus82@acme2.com",
+          "role": "Product Manager",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_16",
+      "subject": "Product launch ROI rich",
+      "participants": [
+        {
+          "id": "person_7",
+          "name": "Lewis Larkin",
+          "email": "Roscoe_Erdman42@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_6",
+          "name": "Lora Gibson",
+          "email": "Tomas_Kub20@acme2.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_16",
+          "name": "Byron Stehr",
+          "email": "Amber_Runte29@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_13",
+          "name": "Ryan Kris II",
+          "email": "Thalia_Lakin59@acme2.com",
+          "role": "Product Director",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_17",
+      "subject": "Launch timeline methodologies front-end",
+      "participants": [
+        {
+          "id": "person_6",
+          "name": "Lora Gibson",
+          "email": "Tomas_Kub20@acme2.com",
+          "role": "Marketing Specialist",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_7",
+          "name": "Lewis Larkin",
+          "email": "Roscoe_Erdman42@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_17",
+          "name": "Winifred Witting",
+          "email": "Addison_Kuvalis-Brakus82@acme2.com",
+          "role": "Product Manager",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_18",
+      "subject": "Product launch partnerships revolutionary",
+      "participants": [
+        {
+          "id": "person_11",
+          "name": "Sammy Kuphal Sr.",
+          "email": "Arturo.Armstrong@acme2.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_12",
+          "name": "Kelly Gleason",
+          "email": "Malinda_Hodkiewicz-Howell@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_14",
+          "name": "Constance Simonis",
+          "email": "Albin_Aufderhar13@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        },
+        {
+          "id": "person_15",
+          "name": "Garry Kohler",
+          "email": "Mariam.Huel@acme2.com",
+          "role": "Business Analyst",
+          "department": "Product"
+        }
+      ]
+    },
+    {
+      "id": "thread_19",
+      "subject": "Release platforms frictionless",
+      "participants": [
+        {
+          "id": "person_10",
+          "name": "Ashley Leuschke",
+          "email": "Abdul.Pfannerstill@acme2.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_11",
+          "name": "Sammy Kuphal Sr.",
+          "email": "Arturo.Armstrong@acme2.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_17",
+          "name": "Winifred Witting",
+          "email": "Addison_Kuvalis-Brakus82@acme2.com",
+          "role": "Product Manager",
+          "department": "Product"
+        }
+      ]
+    }
+  ]
+}

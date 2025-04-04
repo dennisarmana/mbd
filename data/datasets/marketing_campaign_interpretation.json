@@ -1,0 +1,1812 @@
+{
+  "scenario": {
+    "id": "marketing_campaign_interpretation",
+    "name": "Marketing Campaign Interpretation",
+    "description": "Different team members have varied understandings of campaign goals",
+    "complexity_level": 1,
+    "key_issues": [
+      "Ambiguous campaign objectives",
+      "Unclear success metrics",
+      "Different interpretations of target audience"
+    ],
+    "time_span": {
+      "start_date": "2025-01-01T00:00:00.000Z",
+      "end_date": "2025-02-01T00:00:00.000Z"
+    }
+  },
+  "company": {
+    "name": "Acme1Corp",
+    "domain": "acme1.com",
+    "departments": [
+      {
+        "id": "dept_0",
+        "name": "Executive",
+        "parent_department": null
+      },
+      {
+        "id": "dept_1",
+        "name": "Marketing",
+        "parent_department": "dept_0"
+      },
+      {
+        "id": "dept_2",
+        "name": "Product",
+        "parent_department": null
+      },
+      {
+        "id": "dept_3",
+        "name": "Engineering",
+        "parent_department": "dept_0"
+      },
+      {
+        "id": "dept_4",
+        "name": "Design",
+        "parent_department": null
+      }
+    ],
+    "persons": [
+      {
+        "id": "person_0",
+        "name": "Dr. Stewart Stiedemann",
+        "email": "Karlie_Smith34@acme1.com",
+        "department_id": "dept_0",
+        "role": "Executive Director",
+        "boss_id": null,
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_1",
+        "name": "Myrtle Borer",
+        "email": "Jazlyn_Bogan-Kuphal81@acme1.com",
+        "department_id": "dept_0",
+        "role": "Manager",
+        "boss_id": "person_0",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_2",
+        "name": "Stuart Mann",
+        "email": "Jewel.Heathcote@acme1.com",
+        "department_id": "dept_0",
+        "role": "Analyst",
+        "boss_id": "person_0",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_3",
+        "name": "Lorenzo Lebsack",
+        "email": "Lavada.Kohler47@acme1.com",
+        "department_id": "dept_0",
+        "role": "Specialist",
+        "boss_id": "person_0",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_4",
+        "name": "Dr. Minnie Upton",
+        "email": "Jarret.Beatty@acme1.com",
+        "department_id": "dept_0",
+        "role": "Analyst",
+        "boss_id": "person_0",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_5",
+        "name": "Nick Feest",
+        "email": "Roosevelt_Barrows35@acme1.com",
+        "department_id": "dept_1",
+        "role": "Marketing Director",
+        "boss_id": "person_0",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_6",
+        "name": "Guillermo Schmeler",
+        "email": "Brando.Huels@acme1.com",
+        "department_id": "dept_1",
+        "role": "Content Creator",
+        "boss_id": "person_5",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_7",
+        "name": "Mr. Edmund Braun IV",
+        "email": "Lucile.Tillman53@acme1.com",
+        "department_id": "dept_1",
+        "role": "Campaign Manager",
+        "boss_id": "person_5",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_8",
+        "name": "Gene Larkin-Feest",
+        "email": "Nash_Wehner@acme1.com",
+        "department_id": "dept_1",
+        "role": "Campaign Manager",
+        "boss_id": "person_5",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_9",
+        "name": "Neil Gleichner",
+        "email": "Jacey.Witting@acme1.com",
+        "department_id": "dept_2",
+        "role": "Product Director",
+        "boss_id": null,
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_10",
+        "name": "Sean Wehner Sr.",
+        "email": "Antoinette_Wisoky@acme1.com",
+        "department_id": "dept_2",
+        "role": "Business Analyst",
+        "boss_id": "person_9",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_11",
+        "name": "Ms. Kristine Veum",
+        "email": "Zion.McGlynn18@acme1.com",
+        "department_id": "dept_2",
+        "role": "Product Owner",
+        "boss_id": "person_9",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_12",
+        "name": "Dana Walsh",
+        "email": "Vena.Gulgowski46@acme1.com",
+        "department_id": "dept_2",
+        "role": "Product Owner",
+        "boss_id": "person_9",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_13",
+        "name": "Anne Kub",
+        "email": "Theo_Halvorson65@acme1.com",
+        "department_id": "dept_2",
+        "role": "Product Owner",
+        "boss_id": "person_9",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_14",
+        "name": "Jesse Ernser",
+        "email": "Friedrich.Erdman30@acme1.com",
+        "department_id": "dept_2",
+        "role": "Product Owner",
+        "boss_id": "person_9",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_15",
+        "name": "Wilfred Conn",
+        "email": "Hallie_Kertzmann93@acme1.com",
+        "department_id": "dept_3",
+        "role": "Engineering Director",
+        "boss_id": "person_0",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_16",
+        "name": "Mr. Fred Kuhn",
+        "email": "Kara_Hermann14@acme1.com",
+        "department_id": "dept_3",
+        "role": "Software Engineer",
+        "boss_id": "person_15",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_17",
+        "name": "Ivan Hayes",
+        "email": "Kelsi.Dicki@acme1.com",
+        "department_id": "dept_3",
+        "role": "DevOps Engineer",
+        "boss_id": "person_15",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_18",
+        "name": "Patsy Feest-Kunze Sr.",
+        "email": "Dax.Krajcik-Ortiz17@acme1.com",
+        "department_id": "dept_3",
+        "role": "QA Engineer",
+        "boss_id": "person_15",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_19",
+        "name": "Denise Cartwright DVM",
+        "email": "Adriana.Green@acme1.com",
+        "department_id": "dept_3",
+        "role": "QA Engineer",
+        "boss_id": "person_15",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_20",
+        "name": "Moses Hilpert",
+        "email": "Allison_West@acme1.com",
+        "department_id": "dept_3",
+        "role": "Software Engineer",
+        "boss_id": "person_15",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_21",
+        "name": "Vicki Ebert",
+        "email": "Patrick.Lockman@acme1.com",
+        "department_id": "dept_4",
+        "role": "Design Director",
+        "boss_id": null,
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_22",
+        "name": "Michael Schmitt",
+        "email": "Vivianne_Crona@acme1.com",
+        "department_id": "dept_4",
+        "role": "UX Researcher",
+        "boss_id": "person_21",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_23",
+        "name": "Randy Lehner",
+        "email": "Deshawn_Ryan8@acme1.com",
+        "department_id": "dept_4",
+        "role": "Visual Designer",
+        "boss_id": "person_21",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_24",
+        "name": "Jeffery Greenholt",
+        "email": "Christ_Bartoletti@acme1.com",
+        "department_id": "dept_4",
+        "role": "UI Designer",
+        "boss_id": "person_21",
+        "communication_style": "technical"
+      }
+    ]
+  },
+  "emails": [
+    {
+      "id": "email_0",
+      "threadId": "thread_0",
+      "subject": "Campaign channels vertical",
+      "from": "Lucile.Tillman53@acme1.com",
+      "fromName": "Mr. Edmund Braun IV",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-31T10:57:45.632Z",
+      "body": "Hi Nick,\n\nWe need to finalize our marketing strategy for the vertical campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager"
+    },
+    {
+      "id": "email_1",
+      "threadId": "thread_0",
+      "subject": "Campaign channels vertical",
+      "from": "Lucile.Tillman53@acme1.com",
+      "fromName": "Mr. Edmund Braun IV",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-31T15:50:42.062Z",
+      "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager"
+    },
+    {
+      "id": "email_2",
+      "threadId": "thread_0",
+      "subject": "Campaign channels vertical",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-31T17:57:56.155Z",
+      "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_3",
+      "threadId": "thread_1",
+      "subject": "Marketing lifetime value revolutionary",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-31T17:48:53.480Z",
+      "body": "Hi Guillermo,\n\nWe need to finalize our marketing strategy for the revolutionary campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_4",
+      "threadId": "thread_1",
+      "subject": "Marketing lifetime value revolutionary",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-31T18:56:08.784Z",
+      "body": "Hi Guillermo,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_5",
+      "threadId": "thread_1",
+      "subject": "Marketing lifetime value revolutionary",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-31T20:00:07.411Z",
+      "body": "Hi Guillermo,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_6",
+      "threadId": "thread_1",
+      "subject": "Marketing lifetime value revolutionary",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-31T20:43:57.358Z",
+      "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_7",
+      "threadId": "thread_1",
+      "subject": "Marketing lifetime value revolutionary",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-31T21:58:22.971Z",
+      "body": "Hi Guillermo,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_8",
+      "threadId": "thread_1",
+      "subject": "Marketing lifetime value revolutionary",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-31T23:01:59.514Z",
+      "body": "Hi Guillermo,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_9",
+      "threadId": "thread_2",
+      "subject": "Campaign technologies robust",
+      "from": "Lucile.Tillman53@acme1.com",
+      "fromName": "Mr. Edmund Braun IV",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-14T14:42:54.850Z",
+      "body": "Hi Nick,\n\nWe need to finalize our marketing strategy for the robust campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager"
+    },
+    {
+      "id": "email_10",
+      "threadId": "thread_2",
+      "subject": "Campaign technologies robust",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-18T08:59:31.269Z",
+      "body": "Hi Mr.,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_11",
+      "threadId": "thread_2",
+      "subject": "Campaign technologies robust",
+      "from": "Lucile.Tillman53@acme1.com",
+      "fromName": "Mr. Edmund Braun IV",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-19T19:43:12.347Z",
+      "body": "Hi Nick,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager"
+    },
+    {
+      "id": "email_12",
+      "threadId": "thread_2",
+      "subject": "Campaign technologies robust",
+      "from": "Lucile.Tillman53@acme1.com",
+      "fromName": "Mr. Edmund Braun IV",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-21T15:49:27.375Z",
+      "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager"
+    },
+    {
+      "id": "email_13",
+      "threadId": "thread_2",
+      "subject": "Campaign technologies robust",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-24T00:48:55.523Z",
+      "body": "Hi Mr.,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_14",
+      "threadId": "thread_3",
+      "subject": "Campaign e-commerce global",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-18T14:44:42.565Z",
+      "body": "Hi Nick,\n\nWe need to finalize our marketing strategy for the global campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_15",
+      "threadId": "thread_3",
+      "subject": "Campaign e-commerce global",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-21T19:23:01.179Z",
+      "body": "Hi Nick,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_16",
+      "threadId": "thread_3",
+      "subject": "Campaign e-commerce global",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-23T01:11:44.768Z",
+      "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_17",
+      "threadId": "thread_3",
+      "subject": "Campaign e-commerce global",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-25T05:23:41.931Z",
+      "body": "Hi Nick,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_18",
+      "threadId": "thread_4",
+      "subject": "Marketing portals clicks-and-mortar",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Nash_Wehner@acme1.com"
+      ],
+      "toNames": [
+        "Gene Larkin-Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-18T05:47:49.917Z",
+      "body": "Hi Gene,\n\nI wanted to discuss our upcoming clicks-and-mortar campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_19",
+      "threadId": "thread_4",
+      "subject": "Marketing portals clicks-and-mortar",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-23T01:59:07.905Z",
+      "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_20",
+      "threadId": "thread_4",
+      "subject": "Marketing portals clicks-and-mortar",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Nash_Wehner@acme1.com"
+      ],
+      "toNames": [
+        "Gene Larkin-Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-27T21:43:08.846Z",
+      "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_21",
+      "threadId": "thread_5",
+      "subject": "Campaign users B2B",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-11T20:28:26.323Z",
+      "body": "Hi Guillermo,\n\nI wanted to discuss our upcoming B2B campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_22",
+      "threadId": "thread_5",
+      "subject": "Campaign users B2B",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-14T14:21:56.049Z",
+      "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_23",
+      "threadId": "thread_5",
+      "subject": "Campaign users B2B",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-19T04:08:23.707Z",
+      "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_24",
+      "threadId": "thread_5",
+      "subject": "Campaign users B2B",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-23T08:39:02.363Z",
+      "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_25",
+      "threadId": "thread_5",
+      "subject": "Campaign users B2B",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-26T06:02:32.617Z",
+      "body": "Hi Nick,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_26",
+      "threadId": "thread_6",
+      "subject": "Marketing deliverables end-to-end",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-20T10:26:28.651Z",
+      "body": "Hi Mr.,\n\nWe need to finalize our marketing strategy for the end-to-end campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_27",
+      "threadId": "thread_6",
+      "subject": "Marketing deliverables end-to-end",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-21T18:07:57.340Z",
+      "body": "Hi Mr.,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_28",
+      "threadId": "thread_6",
+      "subject": "Marketing deliverables end-to-end",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-22T21:14:41.299Z",
+      "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_29",
+      "threadId": "thread_6",
+      "subject": "Marketing deliverables end-to-end",
+      "from": "Lucile.Tillman53@acme1.com",
+      "fromName": "Mr. Edmund Braun IV",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Nash_Wehner@acme1.com"
+      ],
+      "toNames": [
+        "Gene Larkin-Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-24T17:47:06.695Z",
+      "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager"
+    },
+    {
+      "id": "email_30",
+      "threadId": "thread_6",
+      "subject": "Marketing deliverables end-to-end",
+      "from": "Lucile.Tillman53@acme1.com",
+      "fromName": "Mr. Edmund Braun IV",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Nash_Wehner@acme1.com"
+      ],
+      "toNames": [
+        "Gene Larkin-Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-26T03:30:05.081Z",
+      "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager"
+    },
+    {
+      "id": "email_31",
+      "threadId": "thread_6",
+      "subject": "Marketing deliverables end-to-end",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-28T00:39:39.956Z",
+      "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_32",
+      "threadId": "thread_7",
+      "subject": "Marketing lifetime value end-to-end",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-24T15:02:55.903Z",
+      "body": "Hi Nick,\n\nI wanted to discuss our upcoming end-to-end campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_33",
+      "threadId": "thread_7",
+      "subject": "Marketing lifetime value end-to-end",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Nash_Wehner@acme1.com"
+      ],
+      "toNames": [
+        "Gene Larkin-Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-26T14:36:38.774Z",
+      "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_34",
+      "threadId": "thread_7",
+      "subject": "Marketing lifetime value end-to-end",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Nash_Wehner@acme1.com"
+      ],
+      "toNames": [
+        "Gene Larkin-Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-28T13:44:41.040Z",
+      "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_35",
+      "threadId": "thread_7",
+      "subject": "Marketing lifetime value end-to-end",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Nash_Wehner@acme1.com"
+      ],
+      "toNames": [
+        "Gene Larkin-Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-29T14:07:21.815Z",
+      "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_36",
+      "threadId": "thread_8",
+      "subject": "Campaign platforms cross-platform",
+      "from": "Lucile.Tillman53@acme1.com",
+      "fromName": "Mr. Edmund Braun IV",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-18T17:26:44.043Z",
+      "body": "Hi Guillermo,\n\nWe need to finalize our marketing strategy for the cross-platform campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager"
+    },
+    {
+      "id": "email_37",
+      "threadId": "thread_8",
+      "subject": "Campaign platforms cross-platform",
+      "from": "Lucile.Tillman53@acme1.com",
+      "fromName": "Mr. Edmund Braun IV",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-21T12:02:18.413Z",
+      "body": "Hi Guillermo,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager"
+    },
+    {
+      "id": "email_38",
+      "threadId": "thread_8",
+      "subject": "Campaign platforms cross-platform",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-22T19:39:33.088Z",
+      "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_39",
+      "threadId": "thread_8",
+      "subject": "Campaign platforms cross-platform",
+      "from": "Lucile.Tillman53@acme1.com",
+      "fromName": "Mr. Edmund Braun IV",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-24T17:20:08.748Z",
+      "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager"
+    },
+    {
+      "id": "email_40",
+      "threadId": "thread_8",
+      "subject": "Campaign platforms cross-platform",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-27T14:32:21.161Z",
+      "body": "Hi Mr.,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_41",
+      "threadId": "thread_9",
+      "subject": "Campaign deliverables one-to-one",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-13T11:36:58.316Z",
+      "body": "Hi Nick,\n\nI wanted to discuss our upcoming one-to-one campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_42",
+      "threadId": "thread_9",
+      "subject": "Campaign deliverables one-to-one",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Nash_Wehner@acme1.com"
+      ],
+      "toNames": [
+        "Gene Larkin-Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-15T18:08:16.516Z",
+      "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_43",
+      "threadId": "thread_9",
+      "subject": "Campaign deliverables one-to-one",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-19T00:50:29.398Z",
+      "body": "Hi Nick,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_44",
+      "threadId": "thread_9",
+      "subject": "Campaign deliverables one-to-one",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-21T19:10:21.216Z",
+      "body": "Hi Nick,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_45",
+      "threadId": "thread_9",
+      "subject": "Campaign deliverables one-to-one",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Nash_Wehner@acme1.com"
+      ],
+      "toNames": [
+        "Gene Larkin-Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-22T23:30:04.602Z",
+      "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_46",
+      "threadId": "thread_9",
+      "subject": "Campaign deliverables one-to-one",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Nash_Wehner@acme1.com"
+      ],
+      "toNames": [
+        "Gene Larkin-Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-24T03:24:53.529Z",
+      "body": "Hi Gene,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_47",
+      "threadId": "thread_10",
+      "subject": "Launch initiatives granular",
+      "from": "Lucile.Tillman53@acme1.com",
+      "fromName": "Mr. Edmund Braun IV",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-31T11:30:59.671Z",
+      "body": "Hi Guillermo,\n\nI wanted to discuss our upcoming granular campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager"
+    },
+    {
+      "id": "email_48",
+      "threadId": "thread_10",
+      "subject": "Launch initiatives granular",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-31T15:48:08.152Z",
+      "body": "Hi Mr.,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_49",
+      "threadId": "thread_10",
+      "subject": "Launch initiatives granular",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-31T17:54:35.014Z",
+      "body": "Hi Mr.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_50",
+      "threadId": "thread_11",
+      "subject": "Launch mindshare compelling",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com",
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler",
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-12T10:37:50.455Z",
+      "body": "Hi Guillermo,\n\nI wanted to discuss our upcoming compelling campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_51",
+      "threadId": "thread_11",
+      "subject": "Launch mindshare compelling",
+      "from": "Lucile.Tillman53@acme1.com",
+      "fromName": "Mr. Edmund Braun IV",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com",
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest",
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-16T14:11:55.624Z",
+      "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager"
+    },
+    {
+      "id": "email_52",
+      "threadId": "thread_11",
+      "subject": "Launch mindshare compelling",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com",
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest",
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-20T18:08:18.854Z",
+      "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_53",
+      "threadId": "thread_11",
+      "subject": "Launch mindshare compelling",
+      "from": "Lucile.Tillman53@acme1.com",
+      "fromName": "Mr. Edmund Braun IV",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com",
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest",
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-23T15:10:00.454Z",
+      "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nMr. Edmund Braun IV\nCampaign Manager"
+    },
+    {
+      "id": "email_54",
+      "threadId": "thread_12",
+      "subject": "Marketing models granular",
+      "from": "Nash_Wehner@acme1.com",
+      "fromName": "Gene Larkin-Feest",
+      "fromRole": "Campaign Manager",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com",
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler",
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-15T00:04:46.762Z",
+      "body": "Hi Guillermo,\n\nI wanted to discuss our upcoming granular campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nKind regards,\nGene Larkin-Feest\nCampaign Manager"
+    },
+    {
+      "id": "email_55",
+      "threadId": "thread_12",
+      "subject": "Marketing models granular",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Nash_Wehner@acme1.com",
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Gene Larkin-Feest",
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-17T09:09:05.335Z",
+      "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_56",
+      "threadId": "thread_12",
+      "subject": "Marketing models granular",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Nash_Wehner@acme1.com",
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Gene Larkin-Feest",
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-22T02:55:25.121Z",
+      "body": "Hi Gene,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_57",
+      "threadId": "thread_13",
+      "subject": "Campaign bandwidth efficient",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com",
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest",
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-13T23:34:30.957Z",
+      "body": "Hi Nick,\n\nWe need to finalize our marketing strategy for the efficient campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_58",
+      "threadId": "thread_13",
+      "subject": "Campaign bandwidth efficient",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com",
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest",
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-16T18:35:57.362Z",
+      "body": "Hi Nick,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_59",
+      "threadId": "thread_13",
+      "subject": "Campaign bandwidth efficient",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com",
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest",
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-20T02:31:09.992Z",
+      "body": "Hi Nick,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_60",
+      "threadId": "thread_13",
+      "subject": "Campaign bandwidth efficient",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com",
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler",
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-21T20:45:58.723Z",
+      "body": "Hi Guillermo,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_61",
+      "threadId": "thread_13",
+      "subject": "Campaign bandwidth efficient",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com",
+        "Lucile.Tillman53@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest",
+        "Mr. Edmund Braun IV"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-24T15:40:05.585Z",
+      "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_62",
+      "threadId": "thread_14",
+      "subject": "Marketing paradigms web-enabled",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-23T06:03:50.058Z",
+      "body": "Hi Guillermo,\n\nWe need to finalize our marketing strategy for the web-enabled campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_63",
+      "threadId": "thread_14",
+      "subject": "Marketing paradigms web-enabled",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-25T02:08:47.632Z",
+      "body": "Hi Guillermo,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    },
+    {
+      "id": "email_64",
+      "threadId": "thread_14",
+      "subject": "Marketing paradigms web-enabled",
+      "from": "Brando.Huels@acme1.com",
+      "fromName": "Guillermo Schmeler",
+      "fromRole": "Content Creator",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Roosevelt_Barrows35@acme1.com"
+      ],
+      "toNames": [
+        "Nick Feest"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-26T19:37:46.137Z",
+      "body": "Hi Nick,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nThank you for your attention to this matter,\nGuillermo Schmeler\nContent Creator\nBrando.Huels@acme1.com"
+    },
+    {
+      "id": "email_65",
+      "threadId": "thread_14",
+      "subject": "Marketing paradigms web-enabled",
+      "from": "Roosevelt_Barrows35@acme1.com",
+      "fromName": "Nick Feest",
+      "fromRole": "Marketing Director",
+      "fromDepartment": "Marketing",
+      "to": [
+        "Brando.Huels@acme1.com"
+      ],
+      "toNames": [
+        "Guillermo Schmeler"
+      ],
+      "cc": [],
+      "timestamp": "2025-01-29T08:03:46.423Z",
+      "body": "Hi Guillermo,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nNick Feest\nMarketing Director\nRoosevelt_Barrows35@acme1.com"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread_0",
+      "subject": "Campaign channels vertical",
+      "participants": [
+        {
+          "id": "person_7",
+          "name": "Mr. Edmund Braun IV",
+          "email": "Lucile.Tillman53@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_5",
+          "name": "Nick Feest",
+          "email": "Roosevelt_Barrows35@acme1.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_1",
+      "subject": "Marketing lifetime value revolutionary",
+      "participants": [
+        {
+          "id": "person_8",
+          "name": "Gene Larkin-Feest",
+          "email": "Nash_Wehner@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_6",
+          "name": "Guillermo Schmeler",
+          "email": "Brando.Huels@acme1.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_2",
+      "subject": "Campaign technologies robust",
+      "participants": [
+        {
+          "id": "person_7",
+          "name": "Mr. Edmund Braun IV",
+          "email": "Lucile.Tillman53@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_5",
+          "name": "Nick Feest",
+          "email": "Roosevelt_Barrows35@acme1.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_3",
+      "subject": "Campaign e-commerce global",
+      "participants": [
+        {
+          "id": "person_8",
+          "name": "Gene Larkin-Feest",
+          "email": "Nash_Wehner@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_5",
+          "name": "Nick Feest",
+          "email": "Roosevelt_Barrows35@acme1.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_4",
+      "subject": "Marketing portals clicks-and-mortar",
+      "participants": [
+        {
+          "id": "person_5",
+          "name": "Nick Feest",
+          "email": "Roosevelt_Barrows35@acme1.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_8",
+          "name": "Gene Larkin-Feest",
+          "email": "Nash_Wehner@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_5",
+      "subject": "Campaign users B2B",
+      "participants": [
+        {
+          "id": "person_5",
+          "name": "Nick Feest",
+          "email": "Roosevelt_Barrows35@acme1.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_6",
+          "name": "Guillermo Schmeler",
+          "email": "Brando.Huels@acme1.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_6",
+      "subject": "Marketing deliverables end-to-end",
+      "participants": [
+        {
+          "id": "person_8",
+          "name": "Gene Larkin-Feest",
+          "email": "Nash_Wehner@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_7",
+          "name": "Mr. Edmund Braun IV",
+          "email": "Lucile.Tillman53@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_7",
+      "subject": "Marketing lifetime value end-to-end",
+      "participants": [
+        {
+          "id": "person_8",
+          "name": "Gene Larkin-Feest",
+          "email": "Nash_Wehner@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_5",
+          "name": "Nick Feest",
+          "email": "Roosevelt_Barrows35@acme1.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_8",
+      "subject": "Campaign platforms cross-platform",
+      "participants": [
+        {
+          "id": "person_7",
+          "name": "Mr. Edmund Braun IV",
+          "email": "Lucile.Tillman53@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_6",
+          "name": "Guillermo Schmeler",
+          "email": "Brando.Huels@acme1.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_9",
+      "subject": "Campaign deliverables one-to-one",
+      "participants": [
+        {
+          "id": "person_8",
+          "name": "Gene Larkin-Feest",
+          "email": "Nash_Wehner@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_5",
+          "name": "Nick Feest",
+          "email": "Roosevelt_Barrows35@acme1.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_10",
+      "subject": "Launch initiatives granular",
+      "participants": [
+        {
+          "id": "person_7",
+          "name": "Mr. Edmund Braun IV",
+          "email": "Lucile.Tillman53@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_6",
+          "name": "Guillermo Schmeler",
+          "email": "Brando.Huels@acme1.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_11",
+      "subject": "Launch mindshare compelling",
+      "participants": [
+        {
+          "id": "person_5",
+          "name": "Nick Feest",
+          "email": "Roosevelt_Barrows35@acme1.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_6",
+          "name": "Guillermo Schmeler",
+          "email": "Brando.Huels@acme1.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_7",
+          "name": "Mr. Edmund Braun IV",
+          "email": "Lucile.Tillman53@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_12",
+      "subject": "Marketing models granular",
+      "participants": [
+        {
+          "id": "person_8",
+          "name": "Gene Larkin-Feest",
+          "email": "Nash_Wehner@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_6",
+          "name": "Guillermo Schmeler",
+          "email": "Brando.Huels@acme1.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_7",
+          "name": "Mr. Edmund Braun IV",
+          "email": "Lucile.Tillman53@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_13",
+      "subject": "Campaign bandwidth efficient",
+      "participants": [
+        {
+          "id": "person_6",
+          "name": "Guillermo Schmeler",
+          "email": "Brando.Huels@acme1.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_5",
+          "name": "Nick Feest",
+          "email": "Roosevelt_Barrows35@acme1.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_7",
+          "name": "Mr. Edmund Braun IV",
+          "email": "Lucile.Tillman53@acme1.com",
+          "role": "Campaign Manager",
+          "department": "Marketing"
+        }
+      ]
+    },
+    {
+      "id": "thread_14",
+      "subject": "Marketing paradigms web-enabled",
+      "participants": [
+        {
+          "id": "person_5",
+          "name": "Nick Feest",
+          "email": "Roosevelt_Barrows35@acme1.com",
+          "role": "Marketing Director",
+          "department": "Marketing"
+        },
+        {
+          "id": "person_6",
+          "name": "Guillermo Schmeler",
+          "email": "Brando.Huels@acme1.com",
+          "role": "Content Creator",
+          "department": "Marketing"
+        }
+      ]
+    }
+  ]
+}
