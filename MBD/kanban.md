@@ -24,7 +24,7 @@ kanban-plugin: board
 - [ ] Add email.txt files first (from, to, cc, timestamp, subject and body), then slowly increase complexity by adding meeting.txt files, mock crm.txt, files etc.
 
 
-## Todo
+## Dev todos
 
 - [ ] Design database schema for storing organizational data
 - [ ] Create mock email dataset for initial development
@@ -42,9 +42,22 @@ kanban-plugin: board
 - [ ] Initial research on Theory of Constraints implementation
 
 
+## Content creation todos
+
+
+
+
+
+
 ## Doing (WIP 2)
 
 - [ ] Breaking down product requirements into tasks (this kanban board)
+- [ ] Create mock email chains in JSON format with massive volumes:
+	- Use 10 scenarios of increasing complexity (from team to company-wide misalignment)
+	- Structure: JSON format with thread IDs, metadata, and full email fields
+	- Volume: 150-200 emails for early scenarios, 250-400 for middle scenarios, 500-1000+ for complex scenarios
+	- Generate programmatically with templates and variations
+	- File structure: Each scenario in its own folder with emails.json, metadata.json, and generation_config.json
 
 
 ## Done
@@ -59,6 +72,6 @@ kanban-plugin: board
 
 %% kanban:settings
 ```
-{"kanban-plugin":"board","list-collapse":[false,false]}
+{"kanban-plugin":"board","list-collapse":[false,false,false]}
 ```
 %%
