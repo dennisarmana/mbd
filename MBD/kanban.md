@@ -48,6 +48,22 @@ kanban-plugin: board
 
 ## Doing (WIP 2)
 
+- [ ] Breaking down product requirements into tasks (this kanban board)
+- [ ] Add personal emails with sensitive content:
+	- [x] Implement generator patterns for personal/non-work emails
+	- [x] Create templates for various sensitive topics:
+		- [x] Illicit affairs and personal relationships
+		- [x] Job searches and applications to other companies
+		- [x] Personal conflicts and domestic disputes
+		- [x] Financial concerns and debt issues
+	- [x] Add detection logic to randomly inject these emails into generated datasets
+	- [x] Implement configurable "realism slider" to control sensitive content amount
+	- [x] Create personas with recurring personal issues across email threads
+	- [ ] Integrate personal emails into main scenario generator
+
+
+## Done
+
 - [ ] Create a web form for email scenario generation:
 	- [x] Set up React-based single-page application with clean UI
 	- [x] Create configuration panels for scenario parameters
@@ -60,11 +76,6 @@ kanban-plugin: board
 		- [x] Implement working download functionality for generated datasets
 	- [ ] Connect frontend to existing Node.js generator backend
 	- [x] Fix TypeScript errors and bugs in UI components
-- [ ] Breaking down product requirements into tasks (this kanban board)
-
-
-## Done
-
 - [ ] Generate email scenarios in increasing complexity to test the system
 - [ ] Created PRD document
 - [ ] Setting up the project repository
