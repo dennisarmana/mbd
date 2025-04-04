@@ -44,20 +44,46 @@ kanban-plugin: board
 
 ## Dennis todos
 
-- [ ] Build minimal chat interface to demonstrate the concept:
-	  - [ ] Create basic HTML/CSS for chat UI with company/user selection
-	  - [ ] Implement JavaScript to handle user input and display responses
-	  - [ ] Connect chat UI to constraint analyzer for basic recommendations
-	  - [ ] Add simple explanations for recommended tasks
+- [x] Integrate Email Generator with BERT Analyzer (MVP Integration Plan):
+  - [x] Fix dataset loading in BERT API to properly read email JSON files
+  - [x] Create data mapping layer to standardize email format for analysis
+  - [x] Add proper error handling for file access issues
+  - [x] Implement direct filesystem paths to access real datasets
+
+- [ ] Enhance BERT constraint identification:
+  - [ ] Train BERT model with sample email threads for better context understanding
+  - [ ] Improve keyword extraction for organizational bottlenecks
+  - [ ] Add weighting factors for communication patterns
+  - [ ] Refine recommendation generation based on identified constraints
+
+- [x] Fix UI/UX issues in web interface:
+  - [x] Resolve dropdown population with real departments/users
+  - [x] Implement functional chat responses using BERT analysis
+  - [x] Add visualization of constraint analysis results
+  - [x] Create seamless connection between UI and backend API
+
 - [ ] Prepare presentation assets:
-	  - [ ] Create overview slide explaining MBD concept
-	  - [ ] Prepare dataset metrics visualization
-	  - [ ] Document constraint analysis methodology
-	  - [ ] Script demo flow with fallback options
+  - [ ] Create overview slide explaining end-to-end MBD system
+  - [ ] Document integrated email generation and constraint analysis flow
+  - [ ] Prepare demo highlighting the key integration points
+  - [ ] Create visualization of the Theory of Constraints methodology
 
 
 ## Doing (WIP 2)
 
+- [x] Connect Email Generator with BERT for constraint identification:
+  - [x] Investigation: Located existing email datasets in data/mixed-scenarios and data/scenarios
+  - [x] Identified integration challenges: datasets are gitignored and need custom access
+  - [x] Update BERT data processor to handle email generator JSON structure
+  - [x] Map company structure from datasets to BERT constraint analyzer
+  - [x] Create data flow pipeline: Email Generator → JSON Files → BERT Analyzer → UI
+  - [x] Extract constraints and generate actionable recommendations
+
+- [ ] System Architecture Understanding:
+  - [x] Email Generator: React/Node.js app at /web/email-generator-ui
+  - [x] Email Datasets: JSON files in /data directory with mixed-scenarios
+  - [x] BERT Analyzer: Python implementation in /nlp directory
+  - [x] Web Interface: Simple Flask-served frontend in /nlp/static
 
 
 
