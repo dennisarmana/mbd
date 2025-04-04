@@ -21,6 +21,7 @@ kanban-plugin: board
 - [ ] Create notification system for urgent tasks
 - [ ] Add calendar integration for scheduling recommended tasks
 - [ ] Implement automated follow-up for task completion
+- [ ] Add email.txt files first (from, to, cc, timestamp, subject and body), then slowly increase complexity by adding meeting.txt files, mock crm.txt, files etc.
 
 
 ## Todo
@@ -43,13 +44,13 @@ kanban-plugin: board
 
 ## Doing (WIP 2)
 
-- [ ] Setting up the project repository
 - [ ] Breaking down product requirements into tasks (this kanban board)
 
 
 ## Done
 
 - [ ] Created PRD document
+- [ ] Setting up the project repository
 - [ ] Created GitHub repository
 - [ ] Initialized development environment
 
