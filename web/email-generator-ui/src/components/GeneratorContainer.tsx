@@ -14,8 +14,10 @@ import {
   Tab,
   Divider
 } from '@mui/material';
+import { SaveAlt as DownloadIcon } from '@mui/icons-material';
 import ScenarioForm from './form/ScenarioForm';
 import EmailPreview from './preview/EmailPreview';
+import DatasetBrowser from './preview/DatasetBrowser';
 import { 
   ScenarioFormData, 
   PreviewData, 
@@ -36,6 +38,8 @@ const GeneratorContainer: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [tabIndex, setTabIndex] = useState(0);
   const [previewData, setPreviewData] = useState<PreviewData | null>(null);
+  const [fullDataset, setFullDataset] = useState<EmailPreviewType[] | null>(null);
+  const [formValues, setFormValues] = useState<ScenarioFormData | null>(null);
   const [generationStatus, setGenerationStatus] = useState<GenerationStatus>({
     status: 'idle',
     progress: 0
@@ -49,9 +53,15 @@ const GeneratorContainer: React.FC = () => {
   // Handler for form submission to generate preview
   const handlePreview = async (formData: ScenarioFormData) => {
     try {
+      setFormValues(formData);
       setGenerationStatus({ status: 'generating', progress: 0 });
       const preview = await generatePreview(formData);
       setPreviewData(preview);
+      
+      // Generate full dataset (this would normally be done in the generate step,
+      // but for our prototype we'll use the same data)
+      setFullDataset(preview.emails);
+      
       setGenerationStatus({ status: 'idle', progress: 0 });
       setTabIndex(1); // Switch to preview tab
     } catch (error) {
@@ -69,30 +79,34 @@ const GeneratorContainer: React.FC = () => {
     }
   };
   
-  // Handler for form submission to generate full dataset
-  const handleGenerateDataset = async (formData: ScenarioFormData) => {
+  // Handler for generating full dataset
+  const handleGenerate = async () => {
+    if (!previewData || !formValues) return;
+    
     try {
       setGenerationStatus({ status: 'generating', progress: 0 });
       setActiveStep(1); // Move to generation step
       
-      // Start the generation process
-      const status = await generateFullDataset(formData);
-      setGenerationStatus(status);
+      // In a real application, this would make a backend call and potentially
+      // poll for status until complete. For this prototype, we'll simulate progress.
+      const intervalId = setInterval(() => {
+        setGenerationStatus(prev => {
+          const newProgress = Math.min(prev.progress + 10, 100);
+          if (newProgress >= 100) {
+            clearInterval(intervalId);
+            // Once generation is complete, we'd normally fetch the full dataset
+            // from the backend, but for now we'll just use our preview data
+            setActiveStep(2); // Move to download step
+            return { 
+              status: 'complete', 
+              progress: 100,
+              outputPath: 'dataset.json'
+            };
+          }
+          return { ...prev, progress: newProgress };
+        });
+      }, 500);
       
-      if (status.status === 'complete') {
-        setActiveStep(2); // Move to completion step
-        setNotification({
-          open: true,
-          message: 'Dataset generated successfully!',
-          severity: 'success'
-        });
-      } else if (status.status === 'error') {
-        setNotification({
-          open: true,
-          message: status.message || 'Error generating dataset',
-          severity: 'error'
-        });
-      }
     } catch (error) {
       console.error('Error generating dataset:', error);
       setGenerationStatus({ 
@@ -106,6 +120,47 @@ const GeneratorContainer: React.FC = () => {
         severity: 'error'
       });
     }
+  };
+  
+  // Handler for downloading the dataset
+  const handleDownload = () => {
+    if (!fullDataset || !formValues) return;
+    
+    // Create a data structure for the full dataset
+    const datasetObject = {
+      generationInfo: {
+        scenarioName: formValues.scenario.name,
+        scenarioDescription: formValues.scenario.description,
+        complexity: formValues.scenario.complexity_level,
+        timestamp: new Date().toISOString(),
+        emailCount: fullDataset.length
+      },
+      company: {
+        name: formValues.generation.companyOptions.name || 'Company',
+        domain: formValues.generation.companyOptions.domain || 'company.com',
+      },
+      emails: fullDataset
+    };
+    
+    // Convert to JSON string
+    const jsonString = JSON.stringify(datasetObject, null, 2);
+    
+    // Create a blob and trigger download
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${formValues.scenario.id || 'scenario'}_dataset.json`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    
+    setNotification({
+      open: true,
+      message: 'Dataset downloaded successfully!',
+      severity: 'success'
+    });
   };
   
   // Close notification
@@ -128,103 +183,70 @@ const GeneratorContainer: React.FC = () => {
     setGenerationStatus({ status: 'idle', progress: 0 });
   };
   
-  // Define steps for the generation process
-  const steps = ['Configure', 'Generate', 'Download'];
-  
   return (
     <Box>
       {/* Stepper to show progress through the generation workflow */}
       <Stepper activeStep={activeStep} sx={{ mb: 4 }}>
-        {steps.map((label) => (
-          <Step key={label}>
-            <StepLabel>{label}</StepLabel>
-          </Step>
-        ))}
+        <Step key="Configure">
+          <StepLabel>Configure</StepLabel>
+        </Step>
+        <Step key="Generate">
+          <StepLabel>Generate</StepLabel>
+        </Step>
+        <Step key="Download">
+          <StepLabel>Download</StepLabel>
+        </Step>
       </Stepper>
       
       {/* Main content area */}
       <Box>
         {activeStep === 0 && (
-          <Box>
-            <Paper sx={{ mb: 3 }}>
-              <Tabs
-                value={tabIndex}
+          <Box sx={{ width: '100%', mt: 4 }}>
+            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+              <Tabs 
+                value={tabIndex} 
                 onChange={handleTabChange}
-                indicatorColor="primary"
-                textColor="primary"
-                variant="fullWidth"
               >
                 <Tab label="Configure" />
-                <Tab 
-                  label="Preview" 
-                  disabled={!previewData}
-                />
+                <Tab label="Preview" disabled={!previewData} />
               </Tabs>
+            </Box>
+            
+            <Box sx={{ mt: 2 }}>
+              {/* Tab 1: Configuration Form */}
+              {tabIndex === 0 && (
+                <ScenarioForm 
+                  onSubmit={handleGenerate} 
+                  onPreview={handlePreview}
+                  isGenerating={generationStatus.status === 'generating'}
+                />
+              )}
               
-              <Divider />
-              
-              <Box sx={{ p: 3 }}>
-                {tabIndex === 0 ? (
-                  <ScenarioForm 
-                    onSubmit={handleGenerateDataset}
-                    onPreview={handlePreview}
-                    isGenerating={generationStatus.status === 'generating'}
+              {/* Tab 2: Preview */}
+              {tabIndex === 1 && previewData && (
+                <Box>
+                  <EmailPreview 
+                    emails={previewData.emails} 
+                    stats={previewData.stats}
                   />
-                ) : (
-                  previewData && (
-                    <Box>
-                      <EmailPreview 
-                        emails={previewData.emails}
-                        stats={previewData.stats}
-                      />
-                      <Box sx={{ mt: 3, display: 'flex', justifyContent: 'space-between' }}>
-                        <Button 
-                          variant="outlined" 
-                          onClick={() => setTabIndex(0)}
-                        >
-                          Back to Configure
-                        </Button>
-                        <Button 
-                          variant="contained" 
-                          color="primary"
-                          onClick={() => {
-                            // We would use the last form data here
-                            // For now, just move to the next step
-                            setActiveStep(1);
-                            setGenerationStatus({ status: 'generating', progress: 10 });
-                            
-                            // Simulate generation progress
-                            let progress = 10;
-                            const interval = setInterval(() => {
-                              progress += 10;
-                              setGenerationStatus({ 
-                                status: 'generating', 
-                                progress 
-                              });
-                              
-                              if (progress >= 100) {
-                                clearInterval(interval);
-                                setGenerationStatus({ 
-                                  status: 'complete', 
-                                  progress: 100,
-                                  outputPath: '/datasets/sample'
-                                });
-                                setActiveStep(2);
-                              }
-                            }, 500);
-                          }}
-                        >
-                          Generate Full Dataset
-                        </Button>
-                      </Box>
-                    </Box>
-                  )
-                )}
-              </Box>
-            </Paper>
+                  
+                  <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      disabled={generationStatus.status === 'generating'}
+                      onClick={handleGenerate}
+                    >
+                      Generate Full Dataset
+                    </Button>
+                  </Box>
+                </Box>
+              )}
+            </Box>
           </Box>
         )}
         
+        {/* Generation in progress */}
         {activeStep === 1 && (
           <Box sx={{ textAlign: 'center', p: 4 }}>
             <Typography variant="h5" gutterBottom>
@@ -248,45 +270,59 @@ const GeneratorContainer: React.FC = () => {
           </Box>
         )}
         
-        {activeStep === 2 && (
-          <Box sx={{ textAlign: 'center', p: 4 }}>
+        {/* Dataset ready with browser and download options */}
+        {activeStep === 2 && fullDataset && (
+          <Box sx={{ p: 2 }}>
             <Alert severity="success" sx={{ mb: 3 }}>
               Your email dataset has been generated successfully!
             </Alert>
             
-            <Typography variant="h5" gutterBottom>
-              Dataset Ready
-            </Typography>
+            <Tabs 
+              value={tabIndex} 
+              onChange={handleTabChange}
+              sx={{ mb: 2 }}
+            >
+              <Tab label="Dataset Info" />
+              <Tab label="Browse Data" />
+            </Tabs>
             
-            <Typography paragraph>
-              Your email dataset has been generated and is ready for download.
-              The dataset contains the emails, threads, and company information
-              according to your configuration.
-            </Typography>
+            {tabIndex === 0 && (
+              <Box sx={{ textAlign: 'center', p: 2 }}>
+                <Typography variant="h5" gutterBottom>
+                  Dataset Ready
+                </Typography>
+                
+                <Typography paragraph>
+                  Your email dataset has been generated and is ready for download.
+                  The dataset contains {fullDataset.length} emails based on the "{formValues?.scenario.name}" scenario.
+                </Typography>
+                
+                <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
+                  <Button 
+                    variant="contained" 
+                    color="primary"
+                    startIcon={<DownloadIcon />}
+                    sx={{ mr: 2 }}
+                    onClick={handleDownload}
+                  >
+                    Download Dataset
+                  </Button>
+                  <Button 
+                    variant="outlined" 
+                    onClick={handleReset}
+                  >
+                    Create Another Dataset
+                  </Button>
+                </Box>
+              </Box>
+            )}
             
-            <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
-              <Button 
-                variant="contained" 
-                color="primary"
-                sx={{ mr: 2 }}
-                onClick={() => {
-                  // In a real implementation, this would trigger a download
-                  setNotification({
-                    open: true,
-                    message: 'Download started!',
-                    severity: 'success'
-                  });
-                }}
-              >
-                Download Dataset
-              </Button>
-              <Button 
-                variant="outlined" 
-                onClick={handleReset}
-              >
-                Create Another Dataset
-              </Button>
-            </Box>
+            {tabIndex === 1 && (
+              <DatasetBrowser 
+                emails={fullDataset} 
+                onDownload={handleDownload}
+              />
+            )}
           </Box>
         )}
       </Box>

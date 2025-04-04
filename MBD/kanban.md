@@ -55,9 +55,12 @@ kanban-plugin: board
 	- [x] Implement auto-generation of company structure (no manual entry needed)
 	- [x] Add dataset volume controls with presets for different complexity levels
 	- [x] Build real-time preview of sample emails before full generation
-	- [ ] Add download options for generated datasets
+	- [x] Fix bugs and implement missing features:
+		- [x] Enhance preview with realistic subject and body text reflecting scenario context
+		- [x] Add dataset browser with pagination for reviewing generated data
+		- [x] Implement working download functionality for generated datasets
 	- [ ] Connect frontend to existing Node.js generator backend
-	- [ ] Fix TypeScript errors and bugs in UI components
+	- [x] Fix TypeScript errors and bugs in UI components
 - [ ] Breaking down product requirements into tasks (this kanban board)
 
 

@@ -108,14 +108,48 @@ export interface PreviewData {
 
 /**
  * Email preview data
+ * 
+ * Contains all information about a single email in the preview dataset
  */
 export interface EmailPreview {
+  /** Unique identifier for the email */
   id: string;
+  
+  /** Thread identifier this email belongs to */
+  threadId?: string;
+  
+  /** Email address of the sender */
   from: string;
+  
+  /** Name of the sender */
+  fromName?: string;
+  
+  /** Job title of the sender */
+  fromTitle?: string;
+  
+  /** Department of the sender */
+  fromDepartment?: string;
+  
+  /** Email addresses of recipients */
   to: string[];
+  
+  /** Names of recipients */
+  toNames?: string[];
+  
+  /** Email subject line */
   subject: string;
+  
+  /** ISO timestamp when the email was sent */
   timestamp: string;
+  
+  /** Short preview text of the email body */
   preview: string;
+  
+  /** Full email body text */
+  body?: string;
+  
+  /** ID of the email this is replying to, if any */
+  replyTo?: string | null;
 }
 
 /**

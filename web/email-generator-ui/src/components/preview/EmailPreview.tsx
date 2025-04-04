@@ -30,14 +30,22 @@ const EmailItem: React.FC<EmailItemProps> = ({ email }) => {
   const theme = useTheme();
   const dateObject = new Date(email.timestamp);
   
-  // Get initials from sender name for avatar
-  const senderName = email.from.split('@')[0].replace(/[^a-zA-Z ]/g, ' ');
-  const initials = senderName
-    .split(' ')
-    .map(word => word[0])
+  // Get name and initials for avatar
+  const senderName = email.fromName || email.from.split('@')[0].replace(/[^a-zA-Z ]/g, ' ');
+  const nameParts = senderName.trim().split(' ');
+  const initials = nameParts
+    .map((word: string) => word[0])
     .join('')
     .toUpperCase()
     .substring(0, 2);
+  
+  // Format email body with newlines preserved
+  const formattedBody = (email.body || email.preview).split('\n').map((line: string, i: number) => (
+    <React.Fragment key={i}>
+      {line}
+      <br />
+    </React.Fragment>
+  ));
   
   return (
     <Card sx={{ mb: 2 }}>
@@ -47,30 +55,62 @@ const EmailItem: React.FC<EmailItemProps> = ({ email }) => {
             {initials}
           </Avatar>
         }
-        title={email.from}
-        subheader={`${dateObject.toLocaleDateString()} ${dateObject.toLocaleTimeString()}`}
+        title={email.fromName || email.from}
+        subheader={
+          <>
+            {email.fromTitle && (
+              <Typography variant="caption" display="block">
+                {email.fromTitle}{email.fromDepartment && `, ${email.fromDepartment} Department`}
+              </Typography>
+            )}
+            <Typography variant="caption" display="block">
+              {email.from}
+            </Typography>
+            <Typography variant="caption" color="text.secondary">
+              {dateObject.toLocaleDateString()} {dateObject.toLocaleTimeString()}
+            </Typography>
+          </>
+        }
       />
       <CardContent>
-        <Typography variant="subtitle1" gutterBottom>
+        <Typography variant="subtitle1" gutterBottom fontWeight="bold">
           {email.subject}
         </Typography>
         <Box sx={{ mb: 2 }}>
           <Typography variant="caption" component="span" sx={{ mr: 1 }}>
             To:
           </Typography>
-          {email.to.map((recipient, index) => (
-            <Chip 
-              key={index} 
-              label={recipient} 
-              size="small" 
-              sx={{ mr: 0.5, mb: 0.5 }} 
-            />
-          ))}
+          {email.toNames && email.toNames.length > 0 ? (
+            email.toNames.map((name: string, index: number) => (
+              <Chip 
+                key={index} 
+                label={name} 
+                size="small" 
+                sx={{ mr: 0.5, mb: 0.5 }} 
+              />
+            ))
+          ) : (
+            email.to.map((recipient, index) => (
+              <Chip 
+                key={index} 
+                label={recipient} 
+                size="small" 
+                sx={{ mr: 0.5, mb: 0.5 }} 
+              />
+            ))
+          )}
         </Box>
+        {email.replyTo && (
+          <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1 }}>
+            In reply to a previous message
+          </Typography>
+        )}
         <Divider sx={{ my: 1 }} />
-        <Typography variant="body2" color="text.secondary">
-          {email.preview}
-        </Typography>
+        <Paper variant="outlined" sx={{ p: 2, bgcolor: 'background.default' }}>
+          <Typography variant="body2">
+            {formattedBody}
+          </Typography>
+        </Paper>
       </CardContent>
     </Card>
   );
