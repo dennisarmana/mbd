@@ -9,6 +9,12 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const { faker } = require('@faker-js/faker');
+const { 
+  enhanceEmailStructure, 
+  enhanceSubject, 
+  addLanguageVariations 
+} = require('./emailEnhancer');
+const personalEmails = require('./personalEmails');
 
 /**
  * Generate a company with departments and employees
@@ -122,7 +128,12 @@ function generateEmails(scenario, company, options = {}) {
       end: new Date('2025-02-01')
     },
     chanceOfCC = 0.4,
-    maxCCRecipients = 3
+    maxCCRecipients = 3,
+    personalEmailOptions = {
+      enabled: false,
+      frequency: 0.05,  // 5% of emails will be personal by default
+      categories: ['affairs', 'jobSearches', 'domesticDisputes', 'financialIssues']
+    }
   } = options;
   
   const emails = [];
@@ -142,7 +153,99 @@ function generateEmails(scenario, company, options = {}) {
     return company.persons[Math.floor(Math.random() * company.persons.length)];
   };
   
-  // Create threads
+  // Create dedicated personal email threads (if enabled)
+  if (personalEmailOptions.enabled) {
+    const personalThreadCount = Math.floor(threadCount * personalEmailOptions.frequency);
+    
+    for (let pt = 0; pt < personalThreadCount; pt++) {
+      const threadStartTime = new Date(
+        timeSpan.start.getTime() + Math.random() * 
+        (timeSpan.end.getTime() - timeSpan.start.getTime())
+      );
+      
+      // Get two random employees for personal exchange
+      const employeePair = personalEmails.getRandomEmployeePair(company);
+      if (!employeePair) continue;
+      
+      const [sender, recipient] = employeePair;
+      const participants = [sender, recipient];
+      
+      // Create a personal thread
+      const threadId = `thread_personal_${pt}`;
+      const personalEmailCount = faker.number.int({
+        min: 1,
+        max: 3 // Personal threads are typically shorter
+      });
+      
+      const thread = {
+        id: threadId,
+        subject: '', // Will be filled with the first email's subject
+        participants: participants.map(p => p.id),
+        start_time: threadStartTime.toISOString(),
+        end_time: null, // Will be set after emails are generated
+        email_ids: [],
+        summary: 'Personal communication',
+        metadata: {
+          personal: true
+        }
+      };
+      
+      // Generate personal emails for this thread
+      let lastEmailTime = threadStartTime;
+      let lastEmailId = null;
+      
+      for (let e = 0; e < personalEmailCount; e++) {
+        // Switch sender and recipient for replies
+        const currentSender = e % 2 === 0 ? sender : recipient;
+        const currentRecipient = e % 2 === 0 ? recipient : sender;
+        
+        // Calculate time increment
+        const timeIncrement = Math.floor(
+          (24 * 60 * 60 * 1000) * (0.5 + Math.random() * 2) // 0.5 to 2.5 days
+        );
+        
+        lastEmailTime = new Date(lastEmailTime.getTime() + timeIncrement);
+        
+        // Generate personal email
+        const personalEmail = personalEmails.generatePersonalEmail(
+          currentSender,
+          currentRecipient,
+          company,
+          {
+            threadId,
+            timestamp: lastEmailTime.toISOString()
+          }
+        );
+        
+        // Update thread subject with the first email's subject
+        if (e === 0) {
+          thread.subject = personalEmail.body.split('\n')[0];
+          if (thread.subject.length > 50) {
+            thread.subject = thread.subject.substring(0, 47) + '...';
+          }
+        }
+        
+        // Add metadata
+        personalEmail.metadata = {
+          ...personalEmail.metadata,
+          sentiment: faker.helpers.arrayElement([
+            'confidential', 'urgent', 'personal', 'sensitive'
+          ]),
+          importance: faker.number.int({ min: 3, max: 5 })
+        };
+        
+        emails.push(personalEmail);
+        thread.email_ids.push(personalEmail.id);
+        lastEmailId = personalEmail.id;
+      }
+      
+      // Set thread end time
+      thread.end_time = lastEmailTime.toISOString();
+      threads.push(thread);
+    }
+  }
+  
+  // Create regular business threads
   for (let t = 0; t < threadCount; t++) {
     const threadStartTime = new Date(
       timeSpan.start.getTime() + Math.random() * 
@@ -283,33 +386,133 @@ function generateEmails(scenario, company, options = {}) {
         totalEmails: emailCount
       });
       
-      // Create the email
-      const emailId = `email_${emails.length}`;
-      const email = {
-        id: emailId,
-        thread_id: threadId,
-        from: sender.id,
-        to: primaryRecipients,
-        cc: ccRecipients,
-        reply_to: e === 0 ? null : lastEmailId,
-        timestamp: lastEmailTime.toISOString(),
-        subject: e === 0 ? subject : `RE: ${subject}`,
-        body: bodyContent,
-        attachments: [],
-        metadata: {
-          sentiment: faker.helpers.arrayElement([
-            'neutral', 'positive', 'negative', 'urgent', 'confused', 'frustrated'
-          ]),
-          key_points: generateKeyPoints(scenario, e),
-          miscommunication_elements: e > 0 ? generateMiscommunicationElements(scenario) : [],
-          follow_up_expected: e < emailCount - 1,
-          importance: faker.number.int({ min: 1, max: 5 })
+      // Randomly inject personal emails into business threads (if enabled)
+      let email;
+      if (personalEmailOptions.enabled && 
+          personalEmails.shouldInjectPersonalEmail(personalEmailOptions) && 
+          e > 0) { // Only inject in reply emails, not thread starters
+          
+        // Choose a random recipient to have a personal exchange with the sender
+        const personalRecipient = participants.find(p => p.id !== sender.id);
+        if (personalRecipient) {
+          // Generate personal email
+          email = personalEmails.generatePersonalEmail(
+            sender,
+            personalRecipient,
+            company,
+            {
+              threadId,
+              timestamp: lastEmailTime.toISOString()
+            }
+          );
+          
+          // Add business email metadata
+          email.metadata = {
+            ...email.metadata,
+            sentiment: 'confidential',
+            importance: faker.number.int({ min: 3, max: 5 }),
+            accidentally_sent: true, // Flag that this was meant to be private
+            key_points: [],
+            follow_up_expected: e < emailCount - 1
+          };
         }
-      };
+      }
+      
+      // Create a regular business email if we didn't create a personal one
+      if (!email) {
+        const emailId = `email_${emails.length}`;
+        
+        // Get sender and recipient details
+        const senderPerson = sender;
+        const recipientPerson = company.persons.find(p => p.id === primaryRecipients[0]) || {
+          name: 'Team Member',
+          title: 'Employee'
+        };
+        
+        // Determine formality based on organizational hierarchy
+        let formality = 'casual';
+        if (e === 0) {
+          // First emails are more formal
+          formality = 'formal';
+        } else if (sender.level < 3) {
+          // Executives tend to be more formal
+          formality = Math.random() < 0.7 ? 'formal' : 'casual';
+        }
+        
+        // Determine sentiment based on email metadata
+        const sentiment = faker.helpers.arrayElement([
+          'neutral', 'positive', 'negative', 'urgent', 'confused', 'frustrated'
+        ]);
+        
+        let emotionType = null;
+        switch (sentiment) {
+          case 'positive':
+            emotionType = 'excitement';
+            break;
+          case 'negative':
+          case 'frustrated':
+            emotionType = 'anger';
+            break;
+          case 'urgent':
+            emotionType = 'anxiety';
+            break;
+          case 'confused':
+            emotionType = 'anxiety';
+            break;
+        }
+        
+        // Enhance the body content with realistic structure
+        const enhancedBody = enhanceEmailStructure(bodyContent, {
+          type: 'business',
+          formality: formality,
+          emotionType: emotionType,
+          senderName: senderPerson.name,
+          senderTitle: senderPerson.title || 'Employee',
+          senderDepartment: senderPerson.department || 'Department',
+          senderCompany: company.name,
+          senderEmail: senderPerson.email || `${senderPerson.name.split(' ')[0].toLowerCase()}@${company.domain}`,
+          recipientName: recipientPerson.name,
+          addBusinessPhrases: true,
+          addTypos: Math.random() < 0.15, // 15% chance of typos in business emails
+          urgent: sentiment === 'urgent',
+          replyFormat: e > 0, // Replies after the first email
+          addSignature: Math.random() < 0.8 // 80% chance of having signature in business email
+        });
+        
+        // Enhance the subject with business context
+        const baseSubject = e === 0 ? subject : `RE: ${subject}`;
+        const enhancedSubject = enhanceSubject(baseSubject, {
+          type: 'business',
+          urgent: sentiment === 'urgent',
+          replyFormat: e > 0,
+          addPrefixes: e === 0 && Math.random() < 0.5
+        });
+        
+        // Create enhanced email object
+        email = {
+          id: emailId,
+          thread_id: threadId,
+          from: sender.id,
+          to: primaryRecipients,
+          cc: ccRecipients,
+          reply_to: e === 0 ? null : lastEmailId,
+          timestamp: lastEmailTime.toISOString(),
+          subject: enhancedSubject,
+          body: enhancedBody,
+          attachments: [],
+          metadata: {
+            sentiment: sentiment,
+            key_points: generateKeyPoints(scenario, e),
+            miscommunication_elements: e > 0 ? generateMiscommunicationElements(scenario) : [],
+            follow_up_expected: e < emailCount - 1,
+            importance: faker.number.int({ min: 1, max: 5 })
+          }
+        };
+      }
       
       emails.push(email);
-      thread.email_ids.push(emailId);
-      lastEmailId = emailId;
+      thread.email_ids.push(email.id);
+      lastEmailId = email.id;
     }
     
     threads.push(thread);
@@ -544,18 +747,26 @@ function generateDataset(scenarioConfig, options = {}) {
     }
   };
   
-  // Generate company data
-  const company = generateCompany(companyOptions);
+  // Generate company structure
+  const company = generateCompany(options.companyOptions || {});
   
   // Generate emails for this scenario
-  const { emails, threads } = generateEmails(scenario, company, {
-    threadCount: 10 * complexity_level,
-    emailsPerThread: {
-      min: 3 + complexity_level,
-      max: 5 + (complexity_level * 2)
-    },
-    ...emailOptions
-  });
+  const { emails, threads } = generateEmails(scenarioConfig, company, options.emailOptions || {});
+  
+  // Calculate stats
+  const stats = {
+    company_name: company.name,
+    departments: company.departments.length,
+    employees: company.persons.length,
+    email_count: emails.length,
+    thread_count: threads.length,
+    time_span: {
+      start_date: emailOptions.timeSpan?.start.toISOString() || 
+        new Date('2025-01-01').toISOString(),
+      end_date: emailOptions.timeSpan?.end.toISOString() || 
+        new Date('2025-02-01').toISOString()
+    }
+  };
   
   // Create a separate "raw" version of the data without analytical metadata
   const rawEmails = emails.map(email => ({

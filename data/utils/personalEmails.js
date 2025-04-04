@@ -5,8 +5,13 @@
  * with sensitive content to be mixed into regular business communications.
  */
 
-const { v4: uuidv4 } = require('uuid');
 const { faker } = require('@faker-js/faker');
+const { v4: uuidv4 } = require('uuid');
+const { 
+  enhanceEmailStructure, 
+  enhanceSubject, 
+  addLanguageVariations 
+} = require('./emailEnhancer');
 
 // Persona relationships tracking - maintains consistency across emails
 const personaRelationships = new Map();
@@ -120,6 +125,18 @@ const templates = {
   ]
 };
 
+// Get a random pair of employees who might exchange personal emails
+function getRandomEmployeePair(company) {
+  const employees = company.persons;
+  if (employees.length < 2) return null;
+  
+  const employee1 = faker.helpers.arrayElement(employees);
+  const otherEmployees = employees.filter(e => e.id !== employee1.id);
+  const employee2 = faker.helpers.arrayElement(otherEmployees);
+  
+  return [employee1, employee2];
+}
+
 // Helper functions for personalizing template content
 function personalize(template, context) {
   let text = template;
@@ -216,40 +233,87 @@ function generatePersonalEmail(fromPerson, toPerson, company, options = {}) {
   
   // Select template type based on relationship
   let templateCategory;
+  let emotionType;
+  let formality;
+  
   switch (relationship.type) {
     case 'affair':
       templateCategory = templates.affairs[0];
+      emotionType = Math.random() < 0.7 ? 'secrecy' : 'excitement';
+      formality = 'intimate';
       break;
     case 'jobsearch':
       templateCategory = templates.jobSearches[0];
+      emotionType = Math.random() < 0.6 ? 'anxiety' : 'excitement';
+      formality = 'casual';
       break;
     case 'dispute':
       templateCategory = templates.domesticDisputes[0];
+      emotionType = 'anger';
+      formality = 'tense';
       break;
     case 'financial':
       templateCategory = templates.financialIssues[0];
+      emotionType = 'anxiety';
+      formality = 'casual';
       break;
     default:
       templateCategory = templates.affairs[0];
+      emotionType = 'secrecy';
+      formality = 'intimate';
   }
   
   // Select random subject and body templates
-  const subject = faker.helpers.arrayElement(templateCategory.subjects);
-  const body = faker.helpers.arrayElement(templateCategory.bodies);
+  const baseSubject = faker.helpers.arrayElement(templateCategory.subjects);
+  const baseBody = faker.helpers.arrayElement(templateCategory.bodies);
   
-  // Generate email
+  // Apply personalization to content
+  const personalizedBody = personalize(baseBody, relationship.context);
+  
+  // Apply language variations for more natural flow
+  const variedBody = addLanguageVariations(personalizedBody);
+  
+  // Apply full structure enhancement based on the email type
+  const enhancedBody = enhanceEmailStructure(variedBody, {
+    type: 'personal',
+    formality: formality,
+    emotionType: emotionType,
+    senderName: fromPerson.name,
+    senderTitle: fromPerson.title || 'Employee',
+    senderDepartment: fromPerson.department || 'Department',
+    senderCompany: company.name,
+    senderEmail: fromPerson.email || `${fromPerson.name.split(' ')[0].toLowerCase()}@${company.domain}`,
+    recipientName: toPerson.name,
+    addTypos: Math.random() < 0.35, // 35% chance of typos in personal emails
+    urgent: relationship.intensity > 8, // High intensity emails marked as urgent
+    addSignature: Math.random() < 0.5, // 50% chance of having a signature
+    signatureType: relationship.type === 'affair' ? 'minimal' : 'casual'
+  });
+  
+  // Enhance the subject line
+  const enhancedSubject = enhanceSubject(baseSubject, {
+    type: 'personal',
+    category: relationship.type,
+    urgent: relationship.intensity > 8,
+    addEmojis: Math.random() < 0.3, // 30% chance of emojis in subject
+    replyFormat: options.isReply || false
+  });
+  
+  // Generate email with enhanced content
   const email = {
-    id: uuidv4(),
+    id: options.id || uuidv4(),
     thread_id: options.threadId || uuidv4(),
     from: fromPerson.id,
     to: [toPerson.id],
     cc: [],
     timestamp: options.timestamp || new Date().toISOString(),
-    body: personalize(body, relationship.context),
+    subject: enhancedSubject,
+    body: enhancedBody,
     metadata: {
       personal: true,
       category: relationship.type,
-      intensity: relationship.intensity
+      intensity: relationship.intensity,
+      sensitive: true
     }
   };
   
@@ -277,5 +341,10 @@ function getRandomEmployeePair(company) {
 module.exports = {
   generatePersonalEmail,
   shouldInjectPersonalEmail,
-  getRandomEmployeePair
+  getRandomEmployeePair,
+  // Expose templates for custom generations
+  templates,
+  // For testing and customization
+  personalize,
+  getOrCreateRelationship
 };
