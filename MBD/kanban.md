@@ -50,13 +50,14 @@ kanban-plugin: board
 ## Doing (WIP 2)
 
 - [ ] Create a web form for email scenario generation:
-	- [ ] Set up React-based single-page application with clean UI
-	- [ ] Create configuration panels for scenario parameters
-	- [ ] Implement auto-generation of company structure (no manual entry needed)
-	- [ ] Add dataset volume controls with presets for different complexity levels
-	- [ ] Build real-time preview of sample emails before full generation
+	- [x] Set up React-based single-page application with clean UI
+	- [x] Create configuration panels for scenario parameters
+	- [x] Implement auto-generation of company structure (no manual entry needed)
+	- [x] Add dataset volume controls with presets for different complexity levels
+	- [x] Build real-time preview of sample emails before full generation
 	- [ ] Add download options for generated datasets
 	- [ ] Connect frontend to existing Node.js generator backend
+	- [ ] Fix TypeScript errors and bugs in UI components
 - [ ] Breaking down product requirements into tasks (this kanban board)
 
 
