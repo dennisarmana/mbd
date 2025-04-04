@@ -30,7 +30,7 @@ kanban-plugin: board
 - [x] Create mock email dataset for initial development
 - [ ] Design responsive UI for chat interface
 - [ ] Create department and user selection dropdowns
-- [ ] Implement BERT model for data extraction from emails
+- [ ] ~~Implement BERT model for data extraction from emails~~
 - [ ] Develop Theory of Constraints analysis algorithm
 - [ ] Create content filtering system with four-model consensus
 - [ ] Design user feedback mechanism
@@ -39,20 +39,37 @@ kanban-plugin: board
 - [ ] Create system architecture documentation
 - [ ] Define metrics collection methodology
 - [ ] Design admin review interface for uncertain content
-- [ ] Initial research on Theory of Constraints implementation
+- [ ] Initial research on BERT implementation for Theory of Constraints
 
 
-## Content creation todos
+## Dennis todos
 
+- [ ] Build minimal chat interface to demonstrate the concept:
+	  - [ ] Create basic HTML/CSS for chat UI with company/user selection
+	  - [ ] Implement JavaScript to handle user input and display responses
+	  - [ ] Connect chat UI to constraint analyzer for basic recommendations
+	  - [ ] Add simple explanations for recommended tasks
+- [ ] Prepare presentation assets:
+	  - [ ] Create overview slide explaining MBD concept
+	  - [ ] Prepare dataset metrics visualization
+	  - [ ] Document constraint analysis methodology
+	  - [ ] Script demo flow with fallback options
 
 
 ## Doing (WIP 2)
 
-- [ ] Breaking down product requirements into tasks (this kanban board)
+
 
 
 ## Done
 
+- [x] Breaking down product requirements into tasks (this kanban board)
+- [x] Create a BERT-based Theory of Constraints analyzer (60-min MVP Plan):
+  - [x] Set up Python environment with BERT dependencies
+  - [x] Create data processor to prepare emails for BERT model
+  - [x] Implement BERT model for constraint extraction
+  - [x] Build simple API to connect BERT analysis to web interface
+  - [x] Generate actionable recommendations from BERT insights
 - [x] Improve realism of generated email content:
 	- [x] Enhance natural language structure and flow
 		- [x] Add proper email greetings, closings, and signatures
@@ -69,7 +86,6 @@ kanban-plugin: board
 	- [x] Create cohesive mini-storylines across email threads
 		- [x] Add specific references to past communications
 		- [x] Develop consistent narratives within each personal thread
-
 - [x] Add personal emails with sensitive content:
 	- [x] Implement generator patterns for personal/non-work emails
 	- [x] Create templates for various sensitive topics:
@@ -81,7 +97,6 @@ kanban-plugin: board
 	- [x] Implement configurable "realism slider" to control sensitive content amount
 	- [x] Create personas with recurring personal issues across email threads
 	- [x] Integrate personal emails into main scenario generator
-
 - [ ] Create a web form for email scenario generation:
 	- [x] Set up React-based single-page application with clean UI
 	- [x] Create configuration panels for scenario parameters
