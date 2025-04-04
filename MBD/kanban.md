@@ -49,7 +49,27 @@ kanban-plugin: board
 ## Doing (WIP 2)
 
 - [ ] Breaking down product requirements into tasks (this kanban board)
-- [ ] Add personal emails with sensitive content:
+- [ ] Improve realism of generated email content:
+	- [ ] Enhance natural language structure and flow
+		- [ ] Add proper email greetings, closings, and signatures
+		- [ ] Incorporate occasional typos and informal language
+		- [ ] Vary sentence length and structure for authenticity
+	- [ ] Implement richer personalization
+		- [ ] Reference company-specific projects and products
+		- [ ] Include more contextually relevant employee details
+		- [ ] Add timeline-consistent dates and references
+	- [ ] Improve emotional content authenticity
+		- [ ] Make affairs more emotionally charged (tension, secrecy, guilt)
+		- [ ] Add anxiety and excitement to job search emails
+		- [ ] Enhance realism of personal conflicts (anger, concern)
+	- [ ] Create cohesive mini-storylines across email threads
+		- [ ] Add specific references to past communications
+		- [ ] Develop consistent narratives within each personal thread
+
+
+## Done
+
+- [x] Add personal emails with sensitive content:
 	- [x] Implement generator patterns for personal/non-work emails
 	- [x] Create templates for various sensitive topics:
 		- [x] Illicit affairs and personal relationships
@@ -59,10 +79,7 @@ kanban-plugin: board
 	- [x] Add detection logic to randomly inject these emails into generated datasets
 	- [x] Implement configurable "realism slider" to control sensitive content amount
 	- [x] Create personas with recurring personal issues across email threads
-	- [ ] Integrate personal emails into main scenario generator
-
-
-## Done
+	- [x] Integrate personal emails into main scenario generator
 
 - [ ] Create a web form for email scenario generation:
 	- [x] Set up React-based single-page application with clean UI
