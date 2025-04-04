@@ -49,25 +49,26 @@ kanban-plugin: board
 ## Doing (WIP 2)
 
 - [ ] Breaking down product requirements into tasks (this kanban board)
-- [ ] Improve realism of generated email content:
-	- [ ] Enhance natural language structure and flow
-		- [ ] Add proper email greetings, closings, and signatures
-		- [ ] Incorporate occasional typos and informal language
-		- [ ] Vary sentence length and structure for authenticity
-	- [ ] Implement richer personalization
-		- [ ] Reference company-specific projects and products
-		- [ ] Include more contextually relevant employee details
-		- [ ] Add timeline-consistent dates and references
-	- [ ] Improve emotional content authenticity
-		- [ ] Make affairs more emotionally charged (tension, secrecy, guilt)
-		- [ ] Add anxiety and excitement to job search emails
-		- [ ] Enhance realism of personal conflicts (anger, concern)
-	- [ ] Create cohesive mini-storylines across email threads
-		- [ ] Add specific references to past communications
-		- [ ] Develop consistent narratives within each personal thread
 
 
 ## Done
+
+- [x] Improve realism of generated email content:
+	- [x] Enhance natural language structure and flow
+		- [x] Add proper email greetings, closings, and signatures
+		- [x] Incorporate occasional typos and informal language
+		- [x] Vary sentence length and structure for authenticity
+	- [x] Implement richer personalization
+		- [x] Reference company-specific projects and products
+		- [x] Include more contextually relevant employee details
+		- [x] Add timeline-consistent dates and references
+	- [x] Improve emotional content authenticity
+		- [x] Make affairs more emotionally charged (tension, secrecy, guilt)
+		- [x] Add anxiety and excitement to job search emails
+		- [x] Enhance realism of personal conflicts (anger, concern)
+	- [x] Create cohesive mini-storylines across email threads
+		- [x] Add specific references to past communications
+		- [x] Develop consistent narratives within each personal thread
 
 - [x] Add personal emails with sensitive content:
 	- [x] Implement generator patterns for personal/non-work emails
