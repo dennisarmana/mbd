@@ -1,0 +1,14 @@
+{
+  "name": "mbd-data-generator",
+  "version": "1.0.0",
+  "description": "Mock email dataset generator for miscommunication analysis",
+  "main": "index.js",
+  "scripts": {
+    "generate": "node scripts/generate-data.js",
+    "generate-sample": "node scripts/generate-sample.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "uuid": "^9.0.1"
+  }
+}

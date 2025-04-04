@@ -1,0 +1,257 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Email Dataset Schema",
+  "description": "Schema for mock email datasets representing organizational miscommunication",
+  "type": "object",
+  "required": ["scenario", "company", "emails"],
+  "properties": {
+    "scenario": {
+      "type": "object",
+      "required": ["id", "name", "description", "complexity_level"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the scenario"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the scenario"
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the scenario"
+        },
+        "complexity_level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Complexity level (1-10) of the scenario"
+        },
+        "key_issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of key miscommunication issues in this scenario"
+        },
+        "time_span": {
+          "type": "object",
+          "properties": {
+            "start_date": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "end_date": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "description": "Time span of the email exchanges"
+        }
+      }
+    },
+    "company": {
+      "type": "object",
+      "required": ["name", "departments", "persons"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Company name"
+        },
+        "domain": {
+          "type": "string",
+          "description": "Email domain for the company"
+        },
+        "departments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "name"],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "parent_department": {
+                "type": ["string", "null"]
+              }
+            }
+          },
+          "description": "List of departments in the company"
+        },
+        "persons": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "email", "department_id", "role"],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string",
+                "format": "email"
+              },
+              "department_id": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "boss_id": {
+                "type": ["string", "null"]
+              },
+              "communication_style": {
+                "type": "string",
+                "enum": ["formal", "casual", "direct", "verbose", "technical", "diplomatic"]
+              }
+            }
+          },
+          "description": "List of persons/employees in the company"
+        }
+      }
+    },
+    "emails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "thread_id", "from", "to", "timestamp", "subject", "body"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for this email"
+          },
+          "thread_id": {
+            "type": "string",
+            "description": "Thread identifier to group related emails"
+          },
+          "from": {
+            "type": "string",
+            "description": "ID of the sender (references person.id)"
+          },
+          "to": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of recipient IDs (each references person.id)"
+          },
+          "cc": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of CC recipient IDs (each references person.id)"
+          },
+          "reply_to": {
+            "type": ["string", "null"],
+            "description": "ID of the email this is a reply to"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When the email was sent"
+          },
+          "subject": {
+            "type": "string",
+            "description": "Email subject line"
+          },
+          "body": {
+            "type": "string",
+            "description": "Email body content"
+          },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "content_reference": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "Optional file attachments"
+          },
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "sentiment": {
+                "type": "string",
+                "enum": ["neutral", "positive", "negative", "urgent", "confused", "frustrated"]
+              },
+              "key_points": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "miscommunication_elements": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "follow_up_expected": {
+                "type": "boolean"
+              },
+              "importance": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              }
+            }
+          }
+        }
+      }
+    },
+    "threads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "participants": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "start_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "end_time": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "email_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "summary": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Summary information about email threads"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "marketing_campaign_interpretation",
+  "name": "Marketing Campaign Interpretation",
+  "description": "Different team members have varied understandings of campaign goals",
+  "email_count": 25,
+  "thread_count": 5,
+  "department_count": 4,
+  "person_count": 17,
+  "sample": true,
+  "time_period": {
+    "start": "2025-01-01T00:00:00.000Z",
+    "end": "2025-01-15T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,627 @@
+{
+  "company": {
+    "name": "TechCorp",
+    "domain": "techcorp.com",
+    "departments": [
+      {
+        "id": "dept_0",
+        "name": "Executive",
+        "parent_department": null
+      },
+      {
+        "id": "dept_1",
+        "name": "Marketing",
+        "parent_department": null
+      },
+      {
+        "id": "dept_2",
+        "name": "Product",
+        "parent_department": null
+      },
+      {
+        "id": "dept_3",
+        "name": "Engineering",
+        "parent_department": null
+      }
+    ],
+    "persons": [
+      {
+        "id": "person_0",
+        "name": "Constance Zulauf-Heller",
+        "email": "Nathen_Wiegand35@techcorp.com",
+        "department_id": "dept_0",
+        "role": "Executive Director",
+        "boss_id": null,
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_1",
+        "name": "Mrs. Antoinette Wintheiser",
+        "email": "Maxine_Kuhlman82@techcorp.com",
+        "department_id": "dept_0",
+        "role": "Specialist",
+        "boss_id": "person_0",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_2",
+        "name": "Kendra Steuber",
+        "email": "Alejandrin.Gislason@techcorp.com",
+        "department_id": "dept_0",
+        "role": "Specialist",
+        "boss_id": "person_0",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_3",
+        "name": "Tracy Wiza",
+        "email": "Eldridge.Rempel53@techcorp.com",
+        "department_id": "dept_0",
+        "role": "Manager",
+        "boss_id": "person_0",
+        "communication_style": "verbose"
+      },
+      {
+        "id": "person_4",
+        "name": "Ms. Antonia Grant",
+        "email": "Ivah.Grant@techcorp.com",
+        "department_id": "dept_1",
+        "role": "Marketing Director",
+        "boss_id": null,
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_5",
+        "name": "Darnell Dach",
+        "email": "Kristian.Ortiz@techcorp.com",
+        "department_id": "dept_1",
+        "role": "Marketing Specialist",
+        "boss_id": "person_4",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_6",
+        "name": "Ms. Edna Mayer",
+        "email": "Sebastian_Kemmer57@techcorp.com",
+        "department_id": "dept_1",
+        "role": "Content Creator",
+        "boss_id": "person_4",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_7",
+        "name": "Kelvin Bode",
+        "email": "Horace_Herman33@techcorp.com",
+        "department_id": "dept_1",
+        "role": "Campaign Manager",
+        "boss_id": "person_4",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_8",
+        "name": "Marc Stehr",
+        "email": "Alysson_Klocko@techcorp.com",
+        "department_id": "dept_1",
+        "role": "Campaign Manager",
+        "boss_id": "person_4",
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_9",
+        "name": "Muriel MacGyver",
+        "email": "Jacky_Zemlak16@techcorp.com",
+        "department_id": "dept_2",
+        "role": "Product Director",
+        "boss_id": null,
+        "communication_style": "technical"
+      },
+      {
+        "id": "person_10",
+        "name": "Freddie Klocko",
+        "email": "Tiffany.Rutherford1@techcorp.com",
+        "department_id": "dept_2",
+        "role": "Product Manager",
+        "boss_id": "person_9",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_11",
+        "name": "Catherine Cronin II",
+        "email": "Kallie.Baumbach@techcorp.com",
+        "department_id": "dept_2",
+        "role": "Business Analyst",
+        "boss_id": "person_9",
+        "communication_style": "formal"
+      },
+      {
+        "id": "person_12",
+        "name": "Frankie Breitenberg DDS",
+        "email": "Isabell_Kerluke@techcorp.com",
+        "department_id": "dept_3",
+        "role": "Engineering Director",
+        "boss_id": null,
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_13",
+        "name": "Alfred Lemke",
+        "email": "Pearlie_Blick@techcorp.com",
+        "department_id": "dept_3",
+        "role": "QA Engineer",
+        "boss_id": "person_12",
+        "communication_style": "casual"
+      },
+      {
+        "id": "person_14",
+        "name": "Antonia Tillman",
+        "email": "Ciara.Stracke85@techcorp.com",
+        "department_id": "dept_3",
+        "role": "DevOps Engineer",
+        "boss_id": "person_12",
+        "communication_style": "direct"
+      },
+      {
+        "id": "person_15",
+        "name": "Annie Carroll",
+        "email": "Sven.Predovic@techcorp.com",
+        "department_id": "dept_3",
+        "role": "DevOps Engineer",
+        "boss_id": "person_12",
+        "communication_style": "diplomatic"
+      },
+      {
+        "id": "person_16",
+        "name": "Wilbur Kulas",
+        "email": "Kristina.Zulauf@techcorp.com",
+        "department_id": "dept_3",
+        "role": "DevOps Engineer",
+        "boss_id": "person_12",
+        "communication_style": "formal"
+      }
+    ]
+  },
+  "emails": [
+    {
+      "id": "email_0",
+      "thread_id": "thread_0",
+      "from": "person_5",
+      "to": [
+        "person_6"
+      ],
+      "cc": [],
+      "reply_to": null,
+      "timestamp": "2025-01-13T05:20:10.348Z",
+      "subject": "Marketing e-business magnetic",
+      "body": "Hi Ms.,\n\nWe need to finalize our marketing strategy for the magnetic campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nCheers,\nDarnell Dach",
+      "attachments": []
+    },
+    {
+      "id": "email_1",
+      "thread_id": "thread_0",
+      "from": "person_5",
+      "to": [
+        "person_6"
+      ],
+      "cc": [],
+      "reply_to": "email_0",
+      "timestamp": "2025-01-13T08:31:19.731Z",
+      "subject": "RE: Marketing e-business magnetic",
+      "body": "Hi Ms.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nCheers,\nDarnell Dach",
+      "attachments": []
+    },
+    {
+      "id": "email_2",
+      "thread_id": "thread_0",
+      "from": "person_5",
+      "to": [
+        "person_6"
+      ],
+      "cc": [],
+      "reply_to": "email_1",
+      "timestamp": "2025-01-13T15:30:08.466Z",
+      "subject": "RE: Marketing e-business magnetic",
+      "body": "Hi Ms.,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nCheers,\nDarnell Dach",
+      "attachments": []
+    },
+    {
+      "id": "email_3",
+      "thread_id": "thread_0",
+      "from": "person_6",
+      "to": [
+        "person_5"
+      ],
+      "cc": [],
+      "reply_to": "email_2",
+      "timestamp": "2025-01-13T19:33:52.976Z",
+      "subject": "RE: Marketing e-business magnetic",
+      "body": "Hi Darnell,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nMs. Edna Mayer\nContent Creator",
+      "attachments": []
+    },
+    {
+      "id": "email_4",
+      "thread_id": "thread_0",
+      "from": "person_6",
+      "to": [
+        "person_5"
+      ],
+      "cc": [],
+      "reply_to": "email_3",
+      "timestamp": "2025-01-14T01:21:00.498Z",
+      "subject": "RE: Marketing e-business magnetic",
+      "body": "Hi Darnell,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nKind regards,\nMs. Edna Mayer\nContent Creator",
+      "attachments": []
+    },
+    {
+      "id": "email_5",
+      "thread_id": "thread_1",
+      "from": "person_4",
+      "to": [
+        "person_8"
+      ],
+      "cc": [],
+      "reply_to": null,
+      "timestamp": "2025-01-05T14:12:06.596Z",
+      "subject": "Launch synergies open-source",
+      "body": "Hi Marc,\n\nWe need to finalize our marketing strategy for the open-source campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nBest regards,\nMs. Antonia Grant\nMarketing Director\nIvah.Grant@techcorp.com",
+      "attachments": []
+    },
+    {
+      "id": "email_6",
+      "thread_id": "thread_1",
+      "from": "person_4",
+      "to": [
+        "person_8"
+      ],
+      "cc": [],
+      "reply_to": "email_5",
+      "timestamp": "2025-01-08T22:10:07.068Z",
+      "subject": "RE: Launch synergies open-source",
+      "body": "Hi Marc,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nMs. Antonia Grant\nMarketing Director\nIvah.Grant@techcorp.com",
+      "attachments": []
+    },
+    {
+      "id": "email_7",
+      "thread_id": "thread_1",
+      "from": "person_4",
+      "to": [
+        "person_8"
+      ],
+      "cc": [],
+      "reply_to": "email_6",
+      "timestamp": "2025-01-11T23:06:39.836Z",
+      "subject": "RE: Launch synergies open-source",
+      "body": "Hi Marc,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nMs. Antonia Grant\nMarketing Director\nIvah.Grant@techcorp.com",
+      "attachments": []
+    },
+    {
+      "id": "email_8",
+      "thread_id": "thread_2",
+      "from": "person_8",
+      "to": [
+        "person_4"
+      ],
+      "cc": [],
+      "reply_to": null,
+      "timestamp": "2025-01-04T03:20:43.177Z",
+      "subject": "Campaign synergies wireless",
+      "body": "Hi Ms.,\n\nI wanted to discuss our upcoming wireless campaign. I think we should focus on social media and content marketing. Let me know your thoughts on this approach.\n\nRegards,\nMarc Stehr\nCampaign Manager",
+      "attachments": []
+    },
+    {
+      "id": "email_9",
+      "thread_id": "thread_2",
+      "from": "person_4",
+      "to": [
+        "person_8"
+      ],
+      "cc": [],
+      "reply_to": "email_8",
+      "timestamp": "2025-01-05T19:12:35.268Z",
+      "subject": "RE: Campaign synergies wireless",
+      "body": "Hi Marc,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nMs. Antonia Grant\nMarketing Director\nIvah.Grant@techcorp.com",
+      "attachments": []
+    },
+    {
+      "id": "email_10",
+      "thread_id": "thread_2",
+      "from": "person_4",
+      "to": [
+        "person_8"
+      ],
+      "cc": [],
+      "reply_to": "email_9",
+      "timestamp": "2025-01-06T12:47:28.245Z",
+      "subject": "RE: Campaign synergies wireless",
+      "body": "Hi Marc,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nBest regards,\nMs. Antonia Grant\nMarketing Director\nIvah.Grant@techcorp.com",
+      "attachments": []
+    },
+    {
+      "id": "email_11",
+      "thread_id": "thread_2",
+      "from": "person_8",
+      "to": [
+        "person_4"
+      ],
+      "cc": [],
+      "reply_to": "email_10",
+      "timestamp": "2025-01-08T03:13:21.878Z",
+      "subject": "RE: Campaign synergies wireless",
+      "body": "Hi Ms.,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nRegards,\nMarc Stehr\nCampaign Manager",
+      "attachments": []
+    },
+    {
+      "id": "email_12",
+      "thread_id": "thread_2",
+      "from": "person_4",
+      "to": [
+        "person_8"
+      ],
+      "cc": [],
+      "reply_to": "email_11",
+      "timestamp": "2025-01-09T03:05:20.307Z",
+      "subject": "RE: Campaign synergies wireless",
+      "body": "Hi Marc,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nBest regards,\nMs. Antonia Grant\nMarketing Director\nIvah.Grant@techcorp.com",
+      "attachments": []
+    },
+    {
+      "id": "email_13",
+      "thread_id": "thread_2",
+      "from": "person_8",
+      "to": [
+        "person_4"
+      ],
+      "cc": [],
+      "reply_to": "email_12",
+      "timestamp": "2025-01-10T02:17:15.444Z",
+      "subject": "RE: Campaign synergies wireless",
+      "body": "Hi Ms.,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nRegards,\nMarc Stehr\nCampaign Manager",
+      "attachments": []
+    },
+    {
+      "id": "email_14",
+      "thread_id": "thread_2",
+      "from": "person_4",
+      "to": [
+        "person_8"
+      ],
+      "cc": [],
+      "reply_to": "email_13",
+      "timestamp": "2025-01-11T08:14:01.557Z",
+      "subject": "RE: Campaign synergies wireless",
+      "body": "Hi Marc,\n\nI think I need to clarify a few points from our previous discussion:\n\n1. When I mentioned the timeline, I was referring to the initial phase only.\n2. We still need approval from the leadership team.\n3. The budget allocation isn't finalized yet.\n\nLet me know if this helps clear things up.\n\nBest regards,\nMs. Antonia Grant\nMarketing Director\nIvah.Grant@techcorp.com",
+      "attachments": []
+    },
+    {
+      "id": "email_15",
+      "thread_id": "thread_3",
+      "from": "person_6",
+      "to": [
+        "person_8"
+      ],
+      "cc": [],
+      "reply_to": null,
+      "timestamp": "2025-01-04T01:35:26.524Z",
+      "subject": "Marketing supply-chains visionary",
+      "body": "Hi Marc,\n\nWe need to finalize our marketing strategy for the visionary campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nKind regards,\nMs. Edna Mayer\nContent Creator",
+      "attachments": []
+    },
+    {
+      "id": "email_16",
+      "thread_id": "thread_3",
+      "from": "person_6",
+      "to": [
+        "person_8"
+      ],
+      "cc": [],
+      "reply_to": "email_15",
+      "timestamp": "2025-01-04T18:48:03.881Z",
+      "subject": "RE: Marketing supply-chains visionary",
+      "body": "Hi Marc,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nMs. Edna Mayer\nContent Creator",
+      "attachments": []
+    },
+    {
+      "id": "email_17",
+      "thread_id": "thread_3",
+      "from": "person_8",
+      "to": [
+        "person_6"
+      ],
+      "cc": [],
+      "reply_to": "email_16",
+      "timestamp": "2025-01-06T03:07:13.595Z",
+      "subject": "RE: Marketing supply-chains visionary",
+      "body": "Hi Ms.,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nRegards,\nMarc Stehr\nCampaign Manager",
+      "attachments": []
+    },
+    {
+      "id": "email_18",
+      "thread_id": "thread_3",
+      "from": "person_6",
+      "to": [
+        "person_8"
+      ],
+      "cc": [],
+      "reply_to": "email_17",
+      "timestamp": "2025-01-06T22:24:42.938Z",
+      "subject": "RE: Marketing supply-chains visionary",
+      "body": "Hi Marc,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nKind regards,\nMs. Edna Mayer\nContent Creator",
+      "attachments": []
+    },
+    {
+      "id": "email_19",
+      "thread_id": "thread_3",
+      "from": "person_8",
+      "to": [
+        "person_6"
+      ],
+      "cc": [],
+      "reply_to": "email_18",
+      "timestamp": "2025-01-07T15:14:23.532Z",
+      "subject": "RE: Marketing supply-chains visionary",
+      "body": "Hi Ms.,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nRegards,\nMarc Stehr\nCampaign Manager",
+      "attachments": []
+    },
+    {
+      "id": "email_20",
+      "thread_id": "thread_3",
+      "from": "person_8",
+      "to": [
+        "person_6"
+      ],
+      "cc": [],
+      "reply_to": "email_19",
+      "timestamp": "2025-01-08T11:09:20.180Z",
+      "subject": "RE: Marketing supply-chains visionary",
+      "body": "Hi Ms.,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nRegards,\nMarc Stehr\nCampaign Manager",
+      "attachments": []
+    },
+    {
+      "id": "email_21",
+      "thread_id": "thread_4",
+      "from": "person_4",
+      "to": [
+        "person_8",
+        "person_5"
+      ],
+      "cc": [],
+      "reply_to": null,
+      "timestamp": "2025-01-07T14:41:18.641Z",
+      "subject": "Campaign blockchains frictionless",
+      "body": "Hi Marc,\n\nWe need to finalize our marketing strategy for the frictionless campaign. My understanding is that we're prioritizing digital channels. Can we align on the key messages?\n\nBest regards,\nMs. Antonia Grant\nMarketing Director\nIvah.Grant@techcorp.com",
+      "attachments": []
+    },
+    {
+      "id": "email_22",
+      "thread_id": "thread_4",
+      "from": "person_5",
+      "to": [
+        "person_4",
+        "person_8"
+      ],
+      "cc": [],
+      "reply_to": "email_21",
+      "timestamp": "2025-01-08T15:45:40.855Z",
+      "subject": "RE: Campaign blockchains frictionless",
+      "body": "Hi Ms.,\n\nBased on what you said, I've already started working on the implementation. I've allocated resources based on a June launch date and informed the team. The design team is prioritizing this work as we discussed, and I've requested budget approval based on our conversation.\n\nCheers,\nDarnell Dach",
+      "attachments": []
+    },
+    {
+      "id": "email_23",
+      "thread_id": "thread_4",
+      "from": "person_4",
+      "to": [
+        "person_8",
+        "person_5"
+      ],
+      "cc": [],
+      "reply_to": "email_22",
+      "timestamp": "2025-01-09T13:13:17.722Z",
+      "subject": "RE: Campaign blockchains frictionless",
+      "body": "Hi Marc,\n\nI have a few questions about what you mentioned:\n\n- What exactly do you mean by \"ready to launch\"?\n- Who is responsible for the final approval?\n- Have we considered the impact on other departments?\n\nI think we need more clarity on these points before proceeding.\n\nBest regards,\nMs. Antonia Grant\nMarketing Director\nIvah.Grant@techcorp.com",
+      "attachments": []
+    },
+    {
+      "id": "email_24",
+      "thread_id": "thread_4",
+      "from": "person_4",
+      "to": [
+        "person_8",
+        "person_5"
+      ],
+      "cc": [],
+      "reply_to": "email_23",
+      "timestamp": "2025-01-11T02:58:02.672Z",
+      "subject": "RE: Campaign blockchains frictionless",
+      "body": "Hi Marc,\n\nI agree with the direction. Let's proceed as discussed and touch base next week to ensure we're on track. I'll update the relevant stakeholders on our progress.\n\nBest regards,\nMs. Antonia Grant\nMarketing Director\nIvah.Grant@techcorp.com",
+      "attachments": []
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread_0",
+      "subject": "Marketing e-business magnetic",
+      "participants": [
+        "person_5",
+        "person_6"
+      ],
+      "start_time": "2025-01-13T00:57:50.069Z",
+      "end_time": "2025-01-14T14:35:34.013Z",
+      "email_ids": [
+        "email_0",
+        "email_1",
+        "email_2",
+        "email_3",
+        "email_4"
+      ]
+    },
+    {
+      "id": "thread_1",
+      "subject": "Launch synergies open-source",
+      "participants": [
+        "person_4",
+        "person_8"
+      ],
+      "start_time": "2025-01-02T06:32:27.466Z",
+      "end_time": "2025-01-12T10:54:29.493Z",
+      "email_ids": [
+        "email_5",
+        "email_6",
+        "email_7"
+      ]
+    },
+    {
+      "id": "thread_2",
+      "subject": "Campaign synergies wireless",
+      "participants": [
+        "person_8",
+        "person_4"
+      ],
+      "start_time": "2025-01-03T02:15:44.964Z",
+      "end_time": "2025-01-12T14:51:08.992Z",
+      "email_ids": [
+        "email_8",
+        "email_9",
+        "email_10",
+        "email_11",
+        "email_12",
+        "email_13",
+        "email_14"
+      ]
+    },
+    {
+      "id": "thread_3",
+      "subject": "Marketing supply-chains visionary",
+      "participants": [
+        "person_6",
+        "person_8"
+      ],
+      "start_time": "2025-01-03T02:44:36.153Z",
+      "end_time": "2025-01-12T14:56:55.230Z",
+      "email_ids": [
+        "email_15",
+        "email_16",
+        "email_17",
+        "email_18",
+        "email_19",
+        "email_20"
+      ]
+    },
+    {
+      "id": "thread_4",
+      "subject": "Campaign blockchains frictionless",
+      "participants": [
+        "person_4",
+        "person_8",
+        "person_5"
+      ],
+      "start_time": "2025-01-06T11:31:50.560Z",
+      "end_time": "2025-01-13T07:06:22.112Z",
+      "email_ids": [
+        "email_21",
+        "email_22",
+        "email_23",
+        "email_24"
+      ]
+    }
+  ]
+}
