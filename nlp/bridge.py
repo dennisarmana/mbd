@@ -11,7 +11,9 @@ import json
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import logging
-from direct_test import direct_analyze_dataset
+
+# Import the refactored implementation
+import constraint_analyzer_refactored as analyzer
 
 # Configure detailed logging
 logging.basicConfig(
@@ -49,11 +51,41 @@ def analyze_direct():
   # Get or compute analysis
   if dataset_path not in analysis_cache:
     try:
-      logging.info(f"Running direct analysis for dataset: {dataset_path}")
-      # Use our direct test function
+      logging.info(f"Running analysis with refactored implementation for dataset: {dataset_path}")
+      # Use our refactored implementation
       department = data.get('department')
       user_name = data.get('user_name')
-      analysis_cache[dataset_path] = direct_analyze_dataset(dataset_path, department, user_name)
+      
+      # Run analysis with refactored code
+      result = analyzer.analyze_dataset(dataset_path)
+      
+      # Add department/user filters if provided
+      if department or user_name:
+          # Apply filters to recommendations if available
+          if 'recommendations' in result and result['recommendations']:
+              # Simple filtering logic - could be made more sophisticated
+              filtered_recommendations = []
+              for rec in result['recommendations']:
+                  # Filter by department if specified
+                  if department and 'relevant_people' in rec:
+                      # Check if any people in this department are relevant
+                      department_match = any(role for role, people in rec['relevant_people'].items() 
+                                          if department.lower() in role.lower())
+                      if not department_match:
+                          continue
+                  # Filter by username if specified
+                  if user_name and 'relevant_people' in rec:
+                      # Check if this user is mentioned
+                      user_match = any(user_name in person for role, people in rec['relevant_people'].items()
+                                       for person in people)
+                      if not user_match:
+                          continue
+                  filtered_recommendations.append(rec)
+              
+              # Replace with filtered recommendations
+              result['recommendations'] = filtered_recommendations
+      
+      analysis_cache[dataset_path] = result
       logging.info(f"Direct analysis completed successfully")
     except Exception as e:
       import traceback

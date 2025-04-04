@@ -16,6 +16,7 @@ import os
 import json
 import torch
 import numpy as np
+import logging
 from typing import List, Dict, Any, Tuple
 from transformers import BertTokenizer, BertModel
 from data_processor import EmailDataProcessor
@@ -312,10 +313,10 @@ class ConstraintAnalyzer:
       recommendations.append(recommendation)
     
     # Add thread-based recommendations
-    if thread_analysis:
+    if thread_analysis and isinstance(thread_analysis, dict):
       slow_threads = [
         t_id for t_id, data in thread_analysis.items() 
-        if data.get('avg_response_time', 0) > 24  # Slow if > 24hr response
+        if isinstance(data, dict) and data.get('avg_response_time', 0) > 24  # Slow if > 24hr response
       ]
       
       if slow_threads and len(recommendations) < 3:

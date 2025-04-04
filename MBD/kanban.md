@@ -44,58 +44,72 @@ kanban-plugin: board
 
 ## Dennis todos
 
-- [x] Integrate Email Generator with BERT Analyzer (MVP Integration Plan):
-  - [x] Fix dataset loading in BERT API to properly read email JSON files
-  - [x] Create data mapping layer to standardize email format for analysis
-  - [x] Add proper error handling for file access issues
-  - [x] Implement direct filesystem paths to access real datasets
-
+- [ ] Make analysis results more actionable:
+	  - [ ] Extract key individuals from email datasets
+	  - [ ] Identify specific projects/initiatives mentioned in bottleneck threads
+	  - [ ] Connect constraints to specific people and projects
+	  - [ ] Generate natural language recommendations with specific next steps
 - [ ] Enhance BERT constraint identification:
-  - [ ] Train BERT model with sample email threads for better context understanding
-  - [ ] Improve keyword extraction for organizational bottlenecks
-  - [ ] Add weighting factors for communication patterns
-  - [ ] Refine recommendation generation based on identified constraints
-
-- [x] Fix UI/UX issues in web interface:
-  - [x] Resolve dropdown population with real departments/users
-  - [x] Implement functional chat responses using BERT analysis
-  - [x] Add visualization of constraint analysis results
-  - [x] Create seamless connection between UI and backend API
-
-- [ ] Prepare presentation assets:
-  - [ ] Create overview slide explaining end-to-end MBD system
-  - [ ] Document integrated email generation and constraint analysis flow
-  - [ ] Prepare demo highlighting the key integration points
-  - [ ] Create visualization of the Theory of Constraints methodology
+	  - [ ] Train BERT model with sample email threads for better context understanding
+	  - [ ] Improve keyword extraction for organizational bottlenecks
+	  - [ ] Add weighting factors for communication patterns
+	  - [ ] Refine recommendation generation based on identified constraints
+- [ ] Fix dataset compatibility issues:
+	  - [ ] Add logging to track dataset loading and processing
+	  - [ ] Implement structure validation for datasets
+	  - [ ] Create dataset normalization for different formats
+	  - [ ] Add error handling for malformed datasets
+- [ ] Generate additional scenario datasets:
+	  - [ ] Interface with email generator from Python
+	  - [ ] Create scenario definition system
+	  - [ ] Generate cross-department miscommunication scenario
+	  - [ ] Generate resource allocation conflict scenario
+	  - [ ] Develop validation suite for new scenarios
 
 
 ## Doing (WIP 2)
 
-- [x] Connect Email Generator with BERT for constraint identification:
-  - [x] Investigation: Located existing email datasets in data/mixed-scenarios and data/scenarios
-  - [x] Identified integration challenges: datasets are gitignored and need custom access
-  - [x] Update BERT data processor to handle email generator JSON structure
-  - [x] Map company structure from datasets to BERT constraint analyzer
-  - [x] Create data flow pipeline: Email Generator → JSON Files → BERT Analyzer → UI
-  - [x] Extract constraints and generate actionable recommendations
-
-- [ ] System Architecture Understanding:
-  - [x] Email Generator: React/Node.js app at /web/email-generator-ui
-  - [x] Email Datasets: JSON files in /data directory with mixed-scenarios
-  - [x] BERT Analyzer: Python implementation in /nlp directory
-  - [x] Web Interface: Simple Flask-served frontend in /nlp/static
-
-
 
 ## Done
 
+- [x] Refactor constraint_analyzer.py into modular architecture:
+	  - [x] Roll back to last working version of constraint_analyzer.py
+	  - [x] Create module structure (bert/, analysis/, recommendations/, utils/)
+	  - [x] Extract analysis logic to dedicated modules (~50-75 lines each)
+	  - [x] Move recommendation generation to separate modules
+	  - [x] Implement factory pattern for cleaner initialization
+	  - [x] Reduce main file to ~150-200 lines using composition
+	  - [x] Reapply "make analysis results more actionable" changes to refactored code
+
+- [x] Integrate Email Generator with BERT Analyzer (MVP Integration Plan):
+	  - [x] Fix dataset loading in BERT API to properly read email JSON files
+	  - [x] Create data mapping layer to standardize email format for analysis
+	  - [x] Add proper error handling for file access issues
+	  - [x] Implement direct filesystem paths to access real datasets
+- [ ] System Architecture Understanding:
+	  - [x] Email Generator: React/Node.js app at /web/email-generator-ui
+	  - [x] Email Datasets: JSON files in /data directory with mixed-scenarios
+	  - [x] BERT Analyzer: Python implementation in /nlp directory
+	  - [x] Web Interface: Simple Flask-served frontend in /nlp/static
+- [x] Fix UI/UX issues in web interface:
+	  - [x] Resolve dropdown population with real departments/users
+	  - [x] Implement functional chat responses using BERT analysis
+	  - [x] Add visualization of constraint analysis results
+	  - [x] Create seamless connection between UI and backend API
+- [x] Connect Email Generator with BERT for constraint identification:
+	  - [x] Investigation: Located existing email datasets in data/mixed-scenarios and data/scenarios
+	  - [x] Identified integration challenges: datasets are gitignored and need custom access
+	  - [x] Update BERT data processor to handle email generator JSON structure
+	  - [x] Map company structure from datasets to BERT constraint analyzer
+	  - [x] Create data flow pipeline: Email Generator → JSON Files → BERT Analyzer → UI
+	  - [x] Extract constraints and generate actionable recommendations
 - [x] Breaking down product requirements into tasks (this kanban board)
 - [x] Create a BERT-based Theory of Constraints analyzer (60-min MVP Plan):
-  - [x] Set up Python environment with BERT dependencies
-  - [x] Create data processor to prepare emails for BERT model
-  - [x] Implement BERT model for constraint extraction
-  - [x] Build simple API to connect BERT analysis to web interface
-  - [x] Generate actionable recommendations from BERT insights
+	  - [x] Set up Python environment with BERT dependencies
+	  - [x] Create data processor to prepare emails for BERT model
+	  - [x] Implement BERT model for constraint extraction
+	  - [x] Build simple API to connect BERT analysis to web interface
+	  - [x] Generate actionable recommendations from BERT insights
 - [x] Improve realism of generated email content:
 	- [x] Enhance natural language structure and flow
 		- [x] Add proper email greetings, closings, and signatures

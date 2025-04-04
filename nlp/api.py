@@ -21,8 +21,12 @@ import time
 import glob
 import logging
 import traceback
-from constraint_analyzer import analyze_dataset
+# Import the refactored modules
+import constraint_analyzer_refactored as analyzer 
 from data_processor import EmailDataProcessor
+
+# Use the refactored analyze_dataset function
+analyze_dataset = analyzer.analyze_dataset
 
 # Configure detailed logging
 logging.basicConfig(
