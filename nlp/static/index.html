@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Make Better Decisions (MBD) - Task Advisor</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Add Chart.js for data visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="app-container">
@@ -15,7 +17,14 @@
 
     <div class="main-content">
       <div class="user-selection">
-        <h2>Who are you?</h2>
+        <h2>Dataset Selection</h2>
+        <div class="form-group">
+          <label for="dataset">Scenario:</label>
+          <select id="dataset">
+            <option value="">Select a dataset</option>
+            <!-- Will be populated from available datasets -->
+          </select>
+        </div>
         <div class="form-group">
           <label for="department">Department:</label>
           <select id="department">
@@ -24,20 +33,16 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="user">Name:</label>
+          <label for="user">Your Name:</label>
           <select id="user">
             <option value="">Select your name</option>
             <!-- Will be populated from dataset -->
           </select>
         </div>
-        <div class="form-group">
-          <label for="dataset">Dataset:</label>
-          <select id="dataset">
-            <option value="">Select a dataset</option>
-            <!-- Will be populated from available datasets -->
-          </select>
-        </div>
-        <button id="analyze-btn" class="primary-btn">Analyze Constraints</button>
+        <button id="analyze-btn" class="primary-btn">
+          <span>Analyze Constraints</span>
+          <div class="loader" id="analyze-loader"></div>
+        </button>
       </div>
 
       <div class="chat-container">
@@ -45,7 +50,7 @@
           <div class="message system">
             <p>Welcome to Make Better Decisions! I'm here to help you focus on 
             your most impactful tasks by analyzing organizational constraints.
-            Please select your department and name to get started.</p>
+            Please select a scenario, department and your name to get started.</p>
           </div>
           <!-- Chat messages will appear here -->
         </div>
@@ -56,9 +61,38 @@
       </div>
     </div>
 
+    <div class="visualization-panel" id="visualization-panel">
+      <h3>Constraint Analysis</h3>
+      <div class="visualization-container">
+        <div class="chart-wrapper">
+          <canvas id="constraints-chart"></canvas>
+        </div>
+        <div class="key-metrics">
+          <div class="metric" id="primary-constraint">
+            <h4>Primary Constraint</h4>
+            <p>Not analyzed yet</p>
+          </div>
+          <div class="metric" id="key-people">
+            <h4>Key People</h4>
+            <p>Not analyzed yet</p>
+          </div>
+          <div class="metric" id="affected-projects">
+            <h4>Affected Projects</h4>
+            <p>Not analyzed yet</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="recommendations-panel" id="recommendations-panel">
-      <h3>Top Recommendations</h3>
-      <div id="recommendations-list">
+      <h3>Personalized Recommendations</h3>
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="immediate">Immediate Actions</button>
+        <button class="filter-btn" data-filter="people">People to Contact</button>
+        <button class="filter-btn" data-filter="processes">Process Changes</button>
+      </div>
+      <div id="recommendations-list" class="recommendations-list">
         <!-- Recommendations will appear here -->
       </div>
     </div>

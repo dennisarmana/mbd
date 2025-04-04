@@ -53,18 +53,45 @@ class ConstraintAnalyzer(BaseAnalyzer):
   
   def analyze_dataset(self, 
                      emails: List[Dict[str, Any]], 
-                     company_data: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+                     company_data: Optional[Dict[str, Any]] = None,
+                     filter_params: Optional[Dict[str, str]] = None) -> Dict[str, Any]:
     """
     Analyze a dataset of emails to identify organizational constraints.
     
     Args:
         emails: List of email dictionaries
         company_data: Optional company structure data
+        filter_params: Optional filters to apply (department, user)
         
     Returns:
         Dict with constraint analysis results
     """
     self.logger.info(f"Analyzing dataset with {len(emails)} emails")
+    
+    # Apply filters if provided
+    if filter_params:
+      filtered_emails = []
+      department_filter = filter_params.get('department')
+      user_filter = filter_params.get('user')
+      
+      self.logger.info(f"Applying filters - Department: {department_filter}, User: {user_filter}")
+      
+      for email in emails:
+        # Check department filter
+        if department_filter and 'department' in email:
+          if email['department'] != department_filter:
+            continue
+          
+        # Check user filter
+        if user_filter and 'from' in email:
+          if email['from'] != user_filter:
+            continue
+            
+        # If we got here, the email passed all filters
+        filtered_emails.append(email)
+      
+      self.logger.info(f"Filtered to {len(filtered_emails)} emails from {len(emails)} total")
+      emails = filtered_emails
     
     # Extract text content from emails
     email_texts = []
@@ -214,12 +241,14 @@ class ConstraintAnalyzer(BaseAnalyzer):
 
 
 # Create a compatible API function that matches the original analyze_dataset function signature
-def analyze_dataset(dataset_path: str) -> Dict[str, Any]:
+def analyze_dataset(dataset_path: str, department_filter: Optional[str] = None, user_filter: Optional[str] = None) -> Dict[str, Any]:
   """
   Analyze an email dataset and generate constraint recommendations.
   
   Args:
       dataset_path: Path to the email dataset JSON file or directory
+      department_filter: Optional department ID to filter emails by department
+      user_filter: Optional user ID to filter emails by user
       
   Returns:
       Dict with analysis results and recommendations
@@ -228,6 +257,9 @@ def analyze_dataset(dataset_path: str) -> Dict[str, Any]:
       >>> results = analyze_dataset('/path/to/feature_priority/emails.json')
       >>> print(results['top_constraints'])
       {'resource_constraints': 0.85, 'approval_bottlenecks': 0.67, ...}
+      
+      # With filters
+      >>> results = analyze_dataset('/path/to/emails.json', department_filter='marketing')
   """
   # Setup logging
   logging.basicConfig(level=logging.INFO, 
@@ -255,12 +287,22 @@ def analyze_dataset(dataset_path: str) -> Dict[str, Any]:
   emails = processor.prepare_bert_inputs()
   thread_context = processor.extract_thread_context()
   
+  # Apply filters if provided
+  filter_info = {}
+  if department_filter:
+    filter_info["department"] = department_filter
+    logger.info(f"Department filter applied: {department_filter}")
+    
+  if user_filter:
+    filter_info["user"] = user_filter
+    logger.info(f"User filter applied: {user_filter}")
+    
   # Initialize and run the constraint analyzer
   analyzer = ConstraintAnalyzer()
   
   try:
-    # Use the new refactored architecture to perform analysis
-    analysis_result = analyzer.analyze_dataset(emails)
+    # Use the new refactored architecture to perform analysis with filters
+    analysis_result = analyzer.analyze_dataset(emails, filter_params=filter_info)
     
     # Convert the result to match the original API format
     result = {
@@ -270,12 +312,12 @@ def analyze_dataset(dataset_path: str) -> Dict[str, Any]:
       "timestamp": analysis_result.get("timestamp", ""),
       "email_count": len(emails),
       "thread_count": len(processor.threads),
-      "top_constraints": analysis_result.get("constraints", {}),
+      "constraint_scores": analysis_result.get("constraints", {}),
       "department_insights": analysis_result.get("department_insights", {}),
       "recommendations": analysis_result.get("recommendations", []),
-      "summary": analysis_result.get("summary", ""),
       "key_people": analysis_result.get("key_people", {}),
-      "key_projects": analysis_result.get("key_projects", [])
+      "key_projects": analysis_result.get("key_projects", []),
+      "summary": analysis_result.get("summary", "")
     }
     
     # Log success

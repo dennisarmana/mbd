@@ -70,7 +70,27 @@ kanban-plugin: board
 ## Doing (WIP 2)
 
 
+
+
 ## Done
+
+- [x] Clean up the UI and improve results presentation:
+	  - [x] Visual Design Improvements:
+		- [x] Modernize interface with cleaner design system
+		- [x] Improve spacing, typography, and color schemes
+		- [x] Add loading states and transitions
+	  - [x] Results Presentation:
+		- [x] Reorganize constraints and recommendations display
+		- [x] Create visual hierarchy for key information
+		- [x] Add data visualizations for constraint scores
+	  - [x] Usability Enhancements:
+		- [x] Simplify dataset selection process
+		- [x] Add filtering options for recommendations
+		- [x] Improve navigation between analysis views
+	  - [x] Code Quality:
+		- [x] Refactor frontend JavaScript code
+		- [x] Add proper error handling and user feedback
+		- [x] Fix analysis filtering capabilities
 
 - [x] Refactor constraint_analyzer.py into modular architecture:
 	  - [x] Roll back to last working version of constraint_analyzer.py
@@ -80,7 +100,6 @@ kanban-plugin: board
 	  - [x] Implement factory pattern for cleaner initialization
 	  - [x] Reduce main file to ~150-200 lines using composition
 	  - [x] Reapply "make analysis results more actionable" changes to refactored code
-
 - [x] Integrate Email Generator with BERT Analyzer (MVP Integration Plan):
 	  - [x] Fix dataset loading in BERT API to properly read email JSON files
 	  - [x] Create data mapping layer to standardize email format for analysis

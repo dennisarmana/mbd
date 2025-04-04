@@ -76,7 +76,11 @@ def analyze():
   
   Expected POST body:
   {
-    "dataset_path": "/path/to/dataset.json"
+    "dataset_path": "/path/to/dataset.json",
+    "filter": {
+      "department": "department_id",  # Optional
+      "user": "user_id"  # Optional
+    }
   }
   """
   data = request.json
@@ -87,6 +91,11 @@ def analyze():
     }), 400
   
   dataset_path = data['dataset_path']
+  
+  # Extract filter parameters if present
+  filter_params = {}
+  if 'filter' in data and data['filter']:
+    filter_params = data['filter']
   
   # Try to find the dataset if the exact path doesn't exist
   if not os.path.exists(dataset_path):
@@ -117,18 +126,29 @@ def analyze():
         'message': f'Dataset not found at {dataset_path}'
       }), 404
   
+  # Create cache key that includes filters
+  cache_key = f"{dataset_path}_{filter_params.get('department', '')}_{filter_params.get('user', '')}"
+  
   # Use cached result if available
-  if dataset_path in analysis_cache:
-    return jsonify(analysis_cache[dataset_path])
+  if cache_key in analysis_cache:
+    return jsonify(analysis_cache[cache_key])
   
   try:
     # Perform analysis (may take time)
     logging.debug(f"Starting analysis for dataset: {dataset_path}")
-    result = analyze_dataset(dataset_path)
+    logging.debug(f"Using filter parameters: {filter_params}")
+    
+    # Call with filter parameters if present
+    result = analyze_dataset(
+      dataset_path, 
+      department_filter=filter_params.get('department'),
+      user_filter=filter_params.get('user')
+    )
     logging.debug(f"Analysis result: {result}")
     
-    # Cache the result
-    analysis_cache[dataset_path] = result
+    # Create cache key that includes filters
+    cache_key = f"{dataset_path}_{filter_params.get('department', '')}_{filter_params.get('user', '')}"
+    analysis_cache[cache_key] = result
     
     return jsonify(result)
   except Exception as e:
